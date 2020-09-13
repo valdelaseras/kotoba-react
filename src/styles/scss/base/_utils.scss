@@ -1,0 +1,32 @@
+$large-screen: 1024px;
+
+.desktop-only {
+    display: none;
+}
+
+@media only screen and ( min-width: $large-screen ){
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: inline-block;
+    }
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.submit-confirmation::after {
+  content: "d \2713";
+}
+
+.submit-confirmation:not(:active)::after {
+  opacity: 0;
+  transition: opacity 2s step-end;
+}
+
+.submit-confirmation:active::after {
+  opacity: 1;
+}

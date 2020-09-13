@@ -1,0 +1,88 @@
+html {
+    //font-size: 16px;
+    line-height: 2;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+.helvetica { font-family: Helvetica, sans-serif; }
+.comfortaa { font-family: 'Comfortaa', cursive; }
+.montserrat { font-family: 'Montserrat', sans-serif; }
+
+//TODO: Pick actual sizes and adjust some styling based on rem
+.normal { font-size: 16px; }
+.large { font-size: 20px; }
+.xl { font-size: 24px; }
+
+@media only screen and ( min-width: $large-screen ) {
+  .normal { font-size: 17px; }
+  .large { font-size: 21px; }
+  .xl { font-size: 25px; }
+}
+
+p {
+  font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: normal;
+  margin: 0;
+  color: var(--quaternary-color);
+}
+
+label {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: calc( 2.5rem/1.61803398875);
+}
+
+h3, h4 {
+  font-size: calc(calc( 2.5rem/1.61803398875)/1.61803398875);
+}
+
+.font-xxl {
+  font-size: 5rem;
+}
+
+.font-xl {
+  font-size: 3rem;
+}
+
+.small {
+  font-size: small;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.highlight {
+  color: var(--quaternary-color);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.invalid-color {
+  color: var(--invalid-color);
+}
+
+.theme-quaternary {
+  color: var(--quaternary-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
