@@ -1,0 +1,1238 @@
+[
+  {
+    "kanji": ["安", "安い", "安らか"],
+    "romaji": {
+      "kun": ["yasu", "yasui", "yasuraka"],
+      "on": ["an"]
+    },
+    "kana": {
+      "kun": ["やす", "やすい"],
+      "on": ["アン"]
+    },
+    "english": ["cheap", "peaceful", "low", "quiet", "rested", "contented", "peaceful", "relax"]
+  },
+  {
+    "kanji": ["一", "一つ"],
+    "romaji": {
+      "kun": ["hito", "hitotsu"],
+      "on": ["ichi", "itsu"]
+    },
+    "kana": {
+      "kun": ["ひと", "ひとつ"],
+      "on": ["イチ", "イツ"]
+    },
+    "english": ["one"]
+  },
+  {
+    "kanji": ["飲", "飲む"],
+    "romaji": {
+      "kun": ["no", "nomu"],
+      "on": ["in"]
+    },
+    "kana": {
+      "kun": ["の", "のむ"],
+      "on": ["イン"]
+    },
+    "english": ["drink"]
+  },
+  {
+    "kanji": ["右"],
+    "romaji": {
+      "kun": ["migi"],
+      "on": ["u", "yuu"]
+    },
+    "kana": {
+        "kun": ["みぎ"],
+        "on": ["ウ", "ユウ"]
+    },
+    "english": ["right"]
+  },
+  {
+    "kanji": ["雨"],
+    "romaji": {
+      "kun": ["ame"],
+      "on": ["u"]
+    },
+    "kana": {
+      "kun": ["あめ"],
+      "on": ["ウ"]
+    },
+    "english": ["rain"]
+  },
+  {
+    "kanji": ["駅"],
+    "romaji": {
+      "kun": [],
+      "on": ["eki"]
+    },
+    "kana": {
+      "kun": [""],
+      "on": ["エキ"]
+    },
+    "english": ["station"]
+  },
+  {
+    "kanji": ["円"],
+    "romaji": {
+      "kun": ["maru", "marui"],
+      "on": ["en"]
+    },
+    "kana": {
+      "kun": ["まる","まるい"],
+      "on": ["エン"]
+    },
+    "english": ["yen", "circle"]
+  },
+  {
+    "kanji": ["火"],
+    "romaji": {
+      "kun": ["hi","ho"],
+      "on": ["ka"]
+    },
+    "kana": {
+      "kun": ["ひ","ほ"],
+      "on": ["カ"]
+    },
+    "english": ["fire"]
+  },
+  {
+    "kanji": ["花"],
+    "romaji": {
+      "kun": ["hana"],
+      "on": ["ka"]
+    },
+    "kana": {
+      "kun": ["はな"],
+      "on": ["カ"]
+    },
+    "english": ["flower"]
+  },
+  {
+    "kanji": ["下", "下る", "下ろす", "下げる"],
+    "romaji": {
+      "kun": ["shita", "shimo", "moto", "kudaru", "orosu", "sageru"],
+      "on": ["ka", "ge"]
+    },
+    "kana": {
+      "kun": ["した", "しも", "もと", "くだる", "おろす", "さげる"],
+      "on": ["カ", "ゲ"]
+    },
+    "english": ["down", "under", "lower"]
+  },
+  {
+    "kanji": ["何"],
+    "romaji": {
+      "kun": ["nani", "nan", "nashi"],
+      "on": ["ka"]
+    },
+    "kana": {
+      "kun": ["なに", "なし"],
+      "on": ["カ"]
+    },
+    "english": ["what", "how"]
+  },
+  {
+    "kanji": ["会", "会う"],
+    "romaji": {
+      "kun": ["a", "au"],
+      "on": ["kai", "e"]
+    },
+    "kana": {
+      "kun": ["あ", "あう"],
+      "on": ["カイ", "エ"]
+    },
+    "english": ["meet", "society"]
+  },
+  {
+    "kanji": ["外", "外す"],
+    "romaji": {
+      "kun": ["soto", "hoka", "hazu" ,"hazusu"],
+      "on": ["gai", "ge"]
+    },
+    "kana": {
+      "kun": ["そと", "ほか", "はず", "はずす"],
+      "on": ["ガイ", "ゲ"]
+    },
+    "english": ["outside"]
+  },
+  {
+    "kanji": ["学", "学ぶ"],
+    "romaji": {
+      "kun": ["mana","manabu"],
+      "on": ["gaku"]
+    },
+    "kana": {
+      "kun": ["まな", "まなぶ"],
+      "on": ["ガク"]
+    },
+    "english": ["study", "learning"]
+  },
+  {
+    "kanji": ["間"],
+    "romaji": {
+      "kun": ["aida", "ma"],
+      "on": ["kan", "ken"]
+    },
+    "kana": {
+      "kun": ["あいだ", "ま"],
+      "on": ["カン", "ケン"]
+    },
+    "english": ["interval", "between", "space"]
+  },
+  {
+    "kanji": ["気"],
+    "romaji": {
+      "kun": ["ke"],
+      "on": ["ki"]
+    },
+    "kana": {
+      "kun": ["け"],
+      "on": ["キ"]
+    },
+    "english": ["gas", "spirit", "mind"]
+  },
+  {
+    "kanji": ["九", "九つ"],
+    "romaji": {
+      "kun": ["kokono", "kokonotsu"],
+      "on": ["kyuu", "ku"]
+    },
+    "kana": {
+      "kun": ["ここの", "ここのつ"],
+      "on": ["キュウ", "ク"]
+    },
+    "english": ["nine"]
+  },
+  {
+    "kanji": ["休", "休む"],
+    "romaji": {
+      "kun": ["yasu", "yasumu"],
+      "on": ["kyuu"]
+    },
+    "kana": {
+      "kun": ["やす", "やすむ"],
+      "on": ["キュウ"]
+    },
+    "english": ["rest"]
+  },
+  {
+    "kanji": ["魚"],
+    "romaji": {
+      "kun": ["sakana", "uo"],
+      "on": ["gyo"]
+    },
+    "kana": {
+      "kun": ["さかな", "うお"],
+      "on": ["ギョ"]
+    },
+    "english": ["fish"]
+  },
+  {
+    "kanji": ["金"],
+    "romaji": {
+      "kun": ["kana", "kane"],
+      "on": ["kin", "kon"]
+    },
+    "kana": {
+      "kun": ["かな", "かね"],
+      "on": ["キン", "コン"]
+    },
+    "english": ["money", "gold"]
+  },
+  {
+    "kanji": ["空", "空く", "空ける"],
+    "romaji": {
+      "kun": ["sora", "kara", "a", "aku", "akeru"],
+      "on": ["kuu"]
+    },
+    "kana": {
+      "kun": ["そら", "から", "あ", "あく", "あける"],
+      "on": ["クウ"]
+    },
+    "english": ["sky", "air", "empty"]
+  },
+  {
+    "kanji": ["月"],
+    "romaji": {
+      "kun": ["getsu", "tsuki"],
+      "on": ["getsu"]
+    },
+    "kana": {
+      "kun": ["げつ", "つき"],
+      "on": ["ゲツ"]
+    },
+    "english": ["moon", "month"]
+  },
+  {
+    "kanji": ["見", "見る"],
+    "romaji": {
+      "kun": ["ken", "mi", "miru"],
+      "on": ["ken"]
+    },
+    "kana": {
+      "kun": ["けん", "み", "みる"],
+      "on": ["ケン"]
+    },
+    "english": ["see"]
+  },
+  {
+    "kanji": ["言", "言う"],
+    "romaji": {
+      "kun": ["i", "iu", "koto"],
+      "on": ["gen", "gon"]
+    },
+    "kana": {
+      "kun": ["い", "いう", "こと"],
+      "on": ["ゲン", "ゴン"]
+    },
+    "english": ["say", "speech"]
+  },
+  {
+    "kanji": ["古", "古い", "古す"],
+    "romaji": {
+      "kun": ["furu", "furui", "furusu"],
+      "on": ["ko"]
+    },
+    "kana": {
+      "kun": ["ふる", "ふるい", "ふるす"],
+      "on": ["コ"]
+    },
+    "english": ["old"]
+  },
+  {
+    "kanji": ["五", "五つ"],
+    "romaji": {
+      "kun": ["itsu", "itsutsu"],
+      "on": ["go"]
+    },
+    "kana": {
+      "kun": ["いつ", "いつつ"],
+      "on": ["ゴ"]
+    },
+    "english": ["five"]
+  },
+  {
+    "kanji": ["後", "後ろ", "後れる"],
+    "romaji": {
+      "kun": ["nochi", "ushi", "ushiro", "ato", "oku", "okureru"],
+      "on": ["go", "gou"]
+    },
+    "kana": {
+      "kun": ["のち", "うし", "うしろ", "あと", "おく", "おくれる"],
+      "on": ["ゴ", "ゴウ"]
+    },
+    "english": ["after"]
+  },
+  {
+    "kanji": ["午"],
+    "romaji": {
+      "kun": [],
+      "on": ["go"]
+    },
+    "kana": {
+      "kun": [""],
+      "on": ["ゴ"]
+    },
+    "english": ["noon"]
+  },
+  {
+    "kanji": ["語", "語る", "語らう"],
+    "romaji": {
+      "kun": ["kata", "kataru", "katarau"],
+      "on": ["go"]
+    },
+    "kana": {
+      "kun": ["かた", "かたる", "かたらう"],
+      "on": ["ゴ"]
+    },
+    "english": ["language", "word", "tell"]
+  },
+  {
+    "kanji": ["校"],
+    "romaji": {
+      "kun": [],
+      "on": ["kou"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["コウ"]
+    },
+    "english": ["school", "collate"]
+  },
+  {
+    "kanji": ["口"],
+    "romaji": {
+      "kun": ["kuchi"],
+      "on": ["kou"]
+    },
+    "kana": {
+      "kun": ["くち"],
+      "on": ["コウ"]
+    },
+    "english": ["mouth"]
+  },
+  {
+    "kanji": ["行", "行く", "行う"],
+    "romaji": {
+      "kun": ["i", "iku", "yu", "yuku", "okona", "okonau"],
+      "on": ["kou"]
+    },
+    "kana": {
+      "kun": ["い", "いく", "ゆ", "ゆく", "おこな", "おこなう"],
+      "on": ["コウ"]
+    },
+    "english": ["go", "act", "line"]
+  },
+  {
+    "kanji": ["高", "高い", "高まる", "高める"],
+    "romaji": {
+      "kun": ["taka", "takai", "takameru", "takamaru"],
+      "on": ["kou"]
+    },
+    "kana": {
+      "kun": ["たか", "たかい", "たかまる", "たかめる"],
+      "on": ["コウ", ""]
+    },
+    "english": ["high"]
+  },
+  {
+    "kanji": ["国"],
+    "romaji": {
+      "kun": ["kuni"],
+      "on": ["koku"]
+    },
+    "kana": {
+      "kun": ["くに"],
+      "on": ["コク"]
+    },
+    "english": ["country", "nation"]
+  },
+  {
+    "kanji": ["今"],
+    "romaji": {
+      "kun": ["ima"],
+      "on": ["kon"]
+    },
+    "kana": {
+      "kun": ["いま"],
+      "on": ["コン"]
+    },
+    "english": ["now", "this"]
+  },
+  {
+    "kanji": ["左"],
+    "romaji": {
+      "kun": ["hidari"],
+      "on": ["sa"]
+    },
+    "kana": {
+      "kun": ["ひだり"],
+      "on": ["サ"]
+    },
+    "english": ["left"]
+  },
+  {
+    "kanji": ["三", "三つ"],
+    "romaji": {
+      "kun": ["mi", "mitsu", "mittsu"],
+      "on": ["san"]
+    },
+    "kana": {
+      "kun": ["み", "みつ", "みっつ"],
+      "on": ["サン"]
+    },
+    "english": ["three"]
+  },
+  {
+    "kanji": ["山"],
+    "romaji": {
+      "kun": ["yama"],
+      "on": ["san"]
+    },
+    "kana": {
+      "kun": ["やま"],
+      "on": ["サン"]
+    },
+    "english": ["mountain"]
+  },
+  {
+    "kanji": ["四", "四つ"],
+    "romaji": {
+      "kun": ["yo", "yon", "yottsu", "yotsu"],
+      "on": ["shi"]
+    },
+    "kana": {
+      "kun": ["よ", "よん", "よっつ", "よつ"],
+      "on": ["シ"]
+    },
+    "english": ["four"]
+  },
+  {
+    "kanji": ["子"],
+    "romaji": {
+      "kun": ["ko"],
+      "on": ["shi"]
+    },
+    "kana": {
+      "kun": ["こ"],
+      "on": ["シ"]
+    },
+    "english": ["tiny thing", "child"]
+  },
+  {
+    "kanji": ["耳"],
+    "romaji": {
+      "kun": ["mimi"],
+      "on": ["ji"]
+    },
+    "kana": {
+      "kun": ["みみ"],
+      "on": ["ジ"]
+    },
+    "english": ["ear"]
+  },
+  {
+    "kanji": ["時"],
+    "romaji": {
+      "kun": ["toki"],
+      "on": ["ji"]
+    },
+    "kana": {
+      "kun": ["とき"],
+      "on": ["ジ"]
+    },
+    "english": ["time"]
+  },
+  {
+    "kanji": ["七", "七つ"],
+    "romaji": {
+      "kun": ["nana", "nanatsu", "nano"],
+      "on": ["shichi"]
+    },
+    "kana": {
+      "kun": ["なな", "ななつ", "なの"],
+      "on": ["シチ"]
+    },
+    "english": ["seven"]
+  },
+  {
+    "kanji": ["車"],
+    "romaji": {
+      "kun": ["kuruma"],
+      "on": ["sha"]
+    },
+    "kana": {
+      "kun": ["くるま"],
+      "on": ["シャ"]
+    },
+    "english": ["vehicle", "wheel", "car", "automobile"]
+  },
+  {
+    "kanji": ["社"],
+    "romaji": {
+      "kun": ["yashiro"],
+      "on": ["sha"]
+    },
+    "kana": {
+      "kun": ["やしろ"],
+      "on": ["シャ"]
+    },
+    "english": ["company", "society"]
+  },
+  {
+    "kanji": ["手"],
+    "romaji": {
+      "kun": ["te", "ta"],
+      "on": ["shu"]
+    },
+    "kana": {
+      "kun": ["て", "た"],
+      "on": ["シュ"]
+    },
+    "english": ["hand", "person"]
+  },
+  {
+    "kanji": ["週"],
+    "romaji": {
+      "kun": [],
+      "on": ["shuu"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["シュウ"]
+    },
+    "english": ["week"]
+  },
+  {
+    "kanji": ["十"],
+    "romaji": {
+      "kun": ["too", "to"],
+      "on": ["juu"]
+    },
+    "kana": {
+      "kun": ["とお", "と"],
+      "on": ["ジュウ", "ジッ"]
+    },
+    "english": ["ten"]
+  },
+  {
+    "kanji": ["出", "出る", "出す"],
+    "romaji": {
+      "kun": ["de", "deru", "dasu"],
+      "on": ["shutsu", "sui"]
+    },
+    "kana": {
+      "kun": ["で", "でる", "だす"],
+      "on": ["シュツ", "スイ"]
+    },
+    "english": ["go out", "put out"]
+  },
+  {
+    "kanji": ["書", "書く"],
+    "romaji": {
+      "kun": ["ka", "kaku"],
+      "on": ["sho"]
+    },
+    "kana": {
+      "kun": ["か", "かく"],
+      "on": ["ショ"]
+    },
+    "english": ["write", "book"]
+  },
+  {
+    "kanji": ["女"],
+    "romaji": {
+      "kun": ["onna", "me"],
+      "on": ["nyo", "nyou", "jo"]
+    },
+    "kana": {
+      "kun": ["おんな", "め"],
+      "on": ["ニョ", "ニョウ", "ジョ"]
+    },
+    "english": ["woman"]
+  },
+  {
+    "kanji": ["小", "小さい"],
+    "romaji": {
+      "kun": ["chii", "chiisai", "ko", "o"],
+      "on": ["shou"]
+    },
+    "kana": {
+      "kun": ["ちい", "ちいさい", "こ", "お"],
+      "on": ["ショウ"]
+    },
+    "english": ["small"]
+  },
+  {
+    "kanji": ["少", "少ない", "少し"],
+    "romaji": {
+      "kun": ["suku", "sukunai", "suko", "sukoshi"],
+      "on": ["shou"]
+    },
+    "kana": {
+      "kun": ["すく", "すくない", "すこ", "すこし"],
+      "on": ["ショウ"]
+    },
+    "english": ["little"]
+  },
+  {
+    "kanji": ["上", "上げる", "上る"],
+    "romaji": {
+      "kun": ["ue", "uwa", "kami", "a", "ageru", "nobo", "noboru"],
+      "on": ["jou", "shou"]
+    },
+    "kana": {
+      "kun": ["うえ", "うわ", "かみ", "あ", "あげる", "のぼ", "のぼる"],
+      "on": ["ジョウ", "ショウ"]
+    },
+    "english": ["up", "above"]
+  },
+  {
+    "kanji": ["食", "食べる", "食らう", "食う"],
+    "romaji": {
+      "kun": ["ta", "taberu", "ku", "kurau", "kuu"],
+      "on": ["shoku"]
+    },
+    "kana": {
+      "kun": ["た", "たべる", "く", "くらう", "くう"],
+      "on": ["ショク"]
+    },
+    "english": ["eat", "food"]
+  },
+  {
+    "kanji": ["新", "新しい", "新た"],
+    "romaji": {
+      "kun": ["atara", "atarashii", "ara", "arata", "nii"],
+      "on": ["shin"]
+    },
+    "kana": {
+      "kun": ["あたら", "あたらしい", "あら", "あらた", "にい"],
+      "on": ["シン"]
+    },
+    "english": ["new"]
+  },
+  {
+    "kanji": ["人"],
+    "romaji": {
+      "kun": ["hito"],
+      "on": ["jin", "nin"]
+    },
+    "kana": {
+      "kun": ["ひと"],
+      "on": ["ジン", "ニン"]
+    },
+    "english": ["human being", "person"]
+  },
+  {
+    "kanji": ["水"],
+    "romaji": {
+      "kun": ["mizu"],
+      "on": ["sui"]
+    },
+    "kana": {
+      "kun": ["みず"],
+      "on": ["スイ"]
+    },
+    "english": ["water"]
+  },
+  {
+    "kanji": ["生", "生きる", "生る", "生う", "生える"],
+    "romaji": {
+      "kun": ["i", "ikiru", "u", "umaru", "o", "ou", "ha", "haeru", "ki", "nama"],
+      "on": ["sei", "shuu"]
+    },
+    "kana": {
+      "kun": ["い", "いきる", "う", "うまる", "お", "おう", "は", "はえる", "き", "なま"],
+      "on": ["セイ", "シュウ"]
+    },
+    "english": ["life", "birth"]
+  },
+  {
+    "kanji": ["西"],
+    "romaji": {
+      "kun": ["nishi"],
+      "on": ["sei"]
+    },
+    "kana": {
+      "kun": ["にし"],
+      "on": ["セイ"]
+    },
+    "english": ["west"]
+  },
+  {
+    "kanji": ["川"],
+    "romaji": {
+      "kun": ["kawa"],
+      "on": ["sen"]
+    },
+    "kana": {
+      "kun": ["かわ"],
+      "on": ["セン"]
+    },
+    "english": ["river"]
+  },
+  {
+    "kanji": ["千"],
+    "romaji": {
+      "kun": ["chi"],
+      "on": ["sen"]
+    },
+    "kana": {
+      "kun": ["ち"],
+      "on": ["セン"]
+    },
+    "english": ["thousand"]
+  },
+  {
+    "kanji": ["先"],
+    "romaji": {
+      "kun": ["saki"],
+      "on": ["sen"]
+    },
+    "kana": {
+      "kun": ["さき"],
+      "on": ["セン"]
+    },
+    "english": ["previous", "former", "earlier", "preceding", "prior"]
+  },
+  {
+    "kanji": ["前"],
+    "romaji": {
+      "kun": ["mae"],
+      "on": ["zen"]
+    },
+    "kana": {
+      "kun": ["まえ"],
+      "on": ["ゼン"]
+    },
+    "english": ["before", "front"]
+  },
+  {
+    "kanji": ["足", "足りる", "足す", "足る"],
+    "romaji": {
+      "kun": ["ashi", "ta", "tariru", "taru", "tasu"],
+      "on": ["soku"]
+    },
+    "kana": {
+      "kun": ["あし", "た", "たりる", "たる", "たす"],
+      "on": ["ソク"]
+    },
+    "english": ["foot", "suffice"]
+  },
+  {
+    "kanji": ["多", "多い"],
+    "romaji": {
+      "kun": ["oo", "ooi"],
+      "on": ["ta"]
+    },
+    "kana": {
+      "kun": ["おお", "おおい"],
+      "on": ["タ"]
+    },
+    "english": ["many"]
+  },
+  {
+    "kanji": ["大", "大きい", "大いに"],
+    "romaji": {
+      "kun": ["oo", "ookii", "ooini"],
+      "on": ["dai"]
+    },
+    "kana": {
+      "kun": ["おお", "おおきい", "おおいに"],
+      "on": ["ダイ"]
+    },
+    "english": ["big", "university", "large"]
+  },
+  {
+    "kanji": ["男"],
+    "romaji": {
+      "kun": ["otoko"],
+      "on": ["dan"]
+    },
+    "kana": {
+      "kun": ["おとこ"],
+      "on": ["ダン"]
+    },
+    "english": ["man"]
+  },
+  {
+    "kanji": ["中"],
+    "romaji": {
+      "kun": ["naka"],
+      "on": ["chuu", "juu"]
+    },
+    "kana": {
+      "kun": ["なか"],
+      "on": ["チュウ", "ジュウ"]
+    },
+    "english": ["middle", "in"]
+  },
+  {
+    "kanji": ["長", "長い"],
+    "romaji": {
+      "kun": ["naga", "nagai"],
+      "on": ["chou"]
+    },
+    "kana": {
+      "kun": ["なが", "ながい"],
+      "on": ["チョウ"]
+    },
+    "english": ["long", "chief"]
+  },
+  {
+    "kanji": ["天"],
+    "romaji": {
+      "kun": ["ame", "ama"],
+      "on": ["ten"]
+    },
+    "kana": {
+      "kun": ["あめ", "あま"],
+      "on": ["テン"]
+    },
+    "english": ["heaven"]
+  },
+  {
+    "kanji": ["店"],
+    "romaji": {
+      "kun": ["mise"],
+      "on": ["ten"]
+    },
+    "kana": {
+      "kun": ["みせ"],
+      "on": ["テン"]
+    },
+    "english": ["shop"]
+  },
+  {
+    "kanji": ["電"],
+    "romaji": {
+      "kun": [],
+      "on": ["den"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["デン"]
+    },
+    "english": ["electricity"]
+  },
+  {
+    "kanji": ["土"],
+    "romaji": {
+      "kun": ["tsuchi"],
+      "on": ["do"]
+    },
+    "kana": {
+      "kun": ["つち"],
+      "on": ["ド"]
+    },
+    "english": ["soil", "earth", "dirt", "ground"]
+  },
+  {
+    "kanji": ["東"],
+    "romaji": {
+      "kun": ["higashi"],
+      "on": ["tou"]
+    },
+    "kana": {
+      "kun": ["ひがし"],
+      "on": ["トウ"]
+    },
+    "english": ["east"]
+  },
+  {
+    "kanji": ["道"],
+    "romaji": {
+      "kun": ["michi"],
+      "on": ["dou"]
+    },
+    "kana": {
+      "kun": ["みち"],
+      "on": ["ドウ"]
+    },
+    "english": ["way", "path", "road"]
+  },
+  {
+    "kanji": ["読", "読む"],
+    "romaji": {
+      "kun": ["yo", "yomu"],
+      "on": ["toku"]
+    },
+    "kana": {
+      "kun": ["よ", "よむ"],
+      "on": ["トク"]
+    },
+    "english": ["read"]
+  },
+  {
+    "kanji": ["南"],
+    "romaji": {
+      "kun": ["minami"],
+      "on": ["nan"]
+    },
+    "kana": {
+      "kun": ["みなみ"],
+      "on": ["ナン"]
+    },
+    "english": ["south"]
+  },
+  {
+    "kanji": ["二", "二つ"],
+    "romaji": {
+      "kun": ["futa", "futatsu"],
+      "on": ["ni"]
+    },
+    "kana": {
+      "kun": ["ふた", "ふたつ"],
+      "on": ["ニ"]
+    },
+    "english": ["two"]
+  },
+  {
+    "kanji": ["日"],
+    "romaji": {
+      "kun": ["hi", "ka"],
+      "on": ["nichi", "ji"]
+    },
+    "kana": {
+      "kun": ["ひ", "か"],
+      "on": ["ニチ", "ジツ"]
+    },
+    "english": ["day", "sun"]
+  },
+  {
+    "kanji": ["入", "入る", "入れる"],
+    "romaji": {
+      "kun": ["i", "iru", "ireru", "hai", "hairu"],
+      "on": ["chuu"]
+    },
+    "kana": {
+      "kun": ["い", "いる", "いれる", "はい", "はいる"],
+      "on": ["チュウ"]
+    },
+    "english": ["enter", "put in"]
+  },
+  {
+    "kanji": ["年"],
+    "romaji": {
+      "kun": ["toshi"],
+      "on": ["nen"]
+    },
+    "kana": {
+      "kun": ["とし"],
+      "on": ["ネン"]
+    },
+    "english": ["year"]
+  },
+  {
+    "kanji": ["買", "買う"],
+    "romaji": {
+      "kun": ["ka", "kau"],
+      "on": ["bai"]
+    },
+    "kana": {
+      "kun": ["か", "かう"],
+      "on": ["バイ"]
+    },
+    "english": ["buy"]
+  },
+  {
+    "kanji": ["白", "白い"],
+    "romaji": {
+      "kun": ["shiro", "shiroi", "shira"],
+      "on": ["haku"]
+    },
+    "kana": {
+      "kun": ["しろ", "しろい", "しら"],
+      "on": ["ハク"]
+    },
+    "english": ["white"]
+  },
+  {
+    "kanji": ["八", "八つ"],
+    "romaji": {
+      "kun": ["ya", "yattsu", "ya", "you"],
+      "on": ["hachi"]
+    },
+    "kana": {
+      "kun": ["や", "やっつ", "やっ", "よう"],
+      "on": ["ハチ"]
+    },
+    "english": ["eight"]
+  },
+  {
+    "kanji": ["半", "半ば"],
+    "romaji": {
+      "kun": ["naka", "nakaba"],
+      "on": ["han"]
+    },
+    "kana": {
+      "kun": ["なか", "なかば"],
+      "on": ["ハン"]
+    },
+    "english": ["half"]
+  },
+  {
+    "kanji": ["百"],
+    "romaji": {
+      "kun": [],
+      "on": ["hyaku"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["ヒャク"]
+    },
+    "english": ["hundred"]
+  },
+  {
+    "kanji": ["父"],
+    "romaji": {
+      "kun": ["chichi"],
+      "on": ["fu"]
+    },
+    "kana": {
+      "kun": ["ちち"],
+      "on": ["フ"]
+    },
+    "english": ["father"]
+  },
+  {
+    "kanji": ["分", "分ける", "分かれる", "分かる", "分かつ"],
+    "romaji": {
+      "kun": ["wa", "wakeru", "wakareru", "wakaru", "wakatsu"],
+      "on": ["bun", "fun", "bu"]
+    },
+    "kana": {
+      "kun": ["わ", "わける", "わかれる", "わかる", "わかつ"],
+      "on": ["ブン", "フン", "ブ"]
+    },
+    "english": ["divide", "part", "minute"]
+  },
+  {
+    "kanji": ["聞", "聞く", "聞こえる"],
+    "romaji": {
+      "kun": ["ki", "kiku", "kikoeru"],
+      "on": ["bun", "mon"]
+    },
+    "kana": {
+      "kun": ["き", "きく", "きこえる"],
+      "on": ["ブン", "モン"]
+    },
+    "english": ["hear"]
+  },
+  {
+    "kanji": ["母"],
+    "romaji": {
+      "kun": ["haha"],
+      "on": ["bo"]
+    },
+    "kana": {
+      "kun": ["はは"],
+      "on": ["ボ"]
+    },
+    "english": ["mother"]
+  },
+  {
+    "kanji": ["北"],
+    "romaji": {
+      "kun": ["kita"],
+      "on": ["hoku"]
+    },
+    "kana": {
+      "kun": ["きた"],
+      "on": ["ホク"]
+    },
+    "english": ["north"]
+  },
+  {
+    "kanji": ["木"],
+    "romaji": {
+      "kun": ["ki", "ko"],
+      "on": ["boku"]
+    },
+    "kana": {
+      "kun": ["き", "こ"],
+      "on": ["ボク"]
+    },
+    "english": ["tree", "wood"]
+  },
+  {
+    "kanji": ["本"],
+    "romaji": {
+      "kun": ["moto"],
+      "on": ["hon"]
+    },
+    "kana": {
+      "kun": ["もと"],
+      "on": ["ホン"]
+    },
+    "english": ["basis", "book", "this"]
+  },
+  {
+    "kanji": ["毎"],
+    "romaji": {
+      "kun": [],
+      "on": ["mai"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["マイ"]
+    },
+    "english": ["every"]
+  },
+  {
+    "kanji": ["万"],
+    "romaji": {
+      "kun": [],
+      "on": ["man", "ban"]
+    },
+    "kana": {
+      "kun": [],
+      "on": ["マン", "バン"]
+    },
+    "english": ["ten thousand"]
+  },
+  {
+    "kanji": ["名"],
+    "romaji": {
+      "kun": ["na"],
+      "on": ["mei", "nyou"]
+    },
+    "kana": {
+      "kun": ["な"],
+      "on": ["メイ", "ニョウ"]
+    },
+    "english": ["name"]
+  },
+  {
+    "kanji": ["目"],
+    "romaji": {
+      "kun": ["me", "ma"],
+      "on": ["moku"]
+    },
+    "kana": {
+      "kun": ["め", "ま"],
+      "on": ["モク"]
+    },
+    "english": ["eye", "item"]
+  },
+  {
+    "kanji": ["友"],
+    "romaji": {
+      "kun": ["tomo"],
+      "on": ["yuu"]
+    },
+    "kana": {
+      "kun": ["とも"],
+      "on": ["ユウ"]
+    },
+    "english": ["friend"]
+  },
+  {
+    "kanji": ["来", "来る", "来た", "来る", "来す"],
+    "romaji": {
+      "kun": ["ku", "kuru", "kita", "kitaru", "kitasu"],
+      "on": ["rai"]
+    },
+    "kana": {
+      "kun": ["く", "くる", "きた", "きたる", "きたす"],
+      "on": ["ライ"]
+    },
+    "english": ["come"]
+  },
+  {
+    "kanji": ["立", "立つ", "立てる"],
+    "romaji": {
+      "kun": ["ta", "tatsu", "tateru"],
+      "on": ["ritsu", "ryuu"]
+    },
+    "kana": {
+      "kun": ["た", "たつ", "たてる"],
+      "on": ["リツ", "リュウ"]
+    },
+    "english": ["stand", "establish"]
+  },
+  {
+    "kanji": ["六", "六つ"],
+    "romaji": {
+      "kun": ["mu", "mutsu", "muttsu", "mui"],
+      "on": ["roku"]
+    },
+    "kana": {
+      "kun": ["む", "むつ", "むっつ", "むい"],
+      "on": ["ロク"]
+    },
+    "english": ["six"]
+  },
+  {
+    "kanji": ["話", "話す"],
+    "romaji": {
+      "kun": ["hana", "hanasu", "hanashi"],
+      "on": ["wa"]
+    },
+    "kana": {
+      "kun": ["はな", "はなす", "はなし"],
+      "on": ["ワ"]
+    },
+    "english": ["speak", "talk"]
+  }
+]

@@ -1,0 +1,938 @@
+[
+  {
+    "hiragana": "あ",
+    "romaji": {
+      "kun": ["a"]
+    },
+    "kana": {
+      "kun": ["あ"]
+    }
+  },
+  {
+    "hiragana": "い",
+    "romaji": {
+      "kun": ["i"]
+    },
+    "kana": {
+      "kun": ["い"]
+    }
+  },
+  {
+    "hiragana": "う",
+    "romaji": {
+      "kun": ["u"]
+    },
+    "kana": {
+      "kun": ["う"]
+    }
+  },
+  {
+    "hiragana": "え",
+    "romaji": {
+      "kun": ["e"]
+    },
+    "kana": {
+      "kun": ["え"]
+    }
+  },
+  {
+    "hiragana": "お",
+    "romaji": {
+      "kun": ["o"]
+    },
+    "kana": {
+      "kun": ["お"]
+    }
+  },
+  {
+    "hiragana": "か",
+    "romaji": {
+      "kun": ["ka"]
+    },
+    "kana": {
+      "kun": ["か"]
+    }
+  },
+  {
+    "hiragana": "き",
+    "romaji": {
+      "kun": ["ki"]
+    },
+    "kana": {
+      "kun": ["き"]
+    }
+  },
+  {
+    "hiragana": "く",
+    "romaji": {
+      "kun": ["ku"]
+    },
+    "kana": {
+      "kun": ["く"]
+    }
+  },
+  {
+    "hiragana": "け",
+    "romaji": {
+      "kun": ["ke"]
+    },
+    "kana": {
+      "kun": ["け"]
+    }
+  },
+  {
+    "hiragana": "こ",
+    "romaji": {
+      "kun": ["ko"]
+    },
+    "kana": {
+      "kun": ["こ"]
+    }
+  },
+  {
+    "hiragana": "さ",
+    "romaji": {
+      "kun": ["sa"]
+    },
+    "kana": {
+      "kun": ["さ"]
+    }
+  },
+  {
+    "hiragana": "し",
+    "romaji": {
+      "kun": ["shi"]
+    },
+    "kana": {
+      "kun": ["し"]
+    }
+  },
+  {
+    "hiragana": "す",
+    "romaji": {
+      "kun": ["su"]
+    },
+    "kana": {
+      "kun": ["す"]
+    }
+  },
+  {
+    "hiragana": "せ",
+    "romaji": {
+      "kun": ["se"]
+    },
+    "kana": {
+      "kun": ["せ"]
+    }
+  },
+  {
+    "hiragana": "そ",
+    "romaji": {
+      "kun": ["so"]
+    },
+    "kana": {
+      "kun": ["そ"]
+    }
+  },
+  {
+    "hiragana": "た",
+    "romaji": {
+      "kun": ["ta"]
+    },
+    "kana": {
+      "kun": ["た"]
+    }
+  },
+  {
+    "hiragana": "ち",
+    "romaji": {
+      "kun": ["chi"]
+    },
+    "kana": {
+      "kun": ["ち"]
+    }
+  },
+  {
+    "hiragana": "つ",
+    "romaji": {
+      "kun": ["tsu"]
+    },
+    "kana": {
+      "kun": ["つ"]
+    }
+  },
+  {
+    "hiragana": "て",
+    "romaji": {
+      "kun": ["te"]
+    },
+    "kana": {
+      "kun": ["て"]
+    }
+  },
+  {
+    "hiragana": "と",
+    "romaji": {
+      "kun": ["to"]
+    },
+    "kana": {
+      "kun": ["と"]
+    }
+  },
+  {
+    "hiragana": "な",
+    "romaji": {
+      "kun": ["na"]
+    },
+    "kana": {
+      "kun": ["な"]
+    }
+  },
+  {
+    "hiragana": "に",
+    "romaji": {
+      "kun": ["ni"]
+    },
+    "kana": {
+      "kun": ["に"]
+    }
+  },
+  {
+    "hiragana": "ぬ",
+    "romaji": {
+      "kun": ["nu"]
+    },
+    "kana": {
+      "kun": ["ぬ"]
+    }
+  },
+  {
+    "hiragana": "ね",
+    "romaji": {
+      "kun": ["ne"]
+    },
+    "kana": {
+      "kun": ["ね"]
+    }
+  },
+  {
+    "hiragana": "の",
+    "romaji": {
+      "kun": ["no"]
+    },
+    "kana": {
+      "kun": ["の"]
+    }
+  },
+  {
+    "hiragana": "は",
+    "romaji": {
+      "kun": ["ha"]
+    },
+    "kana": {
+      "kun": ["は"]
+    }
+  },
+  {
+    "hiragana": "ひ",
+    "romaji": {
+      "kun": ["hi"]
+    },
+    "kana": {
+      "kun": ["ひ"]
+    }
+  },
+  {
+    "hiragana": "ふ",
+    "romaji": {
+      "kun": ["fu"]
+    },
+    "kana": {
+      "kun": ["ふ"]
+    }
+  },
+  {
+    "hiragana": "へ",
+    "romaji": {
+      "kun": ["he"]
+    },
+    "kana": {
+      "kun": ["へ"]
+    }
+  },
+  {
+    "hiragana": "ほ",
+    "romaji": {
+      "kun": ["ho"]
+    },
+    "kana": {
+      "kun": ["ほ"]
+    }
+  }
+  ,{
+    "hiragana": "ま",
+    "romaji": {
+      "kun": ["ma"]
+    },
+    "kana": {
+      "kun": ["ま"]
+    }
+  },
+  {
+    "hiragana": "み",
+    "romaji": {
+      "kun": ["mi"]
+    },
+    "kana": {
+      "kun": ["み"]
+    }
+  },
+  {
+    "hiragana": "む",
+    "romaji": {
+      "kun": ["mu"]
+    },
+    "kana": {
+      "kun": ["む"]
+    }
+  },
+  {
+    "hiragana": "め",
+    "romaji": {
+      "kun": ["me"]
+    },
+    "kana": {
+      "kun": ["め"]
+    }
+  },
+  {
+    "hiragana": "も",
+    "romaji": {
+      "kun": ["mo"]
+    },
+    "kana": {
+      "kun": ["も"]
+    }
+  },
+  {
+    "hiragana": "や",
+    "romaji": {
+      "kun": ["ya"]
+    },
+    "kana": {
+      "kun": ["や"]
+    }
+  },
+  {
+    "hiragana": "ゆ",
+    "romaji": {
+      "kun": ["yu"]
+    },
+    "kana": {
+      "kun": ["ゆ"]
+    }
+  },
+  {
+    "hiragana": "よ",
+    "romaji": {
+      "kun": ["yo"]
+    },
+    "kana": {
+      "kun": ["よ"]
+    }
+  },
+  {
+    "hiragana": "ら",
+    "romaji": {
+      "kun": ["ra"]
+    },
+    "kana": {
+      "kun": ["ら"]
+    }
+  },
+  {
+    "hiragana": "り",
+    "romaji": {
+      "kun": ["ri"]
+    },
+    "kana": {
+      "kun": ["り"]
+    }
+  },
+  {
+    "hiragana": "る",
+    "romaji": {
+      "kun": ["ru"]
+    },
+    "kana": {
+      "kun": ["る"]
+    }
+  },
+  {
+    "hiragana": "れ",
+    "romaji": {
+      "kun": ["re"]
+    },
+    "kana": {
+      "kun": ["れ"]
+    }
+  },
+  {
+    "hiragana": "ろ",
+    "romaji": {
+      "kun": ["ro"]
+    },
+    "kana": {
+      "kun": ["ろ"]
+    }
+  },
+  {
+    "hiragana": "わ",
+    "romaji": {
+      "kun": ["wa"]
+    },
+    "kana": {
+      "kun": ["わ"]
+    }
+  },
+  {
+    "hiragana": "を",
+    "romaji": {
+      "kun": ["wo"]
+    },
+    "kana": {
+      "kun": ["を"]
+    }
+  },
+  {
+    "hiragana": "ん",
+    "romaji": {
+      "kun": ["n"]
+    },
+    "kana": {
+      "kun": ["ん"]
+    }
+  },
+  {
+    "hiragana": "が",
+    "romaji": {
+      "kun": ["ga"]
+    },
+    "kana": {
+      "kun": ["が"]
+    }
+  },
+  {
+    "hiragana": "ぎ",
+    "romaji": {
+      "kun": ["gi"]
+    },
+    "kana": {
+      "kun": ["ぎ"]
+    }
+  },
+  {
+    "hiragana": "ぐ",
+    "romaji": {
+      "kun": ["gu"]
+    },
+    "kana": {
+      "kun": ["ぐ"]
+    }
+  },
+  {
+    "hiragana": "げ",
+    "romaji": {
+      "kun": ["ge"]
+    },
+    "kana": {
+      "kun": ["げ"]
+    }
+  },
+  {
+    "hiragana": "ご",
+    "romaji": {
+      "kun": ["go"]
+    },
+    "kana": {
+      "kun": ["ご"]
+    }
+  },
+  {
+    "hiragana": "ざ",
+    "romaji": {
+      "kun": ["za"]
+    },
+    "kana": {
+      "kun": ["ざ"]
+    }
+  },
+  {
+    "hiragana": "じ",
+    "romaji": {
+      "kun": ["ji"]
+    },
+    "kana": {
+      "kun": ["じ"]
+    }
+  },
+  {
+    "hiragana": "ず",
+    "romaji": {
+      "kun": ["zu"]
+    },
+    "kana": {
+      "kun": ["ず"]
+    }
+  },
+  {
+    "hiragana": "ぜ",
+    "romaji": {
+      "kun": ["ze"]
+    },
+    "kana": {
+      "kun": ["ぜ"]
+    }
+  },
+  {
+    "hiragana": "ぞ",
+    "romaji": {
+      "kun": ["zo"]
+    },
+    "kana": {
+      "kun": ["ぞ"]
+    }
+  },
+  {
+    "hiragana": "だ",
+    "romaji": {
+      "kun": ["da"]
+    },
+    "kana": {
+      "kun": ["だ"]
+    }
+  },
+  {
+    "hiragana": "ぢ",
+    "romaji": {
+      "kun": ["ji"]
+    },
+    "kana": {
+      "kun": ["ぢ"]
+    }
+  },
+  {
+    "hiragana": "づ",
+    "romaji": {
+      "kun": ["zu"]
+    },
+    "kana": {
+      "kun": ["づ"]
+    }
+  },
+  {
+    "hiragana": "で",
+    "romaji": {
+      "kun": ["de"]
+    },
+    "kana": {
+      "kun": ["で"]
+    }
+  },
+  {
+    "hiragana": "ど",
+    "romaji": {
+      "kun": ["do"]
+    },
+    "kana": {
+      "kun": ["ど"]
+    }
+  },
+  {
+    "hiragana": "ば",
+    "romaji": {
+      "kun": ["ba"]
+    },
+    "kana": {
+      "kun": ["ば"]
+    }
+  },
+  {
+    "hiragana": "び",
+    "romaji": {
+      "kun": ["bi"]
+    },
+    "kana": {
+      "kun": ["び"]
+    }
+  },
+  {
+    "hiragana": "ぶ",
+    "romaji": {
+      "kun": ["bu"]
+    },
+    "kana": {
+      "kun": ["ぶ"]
+    }
+  },
+  {
+    "hiragana": "べ",
+    "romaji": {
+      "kun": ["be"]
+    },
+    "kana": {
+      "kun": ["べ"]
+    }
+  },
+  {
+    "hiragana": "ぼ",
+    "romaji": {
+      "kun": ["bo"]
+    },
+    "kana": {
+      "kun": ["ぼ"]
+    }
+  },
+  {
+    "hiragana": "ぱ",
+    "romaji": {
+      "kun": ["pa"]
+    },
+    "kana": {
+      "kun": ["ぱ"]
+    }
+  },
+  {
+    "hiragana": "ぴ",
+    "romaji": {
+      "kun": ["pi"]
+    },
+    "kana": {
+      "kun": ["ぴ"]
+    }
+  },
+  {
+    "hiragana": "ぷ",
+    "romaji": {
+      "kun": ["pu"]
+    },
+    "kana": {
+      "kun": ["ぷ"]
+    }
+  },
+  {
+    "hiragana": "ぺ",
+    "romaji": {
+      "kun": ["pe"]
+    },
+    "kana": {
+      "kun": ["ぺ"]
+    }
+  },
+  {
+    "hiragana": "ぽ",
+    "romaji": {
+      "kun": ["po"]
+    },
+    "kana": {
+      "kun": ["ぽ"]
+    }
+  },
+  {
+    "hiragana": "きゃ",
+    "romaji": {
+      "kun": ["kya"]
+    },
+    "kana": {
+      "kun": ["きゃ"]
+    }
+  },
+  {
+    "hiragana": "きゅ",
+    "romaji": {
+      "kun": ["kyu"]
+    },
+    "kana": {
+      "kun": ["きゅ"]
+    }
+  },
+  {
+    "hiragana": "きょ",
+    "romaji": {
+      "kun": ["kyo"]
+    },
+    "kana": {
+      "kun": ["きょ"]
+    }
+  },
+  {
+    "hiragana": "しゃ",
+    "romaji": {
+      "kun": ["sha"]
+    },
+    "kana": {
+      "kun": ["しゃ"]
+    }
+  },
+  {
+    "hiragana": "しゅ",
+    "romaji": {
+      "kun": ["shu"]
+    },
+    "kana": {
+      "kun": ["しゅ"]
+    }
+  },
+  {
+    "hiragana": "しょ",
+    "romaji": {
+      "kun": ["sho"]
+    },
+    "kana": {
+      "kun": ["しょ"]
+    }
+  },
+  {
+    "hiragana": "ちゃ",
+    "romaji": {
+      "kun": ["cha"]
+    },
+    "kana": {
+      "kun": ["ちゃ"]
+    }
+  },
+  {
+    "hiragana": "ちゅ",
+    "romaji": {
+      "kun": ["chu"]
+    },
+    "kana": {
+      "kun": ["ちゅ"]
+    }
+  },
+  {
+    "hiragana": "ちょ",
+    "romaji": {
+      "kun": ["cho"]
+    },
+    "kana": {
+      "kun": ["ちょ"]
+    }
+  },
+  {
+    "hiragana": "にゃ",
+    "romaji": {
+      "kun": ["nya"]
+    },
+    "kana": {
+      "kun": ["にゃ"]
+    }
+  },
+  {
+    "hiragana": "にゅ",
+    "romaji": {
+      "kun": ["nyu"]
+    },
+    "kana": {
+      "kun": ["にゅ"]
+    }
+  },
+  {
+    "hiragana": "にょ",
+    "romaji": {
+      "kun": ["nyo"]
+    },
+    "kana": {
+      "kun": ["にょ"]
+    }
+  },
+  {
+    "hiragana": "ひゃ",
+    "romaji": {
+      "kun": ["hya"]
+    },
+    "kana": {
+      "kun": ["ひゃ"]
+    }
+  },
+  {
+    "hiragana": "ひゅ",
+    "romaji": {
+      "kun": ["hyu"]
+    },
+    "kana": {
+      "kun": ["ひゅ"]
+    }
+  },
+  {
+    "hiragana": "ひょ",
+    "romaji": {
+      "kun": ["hyo"]
+    },
+    "kana": {
+      "kun": ["ひょ"]
+    }
+  },
+  {
+    "hiragana": "みゃ",
+    "romaji": {
+      "kun": ["mya"]
+    },
+    "kana": {
+      "kun": ["みゃ"]
+    }
+  },
+  {
+    "hiragana": "みゅ",
+    "romaji": {
+      "kun": ["myu"]
+    },
+    "kana": {
+      "kun": ["みゅ"]
+    }
+  },
+  {
+    "hiragana": "みょ",
+    "romaji": {
+      "kun": ["myo"]
+    },
+    "kana": {
+      "kun": ["みょ"]
+    }
+  },
+  {
+    "hiragana": "りゃ",
+    "romaji": {
+      "kun": ["rya"]
+    },
+    "kana": {
+      "kun": ["りゃ"]
+    }
+  },
+  {
+    "hiragana": "りゅ",
+    "romaji": {
+      "kun": ["ryu"]
+    },
+    "kana": {
+      "kun": ["りゅ"]
+    }
+  },
+  {
+    "hiragana": "りょ",
+    "romaji": {
+      "kun": ["ryo"]
+    },
+    "kana": {
+      "kun": ["りょ"]
+    }
+  },
+  {
+    "hiragana": "ぎゃ",
+    "romaji": {
+      "kun": ["gya"]
+    },
+    "kana": {
+      "kun": ["ぎゃ"]
+    }
+  },
+  {
+    "hiragana": "ぎゅ",
+    "romaji": {
+      "kun": ["gyu"]
+    },
+    "kana": {
+      "kun": ["ぎゅ"]
+    }
+  },
+  {
+    "hiragana": "ぎょ",
+    "romaji": {
+      "kun": ["gyo"]
+    },
+    "kana": {
+      "kun": ["ぎょ"]
+    }
+  },
+  {
+    "hiragana": "じゃ",
+    "romaji": {
+      "kun": ["ja"]
+    },
+    "kana": {
+      "kun": ["じゃ"]
+    }
+  },
+  {
+    "hiragana": "じゅ",
+    "romaji": {
+      "kun": ["ju"]
+    },
+    "kana": {
+      "kun": ["じゅ"]
+    }
+  },
+  {
+    "hiragana": "じょ",
+    "romaji": {
+      "kun": ["jo"]
+    },
+    "kana": {
+      "kun": ["じょ"]
+    }
+  },
+  {
+    "hiragana": "びゃ",
+    "romaji": {
+      "kun": ["bya"]
+    },
+    "kana": {
+      "kun": ["びゃ"]
+    }
+  },
+  {
+    "hiragana": "びゅ",
+    "romaji": {
+      "kun": ["byu"]
+    },
+    "kana": {
+      "kun": ["びゅ"]
+    }
+  },
+  {
+    "hiragana": "びょ",
+    "romaji": {
+      "kun": ["byo"]
+    },
+    "kana": {
+      "kun": ["びょ"]
+    }
+  },
+  {
+    "hiragana": "ぴゃ",
+    "romaji": {
+      "kun": ["pya"]
+    },
+    "kana": {
+      "kun": ["ぴゃ"]
+    }
+  },
+  {
+    "hiragana": "ぴゅ",
+    "romaji": {
+      "kun": ["pyu"]
+    },
+    "kana": {
+      "kun": ["ぴゅ"]
+    }
+  },
+  {
+    "hiragana": "ぴょ",
+    "romaji": {
+      "kun": ["pyo"]
+    },
+    "kana": {
+      "kun": ["ぴょ"]
+    }
+  }
+]
