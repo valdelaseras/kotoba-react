@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import LinkList from "../../atomic/organisms/LinkList";
 
 const brandingData = { href: "https://weird.io", title: "Lobby", branding: "言葉" };
@@ -19,11 +18,30 @@ const Branding = props =>
     </div>;
 
 export class Nav extends Component {
+    constructor( props ){
+        super( props );
+
+        this.state = {
+            isMobileDevice: this.isMobileDevice()
+        };
+
+        window.addEventListener('resize', () => {
+            this.setState({
+                isMobileDevice: this.isMobileDevice()
+            });
+        });
+    }
+
+    isMobileDevice() {
+        return window.innerWidth < 1024;
+    }
+
     render() {
-        return (
-            <div className="nav">
-                <Branding href={ brandingData.href } title={ brandingData.title } branding={ brandingData.branding }/>
-                <LinkList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>
+        const isMobileDevice = this.state.isMobileDevice;
+        let menu;
+
+        if ( isMobileDevice ){
+            menu =
                 <div className="mobile-menu mobile-only">
                     <input type="checkbox" id="nav-checkbox" className="nav-checkbox"/>
                     <label htmlFor="nav-checkbox" className="nav-toggle">
@@ -32,7 +50,15 @@ export class Nav extends Component {
                     <div className="slide-in-menu">
                         <LinkList class={ 'mobile-nav-list' } children={ linkData }/>
                     </div>
-                </div>
+                </div>;
+        } else {
+            menu = <LinkList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>;
+        }
+
+        return (
+            <div className="nav">
+                <Branding href={ brandingData.href } title={ brandingData.title } branding={ brandingData.branding }/>
+                { menu }
             </div>
         );
     }
