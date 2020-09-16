@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
+
 import Button from '../../components/atomic/atoms/Button';
-import Input from '../../components/atomic/atoms/Input';
 import Form from "../atomic/organisms/Form";
-import FormGroup from "../atomic/molecules/FormGroup";
+
+const formGroup = [
+    {
+        id: "user-info",
+        inputs: [
+            {
+                id: "username-input",
+                name: "login",
+                type: "text",
+                placeholder: "Enter your username",
+                required: ""
+            }
+        ]
+    }
+];
 
 export default class Landing extends Component {
     titleClass = "font-xxl";
@@ -24,9 +38,13 @@ export default class Landing extends Component {
                                 Memorize Japanese characters and vocabulary. Use the default exams, generate new exams
                                 based on your results or create a custom exam yourself!
                             </p>
-                            {/*{ LoginForm }*/}
 
-                            <Form id={ 'login-form' } children={ formGroups }/>
+                            <Form id={ 'login-form' } children={ formGroup }/>
+                            {/*TODO: this button belongs inside this ^ form > formgroup */}
+                            <Button type={ 'submit' }
+                                    title={ 'Submit' }
+                                    class={ 'btn-primary btn-main' }
+                                    disabled="disabled"/>
                         </div>
                     </div>
                 </div>
@@ -34,37 +52,3 @@ export default class Landing extends Component {
         )
     }
 }
-
-const formGroups = [
-    {
-        id: "user-info",
-        inputs: [
-            {
-                id: "username-input",
-                name: "login",
-                type: "text",
-                placeholder: "Enter your username",
-                required: ""
-            }
-        ]
-    }
-];
-
-// const LoginForm =
-//         <form id="login-form">
-//             <div className="form-group">
-//                 <Input id={ 'username-input'}
-//                        name={ 'username' }
-//                        type={ 'text' }
-//                        placeholder={ 'Enter your username' }
-//                        autoComplete="off"
-//                        minLength="1"
-//                        autoFocus
-//                        required="required"/>
-//                 <Button type={ 'submit' }
-//                         title={ 'Submit' }
-//                         class={ 'btn-primary btn-main' }
-//                         disabled="disabled"/>
-//             </div>
-//         </form>;
-

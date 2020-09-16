@@ -14,6 +14,5 @@ const FormGroup = props =>
 
 export default FormGroup;
 
-// TODO: works but rather useless as it is now. I could however use these
-//  form groups to build up the wizard forms for example ( form group acting
-//  as a step and using it to increment/decrement progress counter etc. )
+// TODO: 'Any' kind of element should be possible to use here.
+//  A simple paragraph, buttons, checkboxes, whatever.
