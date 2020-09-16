@@ -17,7 +17,7 @@ const Branding = props =>
         </a>
     </div>;
 
-export class Nav extends Component {
+export default class Nav extends Component {
     constructor( props ){
         super( props );
 
@@ -63,5 +63,3 @@ export class Nav extends Component {
         );
     }
 }
-
-export default Nav;

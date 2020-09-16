@@ -14,7 +14,7 @@ const iconLinkData = [
     { id: "3", anchorClass: "icon-link", href: "https://weird.io", title: "Weird", src:"src/assets/logos/weird.svg", imgClass: "invert-on-dark-theme" },
 ];
 
-export class Footer extends Component {
+export default class Footer extends Component {
     render() {
         return (
             <div className="footer-content">
@@ -41,5 +41,3 @@ export class Footer extends Component {
         );
     }
 }
-
-export default Footer;

@@ -4,7 +4,7 @@ import './styles/css/index.css';
 class App extends Component {
   render() {
     return (
-      <div className="App theme-settings helvetica normal dark-theme">
+      <div className="App theme-settings helvetica normal light-theme">
           <main>
               <section className="section">
                   <div className="section-content">
