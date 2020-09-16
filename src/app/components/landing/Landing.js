@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Button from '../../components/atomic/atoms/Button';
 import Form from "../atomic/organisms/Form";
 
 const formGroup = [
@@ -20,6 +19,8 @@ const formGroup = [
 
 export default class Landing extends Component {
     titleClass = "font-xxl";
+    title = "Kotoba";
+    subtitle = "Makes cramming easier";
 
     render() {
         return (
@@ -27,8 +28,8 @@ export default class Landing extends Component {
                 <div className="column">
                     <div className="column">
                         <div className="content">
-                            <h1 className={ this.titleClass }>Kotoba</h1>
-                            <h2>Makes cramming easier</h2>
+                            <h1 className={ this.titleClass }>{ this.title }</h1>
+                            <h2>{ this.subtitle }</h2>
                         </div>
                     </div>
 
@@ -39,12 +40,12 @@ export default class Landing extends Component {
                                 based on your results or create a custom exam yourself!
                             </p>
 
-                            <Form id={ 'login-form' } children={ formGroup }/>
-                            {/*TODO: this button belongs inside this ^ form > formgroup */}
-                            <Button type={ 'submit' }
-                                    title={ 'Submit' }
-                                    class={ 'btn-primary btn-main' }
-                                    disabled="disabled"/>
+                            <Form id={ 'login-form' }
+                                  children={ formGroup }
+                                  btnType={ 'submit' }
+                                  btnTitle={ 'Submit' }
+                                  btnClass={ 'btn-primary btn-main' }
+                                  btnDisabled={ 'disabled '} />
                         </div>
                     </div>
                 </div>

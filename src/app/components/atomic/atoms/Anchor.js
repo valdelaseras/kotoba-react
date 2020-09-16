@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Link = props =>
+const Anchor = props =>
     <a title={ props.title } href={ props.href }>
         { props.title }
     </a>;
 
-export default Link;
+export default Anchor;

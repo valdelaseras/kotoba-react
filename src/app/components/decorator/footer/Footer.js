@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import LinkList from '../../atomic/organisms/LinkList';
-import ImageLinkList from '../../atomic/organisms/ImageLinkList';
+
+import AnchorList from '../../atomic/organisms/AnchorList';
+import ImageAnchorList from '../../atomic/organisms/ImageAnchorList';
+
+import githubLogo from '../../../../assets/logos/github.svg';
+import linkedinLogo from '../../../../assets/logos/linkedin.svg';
+import weirdLogo from '../../../../assets/logos/weird.svg';
 
 const linkData = [
     { id: "1", href: "https://weird.io", title: "About" },
@@ -9,9 +14,9 @@ const linkData = [
     { id: "4", href: "https://weird.io", title: "Report issues" }
 ];
 const iconLinkData = [
-    { id: "1", anchorClass: "icon-link", href: "https://weird.io", title: "Github", src:"src/assets/logos/github.svg", imgClass: "invert-on-dark-theme" },
-    { id: "2", anchorClass: "icon-link", href: "https://weird.io", title: "Linkedin", src:"src/assets/logos/linkedin.svg", imgClass: "invert-on-dark-theme" },
-    { id: "3", anchorClass: "icon-link", href: "https://weird.io", title: "Weird", src:"src/assets/logos/weird.svg", imgClass: "invert-on-dark-theme" },
+    { id: "1", anchorClass: "icon-link", href: "https://weird.io", title: "Github", src: githubLogo, imgClass: "invert-on-dark-theme" },
+    { id: "2", anchorClass: "icon-link", href: "https://weird.io", title: "Linkedin", src: linkedinLogo, imgClass: "invert-on-dark-theme" },
+    { id: "3", anchorClass: "icon-link", href: "https://weird.io", title: "Weird", src: weirdLogo, imgClass: "invert-on-dark-theme" },
 ];
 
 export default class Footer extends Component {
@@ -22,17 +27,17 @@ export default class Footer extends Component {
                     <div className="column">
                         <div className="column three">
                             <div className="content">
-                                <LinkList children={ linkData.slice(0, 2) }/>
+                                <AnchorList children={ linkData.slice(0, 2) }/>
                             </div>
                         </div>
                         <div className="column three">
                             <div className="content">
-                                <LinkList children={ linkData.slice(2, 4) }/>
+                                <AnchorList children={ linkData.slice(2, 4) }/>
                             </div>
                         </div>
                         <div className="column three">
                             <div className="content">
-                                <ImageLinkList children={ iconLinkData }/>
+                                <ImageAnchorList class="icon-list" children={ iconLinkData }/>
                             </div>
                         </div>
                     </div>

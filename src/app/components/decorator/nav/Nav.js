@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LinkList from "../../atomic/organisms/LinkList";
+import AnchorList from "../../atomic/organisms/AnchorList";
 
 const brandingData = { href: "https://weird.io", title: "Lobby", branding: "言葉" };
 const linkData = [
@@ -48,11 +48,11 @@ export default class Nav extends Component {
                         <span/><span/><span/>
                     </label>
                     <div className="slide-in-menu">
-                        <LinkList class={ 'mobile-nav-list' } children={ linkData }/>
+                        <AnchorList class={ 'mobile-nav-list' } children={ linkData }/>
                     </div>
                 </div>;
         } else {
-            menu = <LinkList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>;
+            menu = <AnchorList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>;
         }
 
         return (

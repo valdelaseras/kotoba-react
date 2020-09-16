@@ -1,5 +1,6 @@
 import React from 'react';
 import FormGroup from '../../atomic/molecules/FormGroup';
+import Button from '../../atomic/atoms/Button';
 
 const Form = props =>
             <form id={ props.id }>
@@ -9,6 +10,9 @@ const Form = props =>
                                title={ child.title }
                                children={ child.inputs }/>)
                 }
+                <Button type={ props.btnType }
+                        title={ props.btnTitle }
+                        class={ props.btnClass }/>
             </form>;
 
 export default Form;
