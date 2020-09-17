@@ -4,6 +4,8 @@ import Form from "../../atomic/organisms/Form";
 import Content from '../../layout/Content';
 import Section from "../../layout/Section";
 
+import './landing.css';
+
 export default class Landing extends Component {
     render() {
         return (
@@ -18,8 +20,7 @@ export default class Landing extends Component {
                           children={ formGroup }
                           btnType={ 'submit' }
                           btnTitle={ 'Submit' }
-                          btnClass={ 'btn-primary btn-main' }
-                          btnDisabled={ 'disabled '} />
+                          btnClass={ 'btn-primary btn-main' }/>
                 </Content>
             </Section>
         )

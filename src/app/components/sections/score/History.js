@@ -10,7 +10,7 @@ export default class History extends Component {
         return (
             <Section id={'score-history'} title={'Score history'}>
                 <Content colSize={'column'}>
-                    <Fieldset title={'Your exams'}>
+                    <Fieldset title={'Your exams'} class={'question'}>
                         <AnchorList children={ examHistory }/>
                     </Fieldset>
                 </Content>
