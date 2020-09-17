@@ -1,10 +1,10 @@
 import React from 'react';
-import Input from "../atoms/Input";
+import Input from '../../atomic/atoms/Input'
 
 const FormGroup = props =>
     <div className="form-group" id={ props.id } >
-        { props.title ? <h2>props.title</h2> : null }
-        { props.children.map(child=>
+        { props.title ? <h2> { props.title } </h2> : null }
+        { props.children.map(child =>
             <Input key={ child.id }
                    id={ child.id }
                    title={ child.title }

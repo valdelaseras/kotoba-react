@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageAnchor from '../atoms/ImageAnchor';
 
-const ImageLinkList = props =>
+const ImageAnchorListItem = props =>
     <li>
         <ImageAnchor anchorClass={ props.anchorClass }
                      href={ props.href }
@@ -11,4 +11,4 @@ const ImageLinkList = props =>
                      imgClass={ props.imgClass }/>
     </li>;
 
-export default ImageLinkList;
+export default ImageAnchorListItem;
