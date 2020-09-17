@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import AnchorList from '../../atomic/organisms/AnchorList';
 import ImageAnchorList from '../../atomic/organisms/ImageAnchorList';
+import Content from '../../layout/Content';
+import Row from '../../layout/Row';
 
 import githubLogo from '../../../../assets/logos/github.svg';
 import linkedinLogo from '../../../../assets/logos/linkedin.svg';
@@ -24,23 +26,17 @@ export default class Footer extends Component {
         return (
             <div className="footer-content">
                 <div className="grid">
-                    <div className="column">
-                        <div className="column three">
-                            <div className="content">
-                                <AnchorList children={ linkData.slice(0, 2) }/>
-                            </div>
-                        </div>
-                        <div className="column three">
-                            <div className="content">
-                                <AnchorList children={ linkData.slice(2, 4) }/>
-                            </div>
-                        </div>
-                        <div className="column three">
-                            <div className="content">
-                                <ImageAnchorList class="icon-list" children={ iconLinkData }/>
-                            </div>
-                        </div>
-                    </div>
+                    <Row colSize={'column'}>
+                        <Content colSize={'column three'}>
+                            <AnchorList children={ linkData.slice(0, 2) }/>
+                        </Content>
+                        <Content colSize={'column three'}>
+                            <AnchorList children={ linkData.slice(2, 4) }/>
+                        </Content>
+                        <Content colSize={'column three'}>
+                            <ImageAnchorList class="icon-list" children={ iconLinkData }/>
+                        </Content>
+                    </Row>
                 </div>
             </div>
         );

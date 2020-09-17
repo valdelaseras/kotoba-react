@@ -4,6 +4,9 @@ import './lobby.css';
 import ButtonList from '../atomic/organisms/ButtonList';
 import Select from "../atomic/atoms/Select";
 import Fieldset from '../atomic/organisms/Fieldset';
+import Content from '../layout/Content';
+import Row from '../layout/Row';
+import Section from "../layout/Section";
 
 const kanaExams = [
     { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
@@ -32,37 +35,24 @@ const repeatSelectOptions = [
 export default class Lobby extends Component {
     render() {
         return (
-            <div id="lobby">
-                <div className="column">
-                    <div className="column">
-                        <div className="content">
-                            <h1>Lobby</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="column">
-                    <div className="column two">
-                        <div className="column">
-                            <div className="content">
-                                <Fieldset class={'reduce-fs-padding'} title={ 'Kana' }>
-                                    <ButtonList class={ 'vertical' }
-                                                children={ kanaExams }/>
-                                </Fieldset>
-                            </div>
-                            <div className="column">
-                                <div className="content">
-                                    <Fieldset class={'reduce-fs-padding'} title={ 'Kanji' }>
-                                        <ButtonList class={ 'vertical' }
-                                                    children={ kanjiExams }/>
-                                    </Fieldset>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="column two">
-                        <div className="content">
+            <Section id={'lobby'} title={'Lobby'}>
+                <Row colSize={'column'}>
+                    <Row colSize={'column two'}>
+                        <Content colSize={'column'}>
+                            <Fieldset class={'reduce-fs-padding'} title={ 'Kana' }>
+                                <ButtonList class={ 'vertical' }
+                                            children={ kanaExams }/>
+                            </Fieldset>
+                        </Content>
+                        <Content colSize={'column'}>
+                            <Fieldset class={'reduce-fs-padding'} title={ 'Kanji' }>
+                                <ButtonList class={ 'vertical' }
+                                            children={ kanjiExams }/>
+                            </Fieldset>
+                        </Content>
+                    </Row>
+                    <Row colSize={'column two'}>
+                        <Content colSize={'column'}>
                             <div className="selected-exam">
                                 <form>
                                     <fieldset>
@@ -72,7 +62,7 @@ export default class Lobby extends Component {
                                             </h2>
                                         </legend>
                                         <small className="highlight">
-                                         {/* selected exam description*/}
+                                            {/* selected exam description*/}
                                         </small>
                                         <p>
                                             The settings below only affect the current exam.
@@ -87,8 +77,8 @@ export default class Lobby extends Component {
 
                                             {/*<label htmlFor="retry-select">Allowed retries per question</label>*/}
                                             {/*<select id="retry-select"*/}
-                                                    {/*name="retry-setting">*/}
-                                                {/*/!*options*!/*/}
+                                            {/*name="retry-setting">*/}
+                                            {/*/!*options*!/*/}
                                             {/*</select>*/}
                                         </div>
 
@@ -109,7 +99,7 @@ export default class Lobby extends Component {
                                                     title={ 'Method' }
                                                     id={ 'method-select' }
                                                     children={ repeatSelectOptions }/>
-                                                    {/*TODO: obv replace the children here and all these select options must be inherited from /settings anyway*/}
+                                            {/*TODO: obv replace the children here and all these select options must be inherited from /settings anyway*/}
                                         </div>
                                         <button type="submit"
                                                 title="Start exam"
@@ -117,10 +107,10 @@ export default class Lobby extends Component {
                                     </fieldset>
                                 </form>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Content>
+                    </Row>
+                </Row>
+            </Section>
         )
     }
 }
