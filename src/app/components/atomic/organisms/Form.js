@@ -17,6 +17,5 @@ const Form = props =>
 
 export default Form;
 
-// TODO: add fieldset + legend ( title )( as optional 'wrapper' )
-// TODO: also add optional title to form itself ( not only for a form group)
-// Note: By adding a fsTitle to the Form, it indicates the author wants a fieldset form
+// TODO: add fieldset + legend ( title )( as optional 'wrapper', children will then be child.fields? )
+// TODO: also maybe add optional title to form itself ( not only for a form group)
