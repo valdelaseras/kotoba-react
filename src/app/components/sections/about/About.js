@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Row from '../layout/Row';
-import Content from '../layout/Content';
-import Fieldset from "../atomic/organisms/Fieldset";
-import Section from "../layout/Section";
+import Row from '../../layout/Row';
+import Content from '../../layout/Content';
+import Fieldset from "../../atomic/organisms/Fieldset";
+import Section from "../../layout/Section";
 
 export default class About extends Component {
     render() {

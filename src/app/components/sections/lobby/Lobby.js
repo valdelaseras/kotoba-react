@@ -1,36 +1,12 @@
 import React, { Component } from 'react';
 import './lobby.css';
 
-import ButtonList from '../atomic/organisms/ButtonList';
-import Select from "../atomic/atoms/Select";
-import Fieldset from '../atomic/organisms/Fieldset';
-import Content from '../layout/Content';
-import Row from '../layout/Row';
-import Section from "../layout/Section";
-
-const kanaExams = [
-    { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
-    { id: 'katakana', class: 'btn-secondary', title: 'Katakana' },
-    { id: 'mixed-kana', class: 'btn-secondary', title: 'All kana' },
-];
-const kanjiExams = [
-    { id: 'kanjin5', class: 'btn-secondary', title: 'Kanji N5' },
-    { id: 'kanjin4', class: 'btn-secondary', title: 'Kanji N4' },
-    { id: 'kanjin3', class: 'btn-secondary', title: 'Kanji N3' },
-    { id: 'kanjin2', class: 'btn-secondary', title: 'Kanji N2' },
-    { id: 'kanjin1', class: 'btn-secondary', title: 'Kanji N1' },
-    { id: 'mixed-kanji', class: 'btn-secondary', title: 'All kanji' },
-];
-const retrySelectOptions = [
-    { id: '1', title: 'None' },
-    { id: '2', title: 'Once' },
-    { id: '3', title: 'Twice' },
-    { id: '4', title: 'Infinite' }
-];
-const repeatSelectOptions = [
-    { id: '1', title: 'Repeat until answered correctly' },
-    { id: '2', title: 'Never repeat' },
-];
+import ButtonList from '../../atomic/organisms/ButtonList';
+import Select from "../../atomic/atoms/Select";
+import Fieldset from '../../atomic/organisms/Fieldset';
+import Content from '../../layout/Content';
+import Row from '../../layout/Row';
+import Section from "../../layout/Section";
 
 export default class Lobby extends Component {
     render() {
@@ -114,4 +90,28 @@ export default class Lobby extends Component {
         )
     }
 }
+
+const kanaExams = [
+    { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
+    { id: 'katakana', class: 'btn-secondary', title: 'Katakana' },
+    { id: 'mixed-kana', class: 'btn-secondary', title: 'All kana' },
+];
+const kanjiExams = [
+    { id: 'kanjin5', class: 'btn-secondary', title: 'Kanji N5' },
+    { id: 'kanjin4', class: 'btn-secondary', title: 'Kanji N4' },
+    { id: 'kanjin3', class: 'btn-secondary', title: 'Kanji N3' },
+    { id: 'kanjin2', class: 'btn-secondary', title: 'Kanji N2' },
+    { id: 'kanjin1', class: 'btn-secondary', title: 'Kanji N1' },
+    { id: 'mixed-kanji', class: 'btn-secondary', title: 'All kanji' },
+];
+const retrySelectOptions = [
+    { id: '1', title: 'None' },
+    { id: '2', title: 'Once' },
+    { id: '3', title: 'Twice' },
+    { id: '4', title: 'Infinite' }
+];
+const repeatSelectOptions = [
+    { id: '1', title: 'Repeat until answered correctly' },
+    { id: '2', title: 'Never repeat' },
+];
 
