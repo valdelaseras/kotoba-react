@@ -1,0 +1,38 @@
+.exam-fs legend h2 {
+    font-size: 5rem;
+    color: #222222;
+}
+
+input {
+    font-size: .8rem;
+    background-color: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid var(--secondary-color);
+    width: 100%;
+}
+
+.stats > li {
+    margin-bottom: 2rem;
+}
+
+.stats > li:last-child {
+    margin-bottom: 0;
+}
+
+li > small {
+    display: block;
+}
+
+.incorrect-answer {
+    text-align: right;
+}
+
+.info-bar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}

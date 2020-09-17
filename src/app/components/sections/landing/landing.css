@@ -1,0 +1,16 @@
+input {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    width: 100%;
+}
+
+input:hover,
+input:focus,
+input:focus-within,
+input:active {
+    border-bottom: 1px solid var(--quaternary-color);
+}

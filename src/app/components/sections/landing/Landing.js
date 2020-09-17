@@ -1,24 +1,10 @@
 import React, { Component } from 'react';
 
-import Form from "../atomic/organisms/Form";
-import Row from '../layout/Row';
-import Content from '../layout/Content';
-import Section from "../layout/Section";
+import Form from "../../atomic/organisms/Form";
+import Content from '../../layout/Content';
+import Section from "../../layout/Section";
 
-const formGroup = [
-    {
-        id: "user-info",
-        inputs: [
-            {
-                id: "username-input",
-                name: "login",
-                type: "text",
-                placeholder: "Enter your username",
-                required: ""
-            }
-        ]
-    }
-];
+import './landing.css';
 
 export default class Landing extends Component {
     render() {
@@ -34,10 +20,24 @@ export default class Landing extends Component {
                           children={ formGroup }
                           btnType={ 'submit' }
                           btnTitle={ 'Submit' }
-                          btnClass={ 'btn-primary btn-main' }
-                          btnDisabled={ 'disabled '} />
+                          btnClass={ 'btn-primary btn-main' }/>
                 </Content>
             </Section>
         )
     }
 }
+
+const formGroup = [
+    {
+        id: "user-info",
+        inputs: [
+            {
+                id: "username-input",
+                name: "login",
+                type: "text",
+                placeholder: "Enter your username",
+                required: ""
+            }
+        ]
+    }
+];
