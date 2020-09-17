@@ -1,8 +1,8 @@
 import React from 'react';
-import ImageLinkListItem from '../../atomic/molecules/ImageLinkListItem';
+import ImageLinkListItem from '../molecules/ImageAnchorListItem';
 
-const ImageLinkList = props =>
-    <ul>
+const ImageAnchorList = props =>
+    <ul className={ props.class }>
         { props.children.map( child =>
             <ImageLinkListItem key={ child.id }
                                anchorClass={ child.anchorClass }
@@ -14,4 +14,4 @@ const ImageLinkList = props =>
         }
     </ul>;
 
-export default ImageLinkList;
+export default ImageAnchorList;

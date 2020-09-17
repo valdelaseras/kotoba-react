@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Login extends Component {
+export default class Login extends Component {
     render() {
         return (
             <form id="login-form">
@@ -16,4 +16,4 @@ export class Login extends Component {
     }
 }
 
-export default Login;
+// TODO: using Form / FormGroup right now for login form. Eventually create a nice reusable component from this with a password input, validation etc.

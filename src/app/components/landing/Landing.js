@@ -1,7 +1,26 @@
 import React, { Component } from 'react';
 
-export class Landing extends Component {
+import Form from "../atomic/organisms/Form";
+
+const formGroup = [
+    {
+        id: "user-info",
+        inputs: [
+            {
+                id: "username-input",
+                name: "login",
+                type: "text",
+                placeholder: "Enter your username",
+                required: ""
+            }
+        ]
+    }
+];
+
+export default class Landing extends Component {
     titleClass = "font-xxl";
+    title = "Kotoba";
+    subtitle = "Makes cramming easier";
 
     render() {
         return (
@@ -9,8 +28,8 @@ export class Landing extends Component {
                 <div className="column">
                     <div className="column">
                         <div className="content">
-                            <h1 className={ this.titleClass }>Kotoba</h1>
-                            <h2>Makes cramming easier</h2>
+                            <h1 className={ this.titleClass }>{ this.title }</h1>
+                            <h2>{ this.subtitle }</h2>
                         </div>
                     </div>
 
@@ -20,7 +39,13 @@ export class Landing extends Component {
                                 Memorize Japanese characters and vocabulary. Use the default exams, generate new exams
                                 based on your results or create a custom exam yourself!
                             </p>
-                            { LoginForm }
+
+                            <Form id={ 'login-form' }
+                                  children={ formGroup }
+                                  btnType={ 'submit' }
+                                  btnTitle={ 'Submit' }
+                                  btnClass={ 'btn-primary btn-main' }
+                                  btnDisabled={ 'disabled '} />
                         </div>
                     </div>
                 </div>
@@ -28,22 +53,3 @@ export class Landing extends Component {
         )
     }
 }
-
-const LoginForm =
-        <form id="login-form">
-            <div className="form-group">
-                <label htmlFor="username-input">
-                </label>
-                <input name="username"
-                       id="username-input"
-                       type="text"
-                       placeholder="Your username"
-                       autoComplete="off"
-                       minLength="1"
-                       autoFocus
-                       required/>
-                <button className="btn btn-primary btn-main" type="submit" disabled>Submit</button>
-            </div>
-        </form>;
-
-export default Landing;

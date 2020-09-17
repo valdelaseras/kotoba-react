@@ -1,0 +1,24 @@
+.selected-exam header {
+    margin-bottom: 1rem;
+}
+
+button[type=submit] {
+    margin: 0;
+}
+
+.reduce-fs-padding {
+    padding: 1rem 2rem;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-group > li,
+.btn-group.vertical > li {
+    flex: 1 1 33vw;
+    margin: .25rem;
+    max-width: calc(50% - .5rem);
+}

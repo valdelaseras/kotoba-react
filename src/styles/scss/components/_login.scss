@@ -3,10 +3,6 @@
     flex-direction: column;
 }
 
-label {
-    margin-bottom: 2rem;
-}
-
 input {
     background-color: transparent;
     border-top: none;
@@ -14,7 +10,6 @@ input {
     border-right: none;
     border-bottom: 1px solid var(--secondary-color);
     font-size: 1rem;
-    margin-bottom: 2rem;
     width: 100%;
 }
 
