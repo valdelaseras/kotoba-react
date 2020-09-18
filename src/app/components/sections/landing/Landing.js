@@ -6,6 +6,22 @@ import Section from "../../layout/Section";
 
 import './landing.css';
 
+const formGroup = [
+    {
+        id: "user-info",
+        inputs: [
+            {
+                id: "username-input",
+                name: "login",
+                type: "text",
+                placeholder: "Enter your username",
+                minLength: '10',
+                required: "required"
+            }
+        ]
+    }
+];
+
 export default class Landing extends Component {
     render() {
         return (
@@ -16,7 +32,8 @@ export default class Landing extends Component {
                         based on your results or create a custom exam yourself!
                     </p>
 
-                    <Form id={ 'login-form' }
+                    <Form onSubmit={ onsubmit }
+                          id={ 'login-form' }
                           children={ formGroup }
                           btnType={ 'submit' }
                           btnTitle={ 'Submit' }
@@ -27,17 +44,5 @@ export default class Landing extends Component {
     }
 }
 
-const formGroup = [
-    {
-        id: "user-info",
-        inputs: [
-            {
-                id: "username-input",
-                name: "login",
-                type: "text",
-                placeholder: "Enter your username",
-                required: ""
-            }
-        ]
-    }
-];
+
+

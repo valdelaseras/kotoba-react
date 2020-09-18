@@ -1,0 +1,8 @@
+input.invalid,
+input.invalid:hover,
+input.invalid:active,
+input.invalid:focus,
+input.invalid:focus-within {
+    border-bottom-color: red;
+}
+

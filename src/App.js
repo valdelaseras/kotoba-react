@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/css/index.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App theme-settings helvetica normal light-theme">
@@ -13,5 +13,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

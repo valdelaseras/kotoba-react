@@ -8,7 +8,9 @@ const FormGroup = props =>
             <Input key={ child.id }
                    id={ child.id }
                    title={ child.title }
+                   type={ child.type }
                    name={ child.name }
+                   minLength={child.minLength}
                    placeholder={ child.placeholder }
                    required={ child.required }/>)}
     </div>;
