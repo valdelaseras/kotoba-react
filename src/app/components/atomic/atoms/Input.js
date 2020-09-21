@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './input.css';
-import {validate} from "@babel/types";
 
 export default class Input extends Component {
     constructor( props ) {
@@ -15,11 +14,22 @@ export default class Input extends Component {
         this.minLength = props.minLength;
 
         this.state = {
-            isValid: true
+            isValid: false
         };
 
         this.initInput();
     }
+
+    // TODO: is this impure?
+    initInput = () => {
+        if ( this.required ) {
+            this.placeholder += ' *';
+        }
+    };
+
+    onchange = ( e ) => {
+        this.setState({ isValid: e.target.checkValidity() });
+    };
 
     render() {
         return (
@@ -31,26 +41,12 @@ export default class Input extends Component {
                        placeholder={ this.placeholder }
                        minLength={ this.minLength }
                        required={ this.required }
-                       onKeyUp={ this.onkeyup.bind( this )}
-                       onInvalid={ this.oninvalid.bind( this ) }/>
+                       onChange={ this.onchange }/>
             </label>
         )
     }
-
-    initInput = () => {
-        if ( this.required ) {
-            this.placeholder += ' *';
-        }
-    };
-
-    oninvalid = () => {
-        this.setState( { isValid: false } );
-    };
-
-    onkeyup = ( e ) => {
-        this.setState({ isValid: e.target.checkValidity() });
-    };
 }
 
 
 // TODO: This is not super reusable as a checkbox or radio input yet
+// TODO: if form pristine, state isValid is false but I guess the 'invalid' styling shouldnt display yet
