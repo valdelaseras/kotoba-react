@@ -13,7 +13,8 @@ export default class FormGroup extends Component {
             isValid: false,
             fields: props.children.map( field => ({
                 name: field.name,
-                valid: false
+                valid: false,
+                value: undefined
             }))
         };
     }

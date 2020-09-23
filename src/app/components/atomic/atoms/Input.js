@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './input.css';
 
 export default class Input extends Component {
     constructor( props ) {
@@ -27,7 +26,7 @@ export default class Input extends Component {
         }
     };
 
-    handleChange = (e ) => {
+    handleChange = ( e ) => {
         this.setState({ isValid: e.target.checkValidity() });
     };
 

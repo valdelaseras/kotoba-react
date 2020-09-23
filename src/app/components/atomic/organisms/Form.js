@@ -11,6 +11,7 @@ export default class Form extends Component {
         this.btnTitle = props.btnTitle;
         this.btnClass = props.btnClass;
         this.children = props.children;
+        this.submitHandler = props.submitHandler;
 
         this.state = {
             isValid: false,
@@ -23,7 +24,7 @@ export default class Form extends Component {
         };
     }
 
-    handleChange = (e ) => {
+    handleChange = ( e ) => {
         const { name, value } = e.target;
         const field = this.state.fields.find( field => field.name === name );
         const invalidChildren = this.state.fields.filter( field => !field.valid );
@@ -38,9 +39,15 @@ export default class Form extends Component {
         this.setState( { isValid: false } );
     };
 
+    submit = ( e ) => {
+      e.preventDefault();
+      this.submitHandler( this.state.fields );
+    };
+
     render() {
         return (
             <form id={ this.id }
+                  onSubmit={ this.submit }
                   onChange={ this.handleChange }
                   onInvalid={ this.onInvalid }>
                 { this.children.map( child =>

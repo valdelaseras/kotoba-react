@@ -14,3 +14,11 @@
 #landing input:active {
     border-bottom: 1px solid var(--quaternary-color);
 }
+
+#landing input.invalid,
+#landing input.invalid:hover,
+#landing input.invalid:active,
+#landing input.invalid:focus,
+#landing input.invalid:focus-within {
+    border-bottom-color: red;
+}

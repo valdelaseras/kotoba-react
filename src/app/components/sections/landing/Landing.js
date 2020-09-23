@@ -23,10 +23,19 @@ const formGroup = [
 ];
 
 export default class Landing extends Component {
-    handleSubmit = ( e ) => {
-        // e.prevent default
-        // save info to ktb-user object in local storage
-        // this function isn't called at all btw
+    constructor( props ){
+        super( props );
+    }
+
+    handleSubmit = ( fields ) => {
+        const username = fields.find( field => field.name === 'username' );
+
+        this.saveToLocalStorage( username.value  );
+        // navigate to lobby
+    };
+
+    saveToLocalStorage = ( username ) => {
+        localStorage.setItem('ktb-username', username );
     };
 
     render() {
@@ -39,7 +48,7 @@ export default class Landing extends Component {
                     </p>
 
                     <Form
-                          onSubmit={ this.handleSubmit }
+                          submitHandler={ this.handleSubmit }
                           id={ 'login-form' }
                           children={ formGroup }
                           btnType={ 'submit' }
