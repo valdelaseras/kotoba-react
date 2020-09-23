@@ -17,19 +17,18 @@ const formGroup = [
                 placeholder: "Enter your username",
                 minLength: '3',
                 required: "required"
-            }, {
-                id: "username-password",
-                name: "password",
-                type: "text",
-                placeholder: "Enter your password",
-                minLength: '3',
-                required: "required"
             }
         ]
     }
 ];
 
 export default class Landing extends Component {
+    handleSubmit = ( e ) => {
+        // e.prevent default
+        // save info to ktb-user object in local storage
+        // this function isn't called at all btw
+    };
+
     render() {
         return (
             <Section id={'landing'} title={'Kotoba'} titleClass={'font-xxl'}>
@@ -40,8 +39,7 @@ export default class Landing extends Component {
                     </p>
 
                     <Form
-                          // onSubmit={ onsubmit }
-                          // onChange={ onchange }
+                          onSubmit={ this.handleSubmit }
                           id={ 'login-form' }
                           children={ formGroup }
                           btnType={ 'submit' }

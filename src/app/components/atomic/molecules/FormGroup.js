@@ -11,24 +11,28 @@ export default class FormGroup extends Component {
 
         this.state = {
             isValid: false,
-            fields: props.children.map( field => ({ name: field.name, valid: false }) )
+            fields: props.children.map( field => ({
+                name: field.name,
+                valid: false
+            }))
         };
     }
 
-    onValidityChange = ( e ) => {
-      const { name } = e.target;
-      const oldField = this.state.fields.find( field => field.name === name );
-      oldField.valid = e.target.checkValidity();
+    handleChange = ( e ) => {
+        const { name } = e.target;
+        const field = this.state.fields.find( field => field.name === name );
+        const invalidChildren = this.state.fields.filter( field => !field.valid );
 
-      const invalidChildren = this.state.fields.filter( field => !field.valid );
-      this.setState({ isValid: invalidChildren.length === 0 });
+        field.valid = e.target.checkValidity();
+
+        this.setState({ isValid: invalidChildren.length === 0 });
     };
 
     render() {
         return (
             <div className={ 'form-group ' + ( this.state.isValid ? '' : 'invalid' ) }
                  id={ this.id }
-                 onChange={ this.onValidityChange }>
+                 onChange={ this.handleChange }>
                 { this.title ? <h2>{ this.title }</h2> : null }
                 { this.children.map( child =>
                     <Input key={ child.id }

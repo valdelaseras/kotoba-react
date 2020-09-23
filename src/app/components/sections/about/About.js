@@ -61,7 +61,7 @@ export default class About extends Component {
                             <p>
                                 After an exam you will see an overview of all your answers in a score sheet with
                                 some stats.
-                                If you have enabled keeping a local record of your <a className="highlight">score
+                                If you have enabled keeping a local record of your <a href="/history" className="highlight">score
                                 history</a>,
                                 you can review all your previous exams again at any later time.
                             </p>

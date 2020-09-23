@@ -27,7 +27,7 @@ export default class Input extends Component {
         }
     };
 
-    onchange = ( e ) => {
+    handleChange = (e ) => {
         this.setState({ isValid: e.target.checkValidity() });
     };
 
@@ -41,7 +41,7 @@ export default class Input extends Component {
                        placeholder={ this.placeholder }
                        minLength={ this.minLength }
                        required={ this.required }
-                       onChange={ this.onchange }/>
+                       onChange={ this.handleChange }/>
             </label>
         )
     }

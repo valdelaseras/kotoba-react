@@ -14,34 +14,34 @@ export default class Form extends Component {
 
         this.state = {
             isValid: false,
-            fields: props.children.map( formGroup => formGroup.inputs.map( field => ({ name: field.name, valid: false, value: null }) ) ).flat()
+            fields: props.children.map( formGroup =>
+                formGroup.inputs.map( field => ({
+                    name: field.name,
+                    valid: false,
+                    value: null
+                }))).flat()
         };
     }
 
-    onChange = ( e ) => {
+    handleChange = (e ) => {
         const { name, value } = e.target;
-        const oldField = this.state.fields.find( field => field.name === name );
-        oldField.valid = e.target.checkValidity();
-        oldField.value = value;
-
+        const field = this.state.fields.find( field => field.name === name );
         const invalidChildren = this.state.fields.filter( field => !field.valid );
+
+        field.valid = e.target.checkValidity();
+        field.value = value;
+
         this.setState({ isValid: invalidChildren.length === 0 });
     };
 
-    onInvalid= () => {
+    onInvalid = () => {
         this.setState( { isValid: false } );
-    };
-
-    test = ( e ) => {
-        e.preventDefault();
-        console.log( this.state.fields )
     };
 
     render() {
         return (
             <form id={ this.id }
-                  onSubmit={ this.test }
-                  onChange={ this.onChange }
+                  onChange={ this.handleChange }
                   onInvalid={ this.onInvalid }>
                 { this.children.map( child =>
                     <FormGroup key={ child.name }

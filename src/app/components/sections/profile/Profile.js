@@ -20,6 +20,6 @@ export default class Profile extends Component {
 }
 
 const profileList = [
-    { id: '1', title: 'Settings', href: 'https://weird.io' },
-    { id: '2', title: 'Your score history', href: 'https://weird.io' }
+    { id: '1', title: 'Settings', href: '/settings' },
+    { id: '2', title: 'Your score history', href: '/history' }
 ];
