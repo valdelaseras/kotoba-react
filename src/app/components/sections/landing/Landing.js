@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Form from "../../atomic/organisms/Form";
 import Content from '../../layout/Content';
@@ -22,16 +23,12 @@ const formGroup = [
     }
 ];
 
-export default class Landing extends Component {
-    constructor( props ){
-        super( props );
-    }
-
+class Landing extends Component {
     handleSubmit = ( fields ) => {
         const username = fields.find( field => field.name === 'username' );
 
         this.saveToLocalStorage( username.value  );
-        // navigate to lobby
+        this.props.history.push('/lobby');
     };
 
     saveToLocalStorage = ( username ) => {
@@ -47,8 +44,7 @@ export default class Landing extends Component {
                         based on your results or create a custom exam yourself!
                     </p>
 
-                    <Form
-                          submitHandler={ this.handleSubmit }
+                    <Form submitHandler={ this.handleSubmit }
                           id={ 'login-form' }
                           children={ formGroup }
                           btnType={ 'submit' }
@@ -60,5 +56,5 @@ export default class Landing extends Component {
     }
 }
 
-
+export default withRouter(Landing);
 

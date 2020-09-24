@@ -24,21 +24,23 @@ const iconLinkData = [
 export default class Footer extends Component {
     render() {
         return (
-            <div className="footer-content">
-                <div className="grid">
-                    <Row colSize={'column'}>
-                        <Content colSize={'column three'}>
-                            <AnchorList children={ linkData.slice(0, 2) }/>
-                        </Content>
-                        <Content colSize={'column three'}>
-                            <AnchorList children={ linkData.slice(2, 4) }/>
-                        </Content>
-                        <Content colSize={'column three'}>
-                            <ImageAnchorList class="icon-list" children={ iconLinkData }/>
-                        </Content>
-                    </Row>
+            <footer>
+                <div className="footer-content">
+                    <div className="grid">
+                        <Row colSize={'column'}>
+                            <Content colSize={'column three'}>
+                                <AnchorList children={ linkData.slice(0, 2) }/>
+                            </Content>
+                            <Content colSize={'column three'}>
+                                <AnchorList children={ linkData.slice(2, 4) }/>
+                            </Content>
+                            <Content colSize={'column three'}>
+                                <ImageAnchorList class="icon-list" children={ iconLinkData }/>
+                            </Content>
+                        </Row>
+                    </div>
                 </div>
-            </div>
+            </footer>
         );
     }
 }

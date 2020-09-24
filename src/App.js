@@ -21,6 +21,7 @@ import History from './app/components/sections/score/History';
 import Settings from './app/components/sections/settings/Settings';
 
 import './styles/css/index.css';
+import SecondaryNav from "./app/components/decorator/nav/SecondaryNav";
 
 export default class App extends Component {
     render() {
@@ -39,6 +40,7 @@ export default class App extends Component {
                 </Switch>
                 <Footer/>
                 <Nav/>
+                <SecondaryNav/>
             </div>
             </Router>
         );

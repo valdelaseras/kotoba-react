@@ -56,10 +56,10 @@ export default class Nav extends Component {
         }
 
         return (
-            <div className="nav">
+            <nav className="nav">
                 <Branding href={ brandingData.href } title={ brandingData.title } branding={ brandingData.branding }/>
                 { menu }
-            </div>
+            </nav>
         );
     }
 }
