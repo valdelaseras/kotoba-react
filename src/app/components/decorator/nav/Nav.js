@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import AnchorList from "../../atomic/organisms/AnchorList";
 
-const brandingData = { href: "https://weird.io", title: "Lobby", branding: "言葉" };
+const brandingData = { href: "/lobby", title: "Lobby", branding: "言葉" };
 const linkData = [
-    { id: "1", href: "https://weird.io", title: "About" },
-    { id: "2", href: "https://weird.io", title: "Profile" },
-    { id: "3", href: "https://weird.io", title: "Lobby" },
-    { id: "4", href: "https://weird.io", title: "Settings" },
-    { id: "5", href: "https://weird.io", title: "Score history" }
+    { id: "1", href: "/about", title: "About" },
+    { id: "2", href: "/profile", title: "Profile" },
+    { id: "3", href: "/lobby", title: "Lobby" },
+    { id: "4", href: "/settings", title: "Settings" },
+    { id: "5", href: "/history", title: "Score history" }
 ];
 
 const Branding = props =>
@@ -32,9 +32,9 @@ export default class Nav extends Component {
         });
     }
 
-    isMobileDevice() {
+    isMobileDevice = () => {
         return window.innerWidth < 1024;
-    }
+    };
 
     render() {
         const isMobileDevice = this.state.isMobileDevice;
@@ -56,10 +56,10 @@ export default class Nav extends Component {
         }
 
         return (
-            <div className="nav">
+            <nav className="nav">
                 <Branding href={ brandingData.href } title={ brandingData.title } branding={ brandingData.branding }/>
                 { menu }
-            </div>
+            </nav>
         );
     }
 }

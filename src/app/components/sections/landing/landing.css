@@ -1,4 +1,4 @@
-input {
+#landing input {
     background-color: transparent;
     border-top: none;
     border-left: none;
@@ -8,9 +8,17 @@ input {
     width: 100%;
 }
 
-input:hover,
-input:focus,
-input:focus-within,
-input:active {
+#landing input:hover,
+#landing input:focus,
+#landing input:focus-within,
+#landing input:active {
     border-bottom: 1px solid var(--quaternary-color);
+}
+
+#landing input.invalid,
+#landing input.invalid:hover,
+#landing input.invalid:active,
+#landing input.invalid:focus,
+#landing input.invalid:focus-within {
+    border-bottom-color: red;
 }

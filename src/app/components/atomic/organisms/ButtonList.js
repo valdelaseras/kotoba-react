@@ -7,6 +7,7 @@ const ButtonList = props =>
             <ButtonListItem key={ child.id }
                             class={ child.class }
                             title={ child.title }
+                            link={ child.link }
                             type={ child.type }/>
         )}
     </ul>

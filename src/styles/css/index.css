@@ -296,6 +296,7 @@ ul {
   -webkit-box-sizing: border-box;
   position: relative;
   height: 100%;
+  overflow-y: scroll;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -672,6 +673,14 @@ select:focus,
 select:focus-within,
 select:active {
   border-color: var(--quaternary-color);
+}
+
+input.invalid,
+input.invalid:hover,
+input.invalid:active,
+input.invalid:focus,
+input.invalid:focus-within {
+  border-bottom-color: red;
 }
 
 .form-group {

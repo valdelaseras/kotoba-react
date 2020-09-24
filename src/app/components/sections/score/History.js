@@ -20,7 +20,7 @@ export default class History extends Component {
 }
 
 const examHistory = [
-    { id: "1", title: "date, type of test, time", href: "https://weird.io" },
-    { id: "2", title: "date, type of test, time", href: "https://weird.io" },
-    { id: "3", title: "date, type of test, time", href: "https://weird.io" }
+    { id: "1", title: "date, type of handleSubmit, time", href: "https://weird.io" },
+    { id: "2", title: "date, type of handleSubmit, time", href: "https://weird.io" },
+    { id: "3", title: "date, type of handleSubmit, time", href: "https://weird.io" }
 ];
