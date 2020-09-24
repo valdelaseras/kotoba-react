@@ -2,3 +2,5 @@ TODO: Move (component related) CSS to components eventually and actually use SCS
 TODO: Router
 
 TODO: Hover state on disabled btn styling is a little off
+
+TODO: Active states on links

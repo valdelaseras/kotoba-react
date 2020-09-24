@@ -32,9 +32,9 @@ export default class Nav extends Component {
         });
     }
 
-    isMobileDevice() {
+    isMobileDevice = () => {
         return window.innerWidth < 1024;
-    }
+    };
 
     render() {
         const isMobileDevice = this.state.isMobileDevice;

@@ -15,8 +15,8 @@ export default class Form extends Component {
 
         this.state = {
             isValid: false,
-            fields: props.children.map( formGroup =>
-                formGroup.inputs.map( field => ({
+            fields: props.children.map( child =>
+                child.inputs.map( field => ({
                     name: field.name,
                     valid: false,
                     value: null
