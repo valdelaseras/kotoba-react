@@ -13,9 +13,8 @@ const groupone = [
             {
                 id: "grouponeone",
                 name: "grouponeone",
-                type: "text",
-                placeholder: "grouponeone",
-                minLength: '3',
+                title: "checkbox",
+                type: "checkbox",
                 required: "required"
             },
             {
@@ -86,7 +85,14 @@ export default class Settings extends Component {
             <Section id={'settings'} title={'Settings'}>
                 <Row colSize={'column'}>
                     <Content colSize={'column two'}>
-
+                        <Fieldset title={'Exams'}>
+                            <Form submitHandler={ this.handleSubmit }
+                                  id={ 'settings-form' }
+                                  children={ groupone }
+                                  btnType={ 'submit' }
+                                  btnTitle={ 'Save' }
+                                  btnClass={ 'btn-primary' }/>
+                        </Fieldset>
                     </Content>
                 </Row>
             </Section>

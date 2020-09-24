@@ -1,6 +1,4 @@
-TODO: Move (component related) CSS to components eventually and actually use SCSS there.
-TODO: Router
-
+TODO: Move (component related) CSS to components eventually and actually use SCSS there. Styling got a little messed up
 TODO: Hover state on disabled btn styling is a little off
-
 TODO: Active states on links
+TODO: Been using () and =()= and submitHandler=handleSubmit and onSubmit=submitHandler etc. Clean up with consistency

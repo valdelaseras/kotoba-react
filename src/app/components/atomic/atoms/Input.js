@@ -23,6 +23,9 @@ export default class Input extends Component {
     initInput = () => {
         if ( this.required ) {
             this.placeholder += ' *';
+            if ( this.title ) {
+                this.title += ' *';
+            }
         }
     };
 
