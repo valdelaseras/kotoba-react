@@ -20,7 +20,7 @@ class Button extends Component {
     }
 }
 
-export default withRouter(Button);
+export default withRouter( Button );
 
 // TODO: this sort of works (disabled state) but it's added/removed 'too late'. '
 //  'setState is not immediate ( clearly ) so I will need to fix this
