@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from '../../../components/atomic/atoms/Button';
 
 export default class Form extends Component {
     constructor( props ){

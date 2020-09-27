@@ -7,3 +7,5 @@ const Fieldset = props =>
     </fieldset>;
 
 export default Fieldset;
+
+// TODO: is there really much of a point to turn this into a component?

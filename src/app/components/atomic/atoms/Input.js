@@ -50,5 +50,5 @@ export default class Input extends Component {
 }
 
 
-// TODO: This is not super reusable as a checkbox or radio input yet
 // TODO: if form pristine, state isValid is false but I guess the 'invalid' styling shouldnt display yet
+// TODO: replace this Input with new one in /form-2 once code has been refactored
