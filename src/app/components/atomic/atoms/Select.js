@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Select = props =>
-    <label htmlFor={ props.name }>{ props.title }
-        <select id={ props.id } name={ props.name }>
-            { props.children.map( child =>
-                <option key={ child.id } value={ child.title }>
-                    { child.title }
-                </option>
-            )}
-        </select>
-    </label>
-;
+import './select.css';
 
-export default Select;
+export default class Select extends Component {
+    constructor( props ){
+        super( props );
 
-// todo: add optional p ( font size small or maybe just small tag? ) beneath Label
+        this.title = props.title;
+        this.required = props.required;
+
+        this.state = {
+            isValid: false
+        };
+
+        this.initSelect();
+    }
+
+    initSelect = () => {
+        if ( this.required ) {
+            if ( this.title ) {
+                this.title += ' *';
+            }
+        }
+    };
+
+    handleChange = ( e ) => {
+        this.setState({ isValid: e.target.checkValidity() });
+    };
+
+    render() {
+        return(
+            <label htmlFor={ this.props.name }>{ this.title }
+                { this.props.text? <p>{ this.props.text }</p> : null }
+                <select id={ this.props.id }
+                        onChange={ this.handleChange }
+                        required={ this.required }
+                        name={ this.props.name }>
+                        { this.props.children.map( child =>
+                        <option key={ child.id }
+                                value={ child.title }>
+                            { child.title }
+                        </option>
+                    )}
+                </select>
+            </label>
+        )
+    }
+}
+
+// TODO: add default checked option

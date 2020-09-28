@@ -53,7 +53,8 @@ export default class Form extends Component {
                 { this.children.map( child =>
                     <FormGroup key={ child.name }
                                title={ child.title }
-                               children={ child.inputs }/>
+                               children={ child.inputs }>
+                    </FormGroup>
                 )}
                 <Button type={ this.btnType }
                         title={ this.btnTitle }
@@ -64,6 +65,5 @@ export default class Form extends Component {
     }
 }
 
-// TODO: changed Button to class component, now disabled doesn't work anymore
-// TODO: add fieldset + legend ( title )
-// TODO: add optional title to form itself ( not only for a form group)
+// TODO: replace this Form with new one in /form-2 once code has been refactored
+

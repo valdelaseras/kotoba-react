@@ -7,6 +7,42 @@ import Fieldset from '../../atomic/organisms/Fieldset';
 import Content from '../../layout/Content';
 import Row from '../../layout/Row';
 import Section from "../../layout/Section";
+import FormGroup from '../../form-2/molecules/FormGroup';
+import Form from '../../form-2/organisms/Form';
+import Anchor from "../../atomic/atoms/Anchor";
+import Button from "../../atomic/atoms/Button";
+
+const retryOptions = [
+    { id: "1", title: "None" },
+    { id: "2", title: "Once" },
+    { id: "3", title: "Twice" },
+    { id: "4", title: "Infinite retries" }
+];
+
+const repeatOptions = [
+    { id: "1", title: "Repeat until answered correctly" },
+    { id: "2", title: "Never repeat" }
+];
+
+const kanaExams = [
+    { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
+    { id: 'katakana', class: 'btn-secondary', title: 'Katakana' },
+    { id: 'mixed-kana', class: 'btn-secondary', title: 'All kana' },
+];
+
+const kanjiExams = [
+    { id: 'kanjin5', class: 'btn-secondary', title: 'Kanji N5' },
+    { id: 'kanjin4', class: 'btn-secondary', title: 'Kanji N4' },
+    { id: 'kanjin3', class: 'btn-secondary', title: 'Kanji N3' },
+    { id: 'kanjin2', class: 'btn-secondary', title: 'Kanji N2' },
+    { id: 'kanjin1', class: 'btn-secondary', title: 'Kanji N1' },
+    { id: 'mixed-kanji', class: 'btn-secondary', title: 'All kanji' },
+];
+
+const methodOptions = [
+    { id: "1", title: "Lorem ipsum" },
+    { id: "2", title: "Lorem ipsum" }
+];
 
 export default class Lobby extends Component {
     render() {
@@ -30,58 +66,33 @@ export default class Lobby extends Component {
                     <Row colSize={'column two'}>
                         <Content colSize={'column'}>
                             <div className="selected-exam">
-                                <form>
-                                    <fieldset>
-                                        <legend>
-                                            <h2>
-                                                {/*selected exam title*/}
-                                            </h2>
-                                        </legend>
-                                        <small className="highlight">
-                                            {/* selected exam description*/}
-                                        </small>
+                                <Form id={'selected-exam-form'}>
+                                    <Fieldset title={'Selected exam title'}>
+                                        <p className="highlight">Selected exam sub text</p>
                                         <p>
                                             The settings below only affect the current exam.
-                                            To change your default global settings,  <a className="bold highlight" title="settings">click here</a>.
+                                            To change your default global settings, <Anchor className="highlight" title={'click here'} to={'/settings'}/>.
                                         </p>
-                                        <h4>Exam settings</h4>
-                                        <div className="form-group">
-                                            <Select name={ 'retry-setting' }
-                                                    title={ 'Allowed retries per question' }
-                                                    id={ 'retry-select' }
-                                                    children={ retrySelectOptions }/>
-
-                                            {/*<label htmlFor="retry-select">Allowed retries per question</label>*/}
-                                            {/*<select id="retry-select"*/}
-                                            {/*name="retry-setting">*/}
-                                            {/*/!*options*!/*/}
-                                            {/*</select>*/}
-                                        </div>
-
-                                        <div className="form-group">
-                                            {/*TODO: the small below must be moved inside the Select, between Label and Select elmn*/}
-                                            <small>
-                                                By default, questions you answered incorrectly will be repeated again at the end of your exam
-                                                until you answer them correctly. You may also choose to disable this.
-                                            </small>
-                                            <Select name={ 'repeat-setting' }
-                                                    title={ 'Repeat incorrectly answered questions' }
-                                                    id={ 'repeat-select' }
-                                                    children={ repeatSelectOptions }/>
-                                        </div>
-
-                                        <div className="form-group">
-                                            <Select name={ 'method-setting' }
-                                                    title={ 'Method' }
-                                                    id={ 'method-select' }
-                                                    children={ repeatSelectOptions }/>
-                                            {/*TODO: obv replace the children here and all these select options must be inherited from /settings anyway*/}
-                                        </div>
-                                        <button type="submit"
-                                                title="Start exam"
-                                                className="btn btn-primary btn-main">Start Exam</button>
-                                    </fieldset>
-                                </form>
+                                        <h3>Exam settings</h3>
+                                        <FormGroup id={'exam-settings'}>
+                                            <Select name={'retry-settings'}
+                                                    title={'Allowed retries per question'}
+                                                    id={'retry-select'}
+                                                    children={ retryOptions }/>
+                                            <Select name={'repeat-settings'}
+                                                    title={'Repeat incorrectly answered questions'}
+                                                    text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
+                                                    id={'repeat-select'} children={ repeatOptions }/>
+                                            <Select name={'method-settings'}
+                                                    title={'Method'}
+                                                    id={'method-select'}
+                                                    children={ methodOptions }/>
+                                        </FormGroup>
+                                        <Button type={'submit'}
+                                                title={'Start exam'}
+                                                class={'btn-primary btn-main'}/>
+                                    </Fieldset>
+                                </Form>
                             </div>
                         </Content>
                     </Row>
@@ -90,28 +101,3 @@ export default class Lobby extends Component {
         )
     }
 }
-
-const kanaExams = [
-    { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
-    { id: 'katakana', class: 'btn-secondary', title: 'Katakana' },
-    { id: 'mixed-kana', class: 'btn-secondary', title: 'All kana' },
-];
-const kanjiExams = [
-    { id: 'kanjin5', class: 'btn-secondary', title: 'Kanji N5' },
-    { id: 'kanjin4', class: 'btn-secondary', title: 'Kanji N4' },
-    { id: 'kanjin3', class: 'btn-secondary', title: 'Kanji N3' },
-    { id: 'kanjin2', class: 'btn-secondary', title: 'Kanji N2' },
-    { id: 'kanjin1', class: 'btn-secondary', title: 'Kanji N1' },
-    { id: 'mixed-kanji', class: 'btn-secondary', title: 'All kanji' },
-];
-const retrySelectOptions = [
-    { id: '1', title: 'None' },
-    { id: '2', title: 'Once' },
-    { id: '3', title: 'Twice' },
-    { id: '4', title: 'Infinite' }
-];
-const repeatSelectOptions = [
-    { id: '1', title: 'Repeat until answered correctly' },
-    { id: '2', title: 'Never repeat' },
-];
-

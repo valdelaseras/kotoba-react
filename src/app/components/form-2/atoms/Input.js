@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 
 export default class Input extends Component {
-    constructor( props ) {
+    constructor( props ){
         super( props );
 
-        this.id = props.id;
-        this.title = props.title;
-        this.name = props.name;
-        this.type= props.type;
-        this.placeholder = props.placeholder;
         this.required = props.required;
-        this.minLength = props.minLength;
+        this.title = props.title;
+        this.placeholder = props.placeholder;
 
         this.state = {
             isValid: false
@@ -19,11 +15,11 @@ export default class Input extends Component {
         this.initInput();
     }
 
-    // TODO: is this impure?
     initInput = () => {
         if ( this.required ) {
-            this.placeholder += ' *';
-            if ( this.title ) {
+            if ( this.placeholder ) {
+                this.placeholder += ' *';
+            } else if ( this.title ) {
                 this.title += ' *';
             }
         }
@@ -33,22 +29,19 @@ export default class Input extends Component {
         this.setState({ isValid: e.target.checkValidity() });
     };
 
+
     render() {
-        return (
-            <label htmlFor={ this.id }>{ this.title }
+        return(
+            <label htmlFor={ this.props.id }>{ this.title }
                 <input className={ this.state.isValid ? '' : 'invalid' }
-                       id={ this.id }
-                       name={ this.name }
-                       type={ this.type }
+                       id={ this.props.id }
+                       name={ this.props.name }
+                       type={ this.props.type }
                        placeholder={ this.placeholder }
-                       minLength={ this.minLength }
+                       minLength={ this.props.minLength }
                        required={ this.required }
                        onChange={ this.handleChange }/>
             </label>
         )
     }
 }
-
-
-// TODO: if form pristine, state isValid is false but I guess the 'invalid' styling shouldnt display yet
-// TODO: replace this Input with new one in /form-2 once code has been refactored

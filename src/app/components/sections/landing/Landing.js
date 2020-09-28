@@ -7,6 +7,10 @@ import Section from "../../layout/Section";
 
 import './landing.css';
 
+// import Input from "../../form-2/atoms/Input";
+// import Form from "../../form-2/organisms/Form";
+// import Button from "../../atomic/atoms/Button";
+
 const formGroup = [
     {
         name: "login",
@@ -50,6 +54,16 @@ class Landing extends Component {
                           btnType={ 'submit' }
                           btnTitle={ 'Submit' }
                           btnClass={ 'btn-primary btn-main' }/>
+
+                          {/*TODO: Below must be used once form is refactored and can validate all relevant children in the form */}
+                          {/*then remove formGroup cons as well*/}
+                    {/*<Form id={'login-form'} */}
+                          {/*onSubmit={ this.handleSubmit() }>*/}
+                          {/*<Input id={'username-input'} name={'username'} type={'text'} placeholder={'Enter your username'} minLength={'2'} required={'required'}/>*/}
+                    {/*<Button type={'submit'}*/}
+                            {/*title={'Submit'}*/}
+                            {/*class={'btn-primary btn-main'}/>*/}
+                    {/*</Form>*/}
                 </Content>
             </Section>
         )
