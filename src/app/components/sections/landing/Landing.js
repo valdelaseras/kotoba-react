@@ -9,6 +9,7 @@ import './landing.css';
 
 // import Input from "../../form-2/atoms/Input";
 // import Form from "../../form-2/organisms/Form";
+// import Button from "../../atomic/atoms/Button";
 
 const formGroup = [
     {
@@ -59,6 +60,9 @@ class Landing extends Component {
                     {/*<Form id={'login-form'} */}
                           {/*onSubmit={ this.handleSubmit() }>*/}
                           {/*<Input id={'username-input'} name={'username'} type={'text'} placeholder={'Enter your username'} minLength={'2'} required={'required'}/>*/}
+                    {/*<Button type={'submit'}*/}
+                            {/*title={'Submit'}*/}
+                            {/*class={'btn-primary btn-main'}/>*/}
                     {/*</Form>*/}
                 </Content>
             </Section>

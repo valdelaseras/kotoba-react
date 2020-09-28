@@ -71,7 +71,7 @@ export default class Lobby extends Component {
                                         <p className="highlight">Selected exam sub text</p>
                                         <p>
                                             The settings below only affect the current exam.
-                                            To change your default global settings, <Anchor className="highlight" title={'click here'} href={'/settings'}/>.
+                                            To change your default global settings, <Anchor className="highlight" title={'click here'} to={'/settings'}/>.
                                         </p>
                                         <h3>Exam settings</h3>
                                         <FormGroup id={'exam-settings'}>

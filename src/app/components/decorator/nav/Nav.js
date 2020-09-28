@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import AnchorList from "../../atomic/organisms/AnchorList";
+import NavLinkList from "../../atomic/organisms/NavLinkList";
 
 const brandingData = { href: "/lobby", title: "Lobby", branding: "言葉" };
 const linkData = [
-    { id: "1", href: "/about", title: "About" },
-    { id: "2", href: "/profile", title: "Profile" },
-    { id: "3", href: "/lobby", title: "Lobby" },
-    { id: "4", href: "/settings", title: "Settings" },
-    { id: "5", href: "/history", title: "Score history" }
+    { id: "1", to: "/about", title: "About" },
+    { id: "2", to: "/profile", title: "Profile" },
+    { id: "3", to: "/lobby", title: "Lobby" },
+    { id: "4", to: "/settings", title: "Settings" },
+    { id: "5", to: "/history", title: "Score history" }
 ];
 
 const Branding = props =>
@@ -48,11 +48,11 @@ export default class Nav extends Component {
                         <span/><span/><span/>
                     </label>
                     <div className="slide-in-menu">
-                        <AnchorList class={ 'mobile-nav-list' } children={ linkData }/>
+                        <NavLinkList class={ 'mobile-nav-list' } children={ linkData }/>
                     </div>
                 </div>;
         } else {
-            menu = <AnchorList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>;
+            menu = <NavLinkList class={ 'nav-list desktop-only' } children={ linkData.slice(0, 2) }/>;
         }
 
         return (
