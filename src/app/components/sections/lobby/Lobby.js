@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './lobby.css';
 
 import ButtonList from '../../atomic/organisms/ButtonList';
@@ -9,7 +10,6 @@ import Row from '../../layout/Row';
 import Section from "../../layout/Section";
 import FormGroup from '../../form-2/molecules/FormGroup';
 import Form from '../../form-2/organisms/Form';
-import Anchor from "../../atomic/atoms/Anchor";
 import Button from "../../atomic/atoms/Button";
 
 const retryOptions = [
@@ -71,7 +71,7 @@ export default class Lobby extends Component {
                                         <p className="highlight">Selected exam sub text</p>
                                         <p>
                                             The settings below only affect the current exam.
-                                            To change your default global settings, <Anchor className="highlight" title={'click here'} to={'/settings'}/>.
+                                            To change your default global settings, <NavLink className="highlight" to={'/settings'}>click here</NavLink>.
                                         </p>
                                         <h3>Exam settings</h3>
                                         <FormGroup id={'exam-settings'}>

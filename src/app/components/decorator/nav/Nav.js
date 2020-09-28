@@ -37,10 +37,9 @@ export default class Nav extends Component {
     };
 
     render() {
-        const isMobileDevice = this.state.isMobileDevice;
         let menu;
 
-        if ( isMobileDevice ){
+        if ( this.state.isMobileDevice ){
             menu =
                 <div className="mobile-menu mobile-only">
                     <input type="checkbox" id="nav-checkbox" className="nav-checkbox"/>
