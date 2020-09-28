@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import AnchorList from '../../atomic/organisms/AnchorList';
 import ImageAnchorList from '../../atomic/organisms/ImageAnchorList';
 import Content from '../../layout/Content';
 import Row from '../../layout/Row';
@@ -8,12 +7,13 @@ import Row from '../../layout/Row';
 import githubLogo from '../../../../assets/logos/github.svg';
 import linkedinLogo from '../../../../assets/logos/linkedin.svg';
 import weirdLogo from '../../../../assets/logos/weird.svg';
+import NavLinkList from "../../atomic/organisms/NavLinkList";
 
 const linkData = [
-    { id: "1", href: "https://weird.io", title: "About" },
-    { id: "2", href: "https://weird.io", title: "Dataset sources" },
-    { id: "3", href: "https://weird.io", title: "Your data and privacy" },
-    { id: "4", href: "https://weird.io", title: "Report issues" }
+    { id: "1", to: "/about", title: "About" },
+    { id: "2", to: "/credits", title: "Dataset sources" },
+    { id: "3", to: "/privacy-policy", title: "Your data and privacy" },
+    { id: "4", to: "/issues", title: "Report issues" }
 ];
 const iconLinkData = [
     { id: "1", anchorClass: "icon-link", href: "https://weird.io", title: "Github", src: githubLogo, imgClass: "invert-on-dark-theme" },
@@ -29,10 +29,10 @@ export default class Footer extends Component {
                     <div className="grid">
                         <Row colSize={'column'}>
                             <Content colSize={'column three'}>
-                                <AnchorList children={ linkData.slice(0, 2) }/>
+                                <NavLinkList children={ linkData.slice(0, 2) }/>
                             </Content>
                             <Content colSize={'column three'}>
-                                <AnchorList children={ linkData.slice(2, 4) }/>
+                                <NavLinkList children={ linkData.slice(2, 4) }/>
                             </Content>
                             <Content colSize={'column three'}>
                                 <ImageAnchorList class="icon-list" children={ iconLinkData }/>
