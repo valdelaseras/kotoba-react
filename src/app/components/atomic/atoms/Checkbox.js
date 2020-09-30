@@ -41,5 +41,3 @@ export default class Checkbox extends Component {
         )
     }
 }
-
-// TODO: add default checked or not

@@ -29,7 +29,6 @@ export default class Input extends Component {
         this.setState({ isValid: e.target.checkValidity() });
     };
 
-
     render() {
         return(
             <label htmlFor={ this.props.id }>{ this.title }
