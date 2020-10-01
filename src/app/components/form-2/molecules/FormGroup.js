@@ -13,12 +13,12 @@ export default class FormGroup extends Component {
                     name: field.props.name,
                     value: null,
                     valid: null
-                }) )
+                }))
         };
     }
 
     handleChange = ( e ) => {
-        const fields = Array.from( this.state.fields );
+        const fields = this.state.fields;
         Object.assign(
             fields.find( field => field.name === e.target.name ),
             { valid: e.target.checkValidity() }

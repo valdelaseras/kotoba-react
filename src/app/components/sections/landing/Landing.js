@@ -42,7 +42,7 @@ class Landing extends Component {
                     <Form id={'login-form'} btnTitle={'Submit'} btnClass={'btn-primary btn-main'}>
                         <FormGroup key={ 'login-details' } id={'login'}>
                             <Input id={'username-input'} name={'username'} type={'text'} placeholder={'Enter your username'} minLength={'3'} required={'required'}/>
-                            <Input id={'password-input'} name={'password'} type={'text'} placeholder={'Enter your password'} minLength={'3'} required={'required'}/>
+                            {/*<Input id={'password-input'} name={'password'} type={'text'} placeholder={'Enter your password'} minLength={'3'} required={'required'}/>*/}
                         </FormGroup>
 
                         <Button key={'login-form-btn'}
