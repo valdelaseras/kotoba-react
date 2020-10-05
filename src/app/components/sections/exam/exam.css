@@ -1,8 +1,3 @@
-.exam-fs legend h2 {
-    font-size: 5rem;
-    color: #222222;
-}
-
 input {
     font-size: .8rem;
     background-color: transparent;
@@ -13,23 +8,23 @@ input {
     width: 100%;
 }
 
-.stats > li {
+#exam .stats > li {
     margin-bottom: 2rem;
 }
 
-.stats > li:last-child {
+#exam .stats > li:last-child {
     margin-bottom: 0;
 }
 
-li > small {
+#exam li > small {
     display: block;
 }
 
-.incorrect-answer {
+#exam .incorrect-answer {
     text-align: right;
 }
 
-.info-bar {
+#exam .info-bar {
     width: 100%;
     box-sizing: border-box;
     padding: 15px 0;

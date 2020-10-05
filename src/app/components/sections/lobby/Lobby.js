@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import './lobby.css';
 
-import ButtonList from '../../atomic/organisms/ButtonList';
+import Button from "../../atomic/atoms/Button";
 import Select from "../../atomic/atoms/Select";
+import FormGroup from '../../atomic/molecules/FormGroup';
+import ButtonList from '../../atomic/organisms/ButtonList';
 import Fieldset from '../../atomic/organisms/Fieldset';
+import Form from '../../atomic/organisms/Form';
 import Content from '../../layout/Content';
 import Row from '../../layout/Row';
 import Section from "../../layout/Section";
-import FormGroup from '../../form-2/molecules/FormGroup';
-import Form from '../../form-2/organisms/Form';
-import Button from "../../atomic/atoms/Button";
+
+import './lobby.css';
 
 const retryOptions = [
     { id: "1", title: "None" },
@@ -25,18 +26,18 @@ const repeatOptions = [
 ];
 
 const kanaExams = [
-    { id: 'hiragana', class: 'btn-secondary active', title: 'Hiragana' },
-    { id: 'katakana', class: 'btn-secondary', title: 'Katakana' },
-    { id: 'mixed-kana', class: 'btn-secondary', title: 'All kana' },
+    { id: 'hiragana', className: 'btn-secondary active', title: 'Hiragana' },
+    { id: 'katakana', className: 'btn-secondary', title: 'Katakana' },
+    { id: 'mixed-kana', className: 'btn-secondary', title: 'All kana' },
 ];
 
 const kanjiExams = [
-    { id: 'kanjin5', class: 'btn-secondary', title: 'Kanji N5' },
-    { id: 'kanjin4', class: 'btn-secondary', title: 'Kanji N4' },
-    { id: 'kanjin3', class: 'btn-secondary', title: 'Kanji N3' },
-    { id: 'kanjin2', class: 'btn-secondary', title: 'Kanji N2' },
-    { id: 'kanjin1', class: 'btn-secondary', title: 'Kanji N1' },
-    { id: 'mixed-kanji', class: 'btn-secondary', title: 'All kanji' },
+    { id: 'kanjin5', className: 'btn-secondary', title: 'Kanji N5' },
+    { id: 'kanjin4', className: 'btn-secondary', title: 'Kanji N4' },
+    { id: 'kanjin3', className: 'btn-secondary', title: 'Kanji N3' },
+    { id: 'kanjin2', className: 'btn-secondary', title: 'Kanji N2' },
+    { id: 'kanjin1', className: 'btn-secondary', title: 'Kanji N1' },
+    { id: 'mixed-kanji', className: 'btn-secondary', title: 'All kanji' },
 ];
 
 const methodOptions = [
@@ -90,7 +91,7 @@ export default class Lobby extends Component {
                                         </FormGroup>
                                         <Button type={'submit'}
                                                 title={'Start exam'}
-                                                class={'btn-primary btn-main'}/>
+                                                className={'btn-primary btn-main'}/>
                                     </Fieldset>
                                 </Form>
                             </div>

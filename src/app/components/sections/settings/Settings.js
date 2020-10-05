@@ -8,8 +8,8 @@ import Button from '../../atomic/atoms/Button';
 
 import Checkbox from '../../atomic/atoms/Checkbox';
 import Select from '../../atomic/atoms/Select';
-import Form from "../../form-2/organisms/Form";
-import FormGroup from "../../form-2/molecules/FormGroup";
+import Form from "../../atomic/organisms/Form";
+import FormGroup from "../../atomic/molecules/FormGroup";
 
 const retryOptions = [
     { id: "1", title: "None" },

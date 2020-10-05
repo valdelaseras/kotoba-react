@@ -6,7 +6,7 @@ const ButtonListItem = props =>
         <Button type={ props.type }
                 title={ props.title }
                 link={ props.link }
-                class={ props.class }/>
+                className={ props.className }/>
     </li>
 ;
 
