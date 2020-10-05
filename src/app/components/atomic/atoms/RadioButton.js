@@ -5,12 +5,7 @@ export default class RadioButton extends Component {
         super( props );
 
         this.title = props.title;
-        this.checked = props.checked;
         this.required = props.required;
-
-        this.state = {
-            isValid: false
-        };
 
         this.initInput();
     }
@@ -23,22 +18,34 @@ export default class RadioButton extends Component {
         }
     };
 
-    handleChange = ( e ) => {
-        this.setState({ isValid: e.target.checkValidity() });
-    };
-
     render() {
         return(
             <label htmlFor={ this.props.id }>{ this.title }
-                <input className={ this.props.class + ( this.state.isValid ? '' : ' invalid' )}
+                <input className={ this.props.isValid ? '' : 'invalid' }
                        id={ this.props.id }
                        name={ this.props.name }
                        type='radio'
-                       defaultChecked={ this.checked }
+                       defaultChecked={ this.props.checked }
                        required={ this.required }
                        onChange={ this.handleChange }/>
             </label>
         )
     }
 }
+
+/**
+ * NOTE: default checked in radio buttons must be passed like a 'normal html attribute'.
+ * FormField has no initial value prop in this case. Example:
+ *
+ * <FormField>
+     <RadioButton id={'rd-test'}
+        title={'radio test'}
+        name={'record'}/>
+     <RadioButton id={'rd-test-two'}
+        name={'record'}/>
+     <RadioButton id={'rd-test-three'}
+        checked={'checked'}
+        name={'record'}/>
+     </FormField>
+ */
 

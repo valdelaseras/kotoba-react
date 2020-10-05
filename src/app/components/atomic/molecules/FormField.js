@@ -4,9 +4,13 @@ export default class FormField extends Component {
     constructor( props ){
         super( props );
 
+        this.initialValue = props.value;
+
         this.state = {
             isValid: false,
-            fieldValue: ''
+            fieldValue: this.initialValue
+            // TODO: add prop to the formfield to set a default value. So this is different for
+            //  checkboxes, radio buttons, selects and inputs
         };
     }
 
@@ -40,3 +44,6 @@ export default class FormField extends Component {
  * Note: Pass one form field in this component ( props.children )
  */
 
+// TODO: fieldValue is empty string by default which works for inputs. But other elements like
+//  checkbox and radiobuttons have a default selected attribute and select has options with a
+//  'selected' attribute for default selection.

@@ -44,7 +44,7 @@ class Landing extends Component {
 
                     <Form id={'login-form'}>
                         <FormGroup key={ 'login-details' } id={'login'}>
-                            <FormField>
+                            <FormField value={''}>
                                 <Input id={'username-input'}
                                        name={'username'}
                                        type={'text'}

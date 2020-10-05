@@ -24,7 +24,7 @@ export default class Input extends Component {
     render() {
         return(
             <label htmlFor={ this.props.id }>{ this.title }
-                <input className={ this.props.isValid ? '' : 'invalid'}
+                <input className={ this.props.isValid ? '' : 'invalid' }
                        defaultValue={ this.props.fieldValue }
                        id={ this.props.id }
                        name={ this.props.name }
