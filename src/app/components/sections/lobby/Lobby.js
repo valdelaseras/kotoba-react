@@ -6,6 +6,7 @@ import Select from "../../atomic/atoms/Select";
 import FormGroup from '../../atomic/molecules/FormGroup';
 import ButtonList from '../../atomic/organisms/ButtonList';
 import Fieldset from '../../atomic/organisms/Fieldset';
+import FormField from '../../atomic/molecules/FormField';
 import Form from '../../atomic/organisms/Form';
 import Content from '../../layout/Content';
 import Row from '../../layout/Row';
@@ -76,18 +77,24 @@ export default class Lobby extends Component {
                                         </p>
                                         <h3>Exam settings</h3>
                                         <FormGroup id={'exam-settings'}>
-                                            <Select name={'retry-settings'}
-                                                    title={'Allowed retries per question'}
-                                                    id={'retry-select'}
-                                                    children={ retryOptions }/>
-                                            <Select name={'repeat-settings'}
-                                                    title={'Repeat incorrectly answered questions'}
-                                                    text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
-                                                    id={'repeat-select'} children={ repeatOptions }/>
-                                            <Select name={'method-settings'}
-                                                    title={'Method'}
-                                                    id={'method-select'}
-                                                    children={ methodOptions }/>
+                                            <FormField value={ retryOptions[2].title }>
+                                                <Select name={'retry-settings'}
+                                                        title={'Allowed retries per question'}
+                                                        id={'retry-select'}
+                                                        children={ retryOptions }/>
+                                            </FormField>
+                                            <FormField value={ repeatOptions[0].title }>
+                                                <Select name={'repeat-settings'}
+                                                        title={'Repeat incorrectly answered questions'}
+                                                        text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
+                                                        id={'repeat-select'} children={ repeatOptions }/>
+                                            </FormField>
+                                            <FormField value={ methodOptions[1].title }>
+                                                <Select name={'method-settings'}
+                                                        title={'Method'}
+                                                        id={'method-select'}
+                                                        children={ methodOptions }/>
+                                            </FormField>
                                         </FormGroup>
                                         <Button type={'submit'}
                                                 title={'Start exam'}
@@ -102,3 +109,5 @@ export default class Lobby extends Component {
         )
     }
 }
+
+// TODO: default values here must be according to settings local storage keys

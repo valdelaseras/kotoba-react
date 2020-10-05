@@ -5,6 +5,7 @@ import Section from "../../layout/Section";
 import Content from '../../layout/Content';
 import Fieldset from "../../atomic/organisms/Fieldset";
 import Form from "../../atomic/organisms/Form";
+import FormField from "../../atomic/molecules/FormField";
 import FormGroup from "../../atomic/molecules/FormGroup";
 import Input from "../../atomic/atoms/Input";
 import Button from "../../atomic/atoms/Button";
@@ -20,11 +21,13 @@ export default class Exam extends Component {
                         <Form id={'exam-form'}>
                             <Fieldset title={'Current question'}>
                                 <FormGroup key={'exam-question'} id={'exam-question-fg'}>
-                                    <Input id={'exam-input'}
-                                           name={'answer'}
-                                           type={'text'}
-                                           placeholder={'Please answer in Current method'}
-                                           required={'required'}/>
+                                    <FormField value={''}>
+                                        <Input id={'exam-input'}
+                                               name={'answer'}
+                                               type={'text'}
+                                               placeholder={'Please answer in Current method'}
+                                               required={'required'}/>
+                                    </FormField>
                                 </FormGroup>
 
                                 <div className={'info-bar'}>
