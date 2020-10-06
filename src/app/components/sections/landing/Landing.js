@@ -62,6 +62,25 @@ class Landing extends Component {
                                        required={'required'}/>
                             </FormField>
                         </FormGroup>
+                        {/*<FormGroup key={ 'test-details' } id={'test'}>*/}
+                            {/*<FormField value={''} key='test-one'>*/}
+                                {/*<Input id={'test-one-input'}*/}
+                                       {/*name={'test-one'}*/}
+                                       {/*type={'text'}*/}
+                                       {/*placeholder={'Enter your test'}*/}
+                                       {/*minLength={'3'}*/}
+                                       {/*required={'required'}/>*/}
+                            {/*</FormField>*/}
+                            {/*<p>Another test child</p>*/}
+                            {/*<FormField value={''} key='test-two'>*/}
+                                {/*<Input id={'test-two-input'}*/}
+                                       {/*name={'test-two'}*/}
+                                       {/*type={'text'}*/}
+                                       {/*placeholder={'Enter your test-two'}*/}
+                                       {/*minLength={'3'}*/}
+                                       {/*required={'required'}/>*/}
+                            {/*</FormField>*/}
+                        {/*</FormGroup>*/}
 
                         <Button key={'login-form-btn'}
                                 type={'submit'}

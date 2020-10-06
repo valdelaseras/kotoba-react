@@ -23,16 +23,16 @@ export default class FormField extends Component {
         // Save the value and validity state in newState so we can pass it to the handleChange
         // function of FormGroup, the parent element. The name of the form field child does not
         // update, so it is excluded here
-        const newState = {
+        const updatedState = {
             isValid: e.target.checkValidity(),
             fieldValue: e.target.value
         };
 
         // Set the actual new states in this component
-        this.setState( newState );
+        this.setState( updatedState );
 
         // Send the new state and the form field child name up the component hierarchy to FormGroup
-        this.props.handleChange( Object.assign({ name: this.state.name }, newState ) );
+        this.props.handleChange( Object.assign({ name: this.state.name }, updatedState ) );
     };
 
     render() {

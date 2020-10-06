@@ -5,30 +5,52 @@ export default class FormGroup extends Component {
         super( props );
 
         this.state = {
-            isValid: false
+            isValid: false,
+            fields: props.children.filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
+                return {
+                    // The field names never change so we just get the names from the children props right away
+                    name: field.props.children.props.name,
+                    value: field.props.value,
+                    isValid: false
+                }
+            })
         };
     }
 
+    /**
+     * updatedState param is passed from the FormField children handleChange
+     *
+     * @param updatedState
+     */
     handleChange = ( updatedState ) => {
-        const formFields =  Array.from( this.getFormFields() );
+        // Cloning the existing list of fields
+        const fields =  Array.from( this.state.fields );
+        // Find the field that executed this handleChange callback method
+        const updatedField = fields.find( field => field.name === updatedState.name );
 
-        console.log(updatedState);
+        // Then we assign the updatedState's values for isValid and fieldValue to those in the
+        // cloned fields array ( per field )
+        updatedField.isValid = updatedState.isValid;
+        updatedField.value = updatedState.fieldValue;
+
+        // With this updated fields array, we can set the updated state of this component. If no fields
+        // are left with isValid: false states, the group is valid
+        this.setState({
+            fields: fields,
+            isValid: !fields.filter( field => !field.isValid).length
+        });
     };
 
     /**
-     * Filter the children that are actually FormFields
+     * Returns true if the type param is found in the element param
      *
-     * @returns { Object }
+     * @param element
+     * @param type
+     * @returns {*|boolean}
      */
-    getFormFields = () => {
-        return this.props.children.filter( child => ( child.type.name && child.type.name.includes('FormField')));
+    elementIsOfType = ( element, type ) => {
+        return (( element.type.name && element.type.name.includes( type )));
     };
-
-    // elementIsOfType = ( element, type ) => {
-    //     return (
-    //         (element.type.name && element.type.name.includes( type ))
-    //     );
-    // };
 
     /**
      * In the render function we render any children that aren't FormFields as is,
@@ -41,7 +63,7 @@ export default class FormGroup extends Component {
     render() {
         const children = this.props.children
             .map( child => {
-                if ( child.type.name && child.type.name.includes('FormField')) {
+                if ( this.elementIsOfType( child, 'FormField')) {
                     const props = {
                         handleChange: this.handleChange
                     };
@@ -54,8 +76,7 @@ export default class FormGroup extends Component {
 
         return(
             <div className={ 'form-group' + ( this.state.isValid ? '' : ' invalid' ) }
-                 id={ this.props.id }
-                 onChange={ this.handleChange }>
+                 id={ this.props.id }>
                 { this.props.title ? <h2>{ this.props.title }</h2> : null }
                 { children }
             </div>
