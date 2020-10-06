@@ -52,6 +52,15 @@ class Landing extends Component {
                                        minLength={'3'}
                                        required={'required'}/>
                             </FormField>
+                            <p>A test child</p>
+                            <FormField value={''} key='password'>
+                                <Input id={'password-input'}
+                                       name={'password'}
+                                       type={'text'}
+                                       placeholder={'Enter your password'}
+                                       minLength={'3'}
+                                       required={'required'}/>
+                            </FormField>
                         </FormGroup>
 
                         <Button key={'login-form-btn'}

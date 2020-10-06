@@ -1,26 +1,42 @@
 import React, { Component } from 'react';
 
+/**
+ * Pass one form field element in this component
+ */
 export default class FormField extends Component {
     constructor( props ){
         super( props );
 
-        this.initialValue = props.value;
-
+        /**
+         * For any type of form field element ( input, select, checkbox, radiobutton ), a
+         * value={'somevalue'} may be set on the FormField tag. This serves as the initial value and sets
+         * defaultSelected, defaultChecked etc. on the form field elements as desired.
+         */
         this.state = {
             isValid: false,
-            fieldValue: this.initialValue
+            fieldValue: props.value,
+            name: props.children.props.name
         };
     }
 
     handleChange = ( e ) => {
-        this.setState({
+        // Save the value and validity state in newState so we can pass it to the handleChange
+        // function of FormGroup, the parent element. The name of the form field child does not
+        // update, so it is excluded here
+        const newState = {
             isValid: e.target.checkValidity(),
             fieldValue: e.target.value
-        });
+        };
+
+        // Set the actual new states in this component
+        this.setState( newState );
+
+        // Send the new state and the form field child name up the component hierarchy to FormGroup
+        this.props.handleChange( Object.assign({ name: this.state.name }, newState ) );
     };
 
     render() {
-        const children = React.Children.map(this.props.children, child => {
+        const children = React.Children.map( this.props.children, child => {
             const props = {
                 isValid: this.state.isValid,
                 fieldValue: this.state.fieldValue
@@ -38,7 +54,7 @@ export default class FormField extends Component {
     }
 }
 
-/**
- * Note: Pass one form field in this component ( props.children )
- */
+// TODO: if form field is not wrapped in a FormGroup component, it now breaks on this.props.handleChange.
+//  Even though a form field "should" be wrapped in a form group ( at least in this project ), it would
+//  be nice if the form fields + children would also still work as standalone components
 
