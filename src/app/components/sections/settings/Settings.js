@@ -58,15 +58,15 @@ export default class Settings extends Component {
                                     <p>
                                         Set your preference on handling incorrectly answered questions.
                                     </p>
-                                    <FormGroup id={'exam-settings'}>
-                                        <FormField value={ retryOptions[2].title }>
+                                    <FormGroup key={'exam-settings'} id={'exam-settings'}>
+                                        <FormField key={'retry-settings'} value={ retryOptions[2].title }>
                                             <Select name={'retry'}
                                                     title={'Allowed retries per question'}
                                                     text={'The amount of retries allowed before moving on to the next question'}
                                                     id={'retry-select'}
                                                     children={ retryOptions }/>
                                         </FormField>
-                                        <FormField value={ repeatOptions[0].title }>
+                                        <FormField key={'repeat-settings'} value={ repeatOptions[0].title }>
                                             <Select name={'repeat'}
                                                     title={'Repeat incorrectly answered questions'}
                                                     text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
@@ -79,9 +79,9 @@ export default class Settings extends Component {
 
                             <Content colSize={'column two'}>
                                 <Fieldset title={'Visual preferences'}>
-                                    <FormGroup id={'visual-settings'}>
+                                    <FormGroup key={'visual-settings'} id={'visual-settings'}>
                                         <h3>Theme</h3>
-                                        <FormField value={ themeOptions[0].title }>
+                                        <FormField key={'theme-select'} value={ themeOptions[0].title }>
                                             <Select name={'theme'}
                                                     id={'theme-select'}
                                                     children={ themeOptions }/>
@@ -90,13 +90,13 @@ export default class Settings extends Component {
                                         <p>
                                             For kids who can't read good and want to learn how to do other stuff good too
                                         </p>
-                                        <FormField value={ fontFamilyOptions[0].title }>
+                                        <FormField key={'font-family-select'} value={ fontFamilyOptions[0].title }>
                                             <Select name={'font-family'}
                                                     title={'Font family'}
                                                     id={'ff-select'}
                                                     children={ fontFamilyOptions }/>
                                         </FormField>
-                                        <FormField value={ fontSizeOptions[0].title }>
+                                        <FormField key={'font-size-select'} value={ fontSizeOptions[0].title }>
                                             <Select name={'font-size'}
                                                     title={'Font size'}
                                                     id={'fs-select'}
@@ -110,8 +110,8 @@ export default class Settings extends Component {
                         <Row colSize={'column'}>
                             <Content colSize={'column two'}>
                                 <Fieldset title={'General settings'}>
-                                    <FormGroup id={'general-settings'}>
-                                        <FormField value={'checked'}>
+                                    <FormGroup key={'general-settings'} id={'general-settings'}>
+                                        <FormField key={'local-record'} value={'checked'}>
                                             <Checkbox id={'local-record'}
                                                       text={'Keep a local record of your scores'}
                                                       title={'Score history'}

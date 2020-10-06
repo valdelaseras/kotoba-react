@@ -76,20 +76,20 @@ export default class Lobby extends Component {
                                             To change your default global settings, <NavLink className="highlight" to={'/settings'}>click here</NavLink>.
                                         </p>
                                         <h3>Exam settings</h3>
-                                        <FormGroup id={'exam-settings'}>
-                                            <FormField value={ retryOptions[2].title }>
+                                        <FormGroup key={'exam-settings'} id={'exam-settings'}>
+                                            <FormField key={'retry-settings'} value={ retryOptions[2].title }>
                                                 <Select name={'retry-settings'}
                                                         title={'Allowed retries per question'}
                                                         id={'retry-select'}
                                                         children={ retryOptions }/>
                                             </FormField>
-                                            <FormField value={ repeatOptions[0].title }>
+                                            <FormField key={'repeat-settings'} value={ repeatOptions[0].title }>
                                                 <Select name={'repeat-settings'}
                                                         title={'Repeat incorrectly answered questions'}
                                                         text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
                                                         id={'repeat-select'} children={ repeatOptions }/>
                                             </FormField>
-                                            <FormField value={ methodOptions[1].title }>
+                                            <FormField key={'method-settings'} value={ methodOptions[1].title }>
                                                 <Select name={'method-settings'}
                                                         title={'Method'}
                                                         id={'method-select'}
