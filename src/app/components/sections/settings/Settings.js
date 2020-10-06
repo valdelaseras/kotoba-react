@@ -77,48 +77,48 @@ export default class Settings extends Component {
                                 </Fieldset>
                             </Content>
 
-                            <Content colSize={'column two'}>
-                                <Fieldset title={'Visual preferences'}>
-                                    <FormGroup key={'visual-settings'} id={'visual-settings'}>
-                                        <h3>Theme</h3>
-                                        <FormField key={'theme-select'} value={ themeOptions[0].title }>
-                                            <Select name={'theme'}
-                                                    id={'theme-select'}
-                                                    children={ themeOptions }/>
-                                        </FormField>
-                                        <h3>Text preference</h3>
-                                        <p>
-                                            For kids who can't read good and want to learn how to do other stuff good too
-                                        </p>
-                                        <FormField key={'font-family-select'} value={ fontFamilyOptions[0].title }>
-                                            <Select name={'font-family'}
-                                                    title={'Font family'}
-                                                    id={'ff-select'}
-                                                    children={ fontFamilyOptions }/>
-                                        </FormField>
-                                        <FormField key={'font-size-select'} value={ fontSizeOptions[0].title }>
-                                            <Select name={'font-size'}
-                                                    title={'Font size'}
-                                                    id={'fs-select'}
-                                                    children={ fontSizeOptions }/>
-                                        </FormField>
-                                    </FormGroup>
-                                </Fieldset>
-                            </Content>
+                            {/*<Content colSize={'column two'}>*/}
+                                {/*<Fieldset title={'Visual preferences'}>*/}
+                                    {/*<FormGroup key={'visual-settings'} id={'visual-settings'}>*/}
+                                        {/*<h3>Theme</h3>*/}
+                                        {/*<FormField key={'theme-select'} value={ themeOptions[0].title }>*/}
+                                            {/*<Select name={'theme'}*/}
+                                                    {/*id={'theme-select'}*/}
+                                                    {/*children={ themeOptions }/>*/}
+                                        {/*</FormField>*/}
+                                        {/*<h3>Text preference</h3>*/}
+                                        {/*<p>*/}
+                                            {/*For kids who can't read good and want to learn how to do other stuff good too*/}
+                                        {/*</p>*/}
+                                        {/*<FormField key={'font-family-select'} value={ fontFamilyOptions[0].title }>*/}
+                                            {/*<Select name={'font-family'}*/}
+                                                    {/*title={'Font family'}*/}
+                                                    {/*id={'ff-select'}*/}
+                                                    {/*children={ fontFamilyOptions }/>*/}
+                                        {/*</FormField>*/}
+                                        {/*<FormField key={'font-size-select'} value={ fontSizeOptions[0].title }>*/}
+                                            {/*<Select name={'font-size'}*/}
+                                                    {/*title={'Font size'}*/}
+                                                    {/*id={'fs-select'}*/}
+                                                    {/*children={ fontSizeOptions }/>*/}
+                                        {/*</FormField>*/}
+                                    {/*</FormGroup>*/}
+                                {/*</Fieldset>*/}
+                            {/*</Content>*/}
                         </Row>
 
                         <Row colSize={'column'}>
                             <Content colSize={'column two'}>
-                                <Fieldset title={'General settings'}>
-                                    <FormGroup key={'general-settings'} id={'general-settings'}>
-                                        <FormField key={'local-record'} value={'checked'}>
-                                            <Checkbox id={'local-record'}
-                                                      text={'Keep a local record of your scores'}
-                                                      title={'Score history'}
-                                                      name={'record'}/>
-                                        </FormField>
-                                    </FormGroup>
-                                </Fieldset>
+                                {/*<Fieldset title={'General settings'}>*/}
+                                    {/*<FormGroup key={'general-settings'} id={'general-settings'}>*/}
+                                        {/*<FormField key={'local-record'} value={'checked'}>*/}
+                                            {/*<Checkbox id={'local-record'}*/}
+                                                      {/*text={'Keep a local record of your scores'}*/}
+                                                      {/*title={'Score history'}*/}
+                                                      {/*name={'record'}/>*/}
+                                        {/*</FormField>*/}
+                                    {/*</FormGroup>*/}
+                                {/*</Fieldset>*/}
                                 <Button type={'submit'}
                                         title={'Save'}
                                         onSubmit={ this.submitHandler }
@@ -132,4 +132,5 @@ export default class Settings extends Component {
     }
 }
 
-
+// TODO: btn-main class is 'undefined'
+// TODO: Form cannot yet handle multiple FormGroups

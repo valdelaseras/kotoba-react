@@ -6,7 +6,7 @@ export default class FormGroup extends Component {
 
         this.state = {
             isValid: false,
-            fields: props.children.filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
+            fields: React.Children.toArray(props.children).filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
                 return {
                     // The field names never change so we just get the names from the children props right away
                     name: field.props.children.props.name,
@@ -61,7 +61,9 @@ export default class FormGroup extends Component {
      * we pass the handleChange function as an additional property .
      */
     render() {
-        const children = this.props.children
+        // Must be turned into an array, so if there is only 1 child we can still perform .filter
+        // and .map methods on it ( as used in this.state.fields )
+        const children = React.Children.toArray( this.props.children )
             .map( child => {
                 if ( this.elementIsOfType( child, 'FormField')) {
                     const props = {
