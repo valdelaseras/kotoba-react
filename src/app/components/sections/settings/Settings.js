@@ -8,8 +8,9 @@ import Button from '../../atomic/atoms/Button';
 
 import Checkbox from '../../atomic/atoms/Checkbox';
 import Select from '../../atomic/atoms/Select';
-import Form from "../../form-2/organisms/Form";
-import FormGroup from "../../form-2/molecules/FormGroup";
+import Form from "../../atomic/organisms/Form";
+import FormGroup from "../../atomic/molecules/FormGroup";
+import FormField from "../../atomic/molecules/FormField";
 
 const retryOptions = [
     { id: "1", title: "None" },
@@ -58,16 +59,20 @@ export default class Settings extends Component {
                                         Set your preference on handling incorrectly answered questions.
                                     </p>
                                     <FormGroup id={'exam-settings'}>
-                                        <Select name={'retry'}
-                                                title={'Allowed retries per question'}
-                                                text={'The amount of retries allowed before moving on to the next question'}
-                                                id={'retry-select'}
-                                                children={ retryOptions }/>
-                                        <Select name={'repeat'}
-                                                title={'Repeat incorrectly answered questions'}
-                                                text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
-                                                id={'repeat-select'}
-                                                children={ repeatOptions }/>
+                                        <FormField value={ retryOptions[2].title }>
+                                            <Select name={'retry'}
+                                                    title={'Allowed retries per question'}
+                                                    text={'The amount of retries allowed before moving on to the next question'}
+                                                    id={'retry-select'}
+                                                    children={ retryOptions }/>
+                                        </FormField>
+                                        <FormField value={ repeatOptions[0].title }>
+                                            <Select name={'repeat'}
+                                                    title={'Repeat incorrectly answered questions'}
+                                                    text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
+                                                    id={'repeat-select'}
+                                                    children={ repeatOptions }/>
+                                        </FormField>
                                     </FormGroup>
                                 </Fieldset>
                             </Content>
@@ -76,21 +81,27 @@ export default class Settings extends Component {
                                 <Fieldset title={'Visual preferences'}>
                                     <FormGroup id={'visual-settings'}>
                                         <h3>Theme</h3>
-                                        <Select name={'theme'}
-                                                id={'theme-select'}
-                                                children={ themeOptions }/>
+                                        <FormField value={ themeOptions[0].title }>
+                                            <Select name={'theme'}
+                                                    id={'theme-select'}
+                                                    children={ themeOptions }/>
+                                        </FormField>
                                         <h3>Text preference</h3>
                                         <p>
                                             For kids who can't read good and want to learn how to do other stuff good too
                                         </p>
-                                        <Select name={'font-family'}
-                                                title={'Font family'}
-                                                id={'ff-select'}
-                                                children={ fontFamilyOptions }/>
-                                        <Select name={'font-size'}
-                                                title={'Font size'}
-                                                id={'fs-select'}
-                                                children={ fontSizeOptions }/>
+                                        <FormField value={ fontFamilyOptions[0].title }>
+                                            <Select name={'font-family'}
+                                                    title={'Font family'}
+                                                    id={'ff-select'}
+                                                    children={ fontFamilyOptions }/>
+                                        </FormField>
+                                        <FormField value={ fontSizeOptions[0].title }>
+                                            <Select name={'font-size'}
+                                                    title={'Font size'}
+                                                    id={'fs-select'}
+                                                    children={ fontSizeOptions }/>
+                                        </FormField>
                                     </FormGroup>
                                 </Fieldset>
                             </Content>
@@ -100,11 +111,12 @@ export default class Settings extends Component {
                             <Content colSize={'column two'}>
                                 <Fieldset title={'General settings'}>
                                     <FormGroup id={'general-settings'}>
-                                        <Checkbox id={'local-record'}
-                                                  text={'Keep a local record of your scores'}
-                                                  title={'Score history'}
-                                                  name={'record'}
-                                                  checked={'checked'}/>
+                                        <FormField value={'checked'}>
+                                            <Checkbox id={'local-record'}
+                                                      text={'Keep a local record of your scores'}
+                                                      title={'Score history'}
+                                                      name={'record'}/>
+                                        </FormField>
                                     </FormGroup>
                                 </Fieldset>
                                 <Button type={'submit'}
@@ -120,4 +132,4 @@ export default class Settings extends Component {
     }
 }
 
-// TODO: Some styling adjustments depending on what I'm going to do with formgroups. Angular / react formgroups are a little different now
+

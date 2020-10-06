@@ -3,12 +3,15 @@ import { withRouter } from 'react-router-dom';
 
 import Content from '../../layout/Content';
 import Section from "../../layout/Section";
-import Input from "../../form-2/atoms/Input";
-import Form from "../../form-2/organisms/Form";
+
+import Form from "../../atomic/organisms/Form";
+import FormGroup from "../../atomic/molecules/FormGroup";
+import FormField from "../../atomic/molecules/FormField";
+
+import Input from "../../atomic/atoms/Input";
 import Button from "../../atomic/atoms/Button";
 
 import './landing.css';
-import FormGroup from "../../form-2/molecules/FormGroup";
 
 class Landing extends Component {
     // constructor( props ){
@@ -39,11 +42,45 @@ class Landing extends Component {
                         based on your results or create a custom exam yourself!
                     </p>
 
-                    <Form id={'login-form'} btnTitle={'Submit'} btnClass={'btn-primary btn-main'}>
+                    <Form id={'login-form'}>
                         <FormGroup key={ 'login-details' } id={'login'}>
-                            <Input id={'username-input'} name={'username'} type={'text'} placeholder={'Enter your username'} minLength={'3'} required={'required'}/>
-                            {/*<Input id={'password-input'} name={'password'} type={'text'} placeholder={'Enter your password'} minLength={'3'} required={'required'}/>*/}
+                            <FormField value={''} key='username'>
+                                <Input id={'username-input'}
+                                       name={'username'}
+                                       type={'text'}
+                                       placeholder={'Enter your username'}
+                                       minLength={'3'}
+                                       required={'required'}/>
+                            </FormField>
+                            <p>A test child</p>
+                            <FormField value={''} key='password'>
+                                <Input id={'password-input'}
+                                       name={'password'}
+                                       type={'text'}
+                                       placeholder={'Enter your password'}
+                                       minLength={'3'}
+                                       required={'required'}/>
+                            </FormField>
                         </FormGroup>
+                        {/*<FormGroup key={ 'test-details' } id={'test'}>*/}
+                            {/*<FormField value={''} key='test-one'>*/}
+                                {/*<Input id={'test-one-input'}*/}
+                                       {/*name={'test-one'}*/}
+                                       {/*type={'text'}*/}
+                                       {/*placeholder={'Enter your test'}*/}
+                                       {/*minLength={'3'}*/}
+                                       {/*required={'required'}/>*/}
+                            {/*</FormField>*/}
+                            {/*<p>Another test child</p>*/}
+                            {/*<FormField value={''} key='test-two'>*/}
+                                {/*<Input id={'test-two-input'}*/}
+                                       {/*name={'test-two'}*/}
+                                       {/*type={'text'}*/}
+                                       {/*placeholder={'Enter your test-two'}*/}
+                                       {/*minLength={'3'}*/}
+                                       {/*required={'required'}/>*/}
+                            {/*</FormField>*/}
+                        {/*</FormGroup>*/}
 
                         <Button key={'login-form-btn'}
                                 type={'submit'}

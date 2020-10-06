@@ -5,7 +5,7 @@ const ButtonList = props =>
     <ul className={ 'btn-group ' + props.class }>
         { props.children.map( child =>
             <ButtonListItem key={ child.id }
-                            class={ child.class }
+                            className={ child.className }
                             title={ child.title }
                             link={ child.link }
                             type={ child.type }/>

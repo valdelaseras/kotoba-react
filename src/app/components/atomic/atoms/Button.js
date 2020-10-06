@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 class Button extends Component {
-    // constructor( props ){
-    //     super( props );
-    //
-    //     this.state = {
-    //         disabled: this.props.isValid
-    //     }
-    // }
+    constructor( props ){
+        super( props );
+
+        this.state = {
+            disabled: this.props.isValid
+        }
+    }
 
     clickHandler = () => {
         if ( this.props.link ) {
@@ -29,9 +29,6 @@ class Button extends Component {
 }
 
 export default withRouter( Button );
-
-// TODO: this sort of works (disabled state) but it's added/removed 'too late'. '
-//  'setState is not immediate ( clearly ) so I will need to fix this
 
 // TODO: on click now works for navigation but eventually need another solution.
 //  A button in lobby for example does not navigate

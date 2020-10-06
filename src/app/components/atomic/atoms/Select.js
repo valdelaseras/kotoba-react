@@ -9,10 +9,6 @@ export default class Select extends Component {
         this.title = props.title;
         this.required = props.required;
 
-        this.state = {
-            isValid: false
-        };
-
         this.initSelect();
     }
 
@@ -24,23 +20,20 @@ export default class Select extends Component {
         }
     };
 
-    handleChange = ( e ) => {
-        this.setState({ isValid: e.target.checkValidity() });
-    };
-
     render() {
         return(
             <label htmlFor={ this.props.name }>{ this.title }
                 { this.props.text? <p>{ this.props.text }</p> : null }
-                <select id={ this.props.id }
-                        onChange={ this.handleChange }
+                <select className={ this.props.isValid ? '' : 'invalid' }
+                        id={ this.props.id }
                         required={ this.required }
-                        name={ this.props.name }>
+                        name={ this.props.name }
+                        defaultValue={ this.props.fieldValue }>
                         { this.props.children.map( child =>
-                        <option key={ child.id }
-                                value={ child.title }>
-                            { child.title }
-                        </option>
+                            <option key={ child.id }
+                                    value={ child.title }>
+                                { child.title }
+                            </option>
                     )}
                 </select>
             </label>
@@ -49,3 +42,11 @@ export default class Select extends Component {
 }
 
 // TODO: add default checked option
+
+// TODO: Check what kind of HTML validity check is done for Select elements, if any.
+//  Style element accordingly as well
+
+/**
+ * NOTE: To set the default selected option, pass the object[i].title in
+ * FormField prop value
+ */

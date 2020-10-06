@@ -1,54 +1,39 @@
 import React, { Component } from 'react';
 
 export default class Input extends Component {
-    constructor( props ) {
+    constructor( props ){
         super( props );
 
-        this.id = props.id;
-        this.title = props.title;
-        this.name = props.name;
-        this.type= props.type;
-        this.placeholder = props.placeholder;
         this.required = props.required;
-        this.minLength = props.minLength;
-
-        this.state = {
-            isValid: false
-        };
+        this.title = props.title;
+        this.placeholder = props.placeholder;
 
         this.initInput();
     }
 
     initInput = () => {
         if ( this.required ) {
-            this.placeholder += ' *';
-            if ( this.title ) {
+            if ( this.placeholder ) {
+                this.placeholder += ' *';
+            } else if ( this.title ) {
                 this.title += ' *';
             }
         }
     };
 
-    handleChange = ( e ) => {
-        this.setState({ isValid: e.target.checkValidity() });
-        console.log('input', this.state.isValid );
-    };
-
     render() {
-        return (
-            <label htmlFor={ this.id }>{ this.title }
-                <input className={ this.state.isValid ? '' : 'invalid' }
-                       id={ this.id }
-                       name={ this.name }
-                       type={ this.type }
+        return(
+            <label htmlFor={ this.props.id }>{ this.title }
+                <input className={ this.props.isValid ? '' : 'invalid' }
+                       defaultValue={ this.props.fieldValue }
+                       id={ this.props.id }
+                       name={ this.props.name }
+                       type={ this.props.type }
                        placeholder={ this.placeholder }
-                       minLength={ this.minLength }
+                       minLength={ this.props.minLength }
                        required={ this.required }
-                       onChange={ this.handleChange }/>
+                />
             </label>
         )
     }
 }
-
-
-// TODO: if form pristine, state isValid is false but I guess the 'invalid' styling shouldnt display yet
-// TODO: replace this Input with new one in /form-2 once code has been refactored

@@ -1,52 +1,85 @@
 import React, { Component } from 'react';
-import Input from '../../atomic/atoms/Input'
 
 export default class FormGroup extends Component {
-    constructor( props ) {
+    constructor( props ){
         super( props );
-
-        this.id = props.id;
-        this.title = props.title;
-        this.children = props.children;
 
         this.state = {
             isValid: false,
-            fields: props.children.map( field => ({
-                name: field.name,
-                valid: false,
-                value: undefined
-            }))
+            fields: props.children.filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
+                return {
+                    // The field names never change so we just get the names from the children props right away
+                    name: field.props.children.props.name,
+                    value: field.props.value,
+                    isValid: false
+                }
+            })
         };
     }
 
-    handleChange = ( e ) => {
-        const { name } = e.target;
-        const field = this.state.fields.find( field => field.name === name );
-        const invalidChildren = this.state.fields.filter( field => !field.valid );
+    /**
+     * updatedState param is passed from the FormField children handleChange
+     *
+     * @param updatedState
+     */
+    handleChange = ( updatedState ) => {
+        // Cloning the existing list of fields
+        const fields =  Array.from( this.state.fields );
+        // Find the field that executed this handleChange callback method
+        const updatedField = fields.find( field => field.name === updatedState.name );
 
-        field.valid = e.target.checkValidity();
+        // Then we assign the updatedState's values for isValid and fieldValue to those in the
+        // cloned fields array ( per field )
+        updatedField.isValid = updatedState.isValid;
+        updatedField.value = updatedState.fieldValue;
 
-        this.setState({ isValid: invalidChildren.length === 0 });
+        // With this updated fields array, we can set the updated state of this component. If no fields
+        // are left with isValid: false states, the group is valid
+        this.setState({
+            fields: fields,
+            isValid: !fields.filter( field => !field.isValid).length
+        });
     };
 
+    /**
+     * Returns true if the type param is found in the element param
+     *
+     * @param element
+     * @param type
+     * @returns {*|boolean}
+     */
+    elementIsOfType = ( element, type ) => {
+        return (( element.type.name && element.type.name.includes( type )));
+    };
+
+    /**
+     * In the render function we render any children that aren't FormFields as is,
+     * without any added props. These don't need any validation, but we still want to render
+     * them ( example: a P element in the form group with some additional information or what not )
+     *
+     * For any FormField elements that actually hold inputs, selects, checkboxes etc.,
+     * we pass the handleChange function as an additional property .
+     */
     render() {
-        return (
-            <div className={ 'form-group ' + ( this.state.isValid ? '' : 'invalid' ) }
-                 id={ this.id }
-                 onChange={ this.handleChange }>
-                { this.title ? <h2>{ this.title }</h2> : null }
-                { this.children.map( child =>
-                    <Input key={ child.id }
-                           id={ child.id }
-                           title={ child.title }
-                           type={ child.type }
-                           name={ child.name }
-                           minLength={ child.minLength }
-                           placeholder={ child.placeholder }
-                           required={ child.required }/>)}
+        const children = this.props.children
+            .map( child => {
+                if ( this.elementIsOfType( child, 'FormField')) {
+                    const props = {
+                        handleChange: this.handleChange
+                    };
+
+                    return React.cloneElement( child, props );
+                } else {
+                    return child;
+                }
+            });
+
+        return(
+            <div className={ 'form-group' + ( this.state.isValid ? '' : ' invalid' ) }
+                 id={ this.props.id }>
+                { this.props.title ? <h2>{ this.props.title }</h2> : null }
+                { children }
             </div>
         )
     }
 }
-
-// TODO: replace this FormGroup with new one in /form-2 once code has been refactored

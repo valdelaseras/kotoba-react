@@ -5,12 +5,8 @@ export default class Checkbox extends Component {
         super( props );
 
         this.title = props.title;
-        this.checked = props.checked;
+        // this.checked = props.checked;
         this.required = props.required;
-
-        this.state = {
-            isValid: false
-        };
 
         this.initCheckbox();
     }
@@ -23,10 +19,6 @@ export default class Checkbox extends Component {
       }
     };
 
-    handleChange = ( e ) => {
-        this.setState({ isValid: e.target.checkValidity() });
-    };
-
     render() {
         return(
             <label htmlFor={ this.props.id }>{ this.title }
@@ -34,10 +26,12 @@ export default class Checkbox extends Component {
                 <input id={ this.props.id }
                        name={ this.props.name }
                        type='checkbox'
-                       defaultChecked={ this.checked }
-                       required={ this.required }
-                       onChange={ this.handleChange }/>
+                       defaultChecked={ this.props.fieldValue }
+                       required={ this.required }/>
             </label>
         )
     }
 }
+
+// TODO: ONLY IF required prop has been given, classname attr with invalid/valid props should be
+//  passed. It makes no sense to have an invalid class by default on an optional checkbox
