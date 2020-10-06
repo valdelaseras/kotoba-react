@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 class Button extends Component {
+    // constructor( props ){
+    //     super( props );
+    //
+    //     this.state = {
+    //         disabled: this.props.isValid
+    //     }
+    // }
+
     clickHandler = () => {
         if ( this.props.link ) {
             this.props.history.push( this.props.link );
@@ -12,9 +20,9 @@ class Button extends Component {
         return(
             <button type={ this.props.type }
                     title={ this.props.title }
-                    className={ "btn " + this.props.class }
-                    onClick={ this.clickHandler }
-                    disabled={ this.props.disabled }>{ this.props.title }
+                    className={ "btn " + this.props.className }
+                    disabled={ this.props.disabled ? 'disabled' : '' }
+                    onClick={ this.clickHandler }>{ this.props.title }
             </button>
         )
     }

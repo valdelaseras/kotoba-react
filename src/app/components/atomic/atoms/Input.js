@@ -19,7 +19,6 @@ export default class Input extends Component {
         this.initInput();
     }
 
-    // TODO: is this impure?
     initInput = () => {
         if ( this.required ) {
             this.placeholder += ' *';
@@ -31,6 +30,7 @@ export default class Input extends Component {
 
     handleChange = ( e ) => {
         this.setState({ isValid: e.target.checkValidity() });
+        console.log('input', this.state.isValid );
     };
 
     render() {

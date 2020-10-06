@@ -49,8 +49,4 @@ export default class FormGroup extends Component {
     }
 }
 
-// TODO: 'Any' kind of element should be possible to use here.
-//  A simple paragraph, buttons, checkboxes, whatever.
-
-
 // TODO: replace this FormGroup with new one in /form-2 once code has been refactored

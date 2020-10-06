@@ -15,6 +15,7 @@ export default class Form extends Component {
 
         this.state = {
             isValid: false,
+            disabled: 'disabled',
             fields: props.children.map( child =>
                 child.inputs.map( field => ({
                     name: field.name,
@@ -32,11 +33,23 @@ export default class Form extends Component {
         field.valid = e.target.checkValidity();
         field.value = value;
 
-        this.setState({ isValid: invalidChildren.length === 0 });
+        if ( invalidChildren.length === 0  ) {
+            this.setState({ isValid: true });
+            this.enableButton();
+        }
+    };
+
+    enableButton = () => {
+      this.setState({ disabled: '' });
+    };
+
+    disableButton = () => {
+        this.setState({ disabled: 'disabled' });
     };
 
     onInvalid = () => {
         this.setState( { isValid: false } );
+        this.disableButton();
     };
 
     submit = ( e ) => {
@@ -59,7 +72,7 @@ export default class Form extends Component {
                 <Button type={ this.btnType }
                         title={ this.btnTitle }
                         class={ this.btnClass }
-                        disabled={ this.state.isValid ? '' : 'disabled' }/>
+                        disabled={ this.state.disabled }/>
             </form>
         )
     }
