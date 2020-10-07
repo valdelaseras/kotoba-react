@@ -52,6 +52,25 @@ class Landing extends Component {
                                        minLength={'3'}
                                        required={'required'}/>
                             </FormField>
+                            <FormField value={''} key='extrafield'>
+                                <Input id={'extrafield-input'}
+                                       name={'extrafield'}
+                                       type={'text'}
+                                       placeholder={'Enter your extrafield'}
+                                       minLength={'3'}
+                                       required={'required'}/>
+                            </FormField>
+                            <p>bleep</p>
+                        </FormGroup>
+                        <FormGroup key={ 'test-details' } id={'test'}>
+                            <FormField value={''} key='testkey'>
+                                <Input id={'test-input'}
+                                       name={'test'}
+                                       type={'text'}
+                                       placeholder={'test'}
+                                       minLength={'3'}
+                                       required={'required'}/>
+                            </FormField>
                         </FormGroup>
 
                         <Button key={'login-form-btn'}

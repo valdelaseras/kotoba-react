@@ -5,14 +5,18 @@ export default class FormGroup extends Component {
         super( props );
 
         this.state = {
+            id: props.id,
             isValid: false,
-            fields: React.Children.toArray(props.children).filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
-                return {
-                    // The field names never change so we just get the names from the children props right away
-                    name: field.props.children.props.name,
-                    value: field.props.value,
-                    isValid: false
-                }
+            fields: React.Children.toArray(props.children)
+                .filter( child => this.elementIsOfType( child, 'FormField'))
+                .map( field => {
+                    return {
+                        // The field names never change so we just get
+                        // the names from the children props right away
+                        name: field.props.children.props.name,
+                        value: field.props.value,
+                        isValid: false
+                    }
             })
         };
     }
@@ -33,12 +37,14 @@ export default class FormGroup extends Component {
         updatedField.isValid = updatedState.isValid;
         updatedField.value = updatedState.fieldValue;
 
+        const updatedFields = {
+            fields: fields,
+            isValid: !fields.filter( field => !field.isValid ).length
+        };
         // With this updated fields array, we can set the updated state of this component. If no fields
         // are left with isValid: false states, the group is valid
-        this.setState({
-            fields: fields,
-            isValid: !fields.filter( field => !field.isValid).length
-        });
+        this.setState( updatedFields );
+        this.props.handleChange( Object.assign({ fields: this.state.fields, id: this.state.id }, updatedFields ));
     };
 
     /**
