@@ -13,7 +13,7 @@ class Button extends Component {
             <button type={ this.props.type }
                     title={ this.props.title }
                     className={ "btn " + this.props.className }
-                    disabled={ this.props.isValid ? '' : 'disabled' }
+                    disabled={ this.props.isValid === false ? 'disabled' : '' }
                     onClick={ this.clickHandler }>{ this.props.title }
             </button>
         )

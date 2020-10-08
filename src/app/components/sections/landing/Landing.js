@@ -16,6 +16,7 @@ import './landing.css';
 class Landing extends Component {
     submitHandler = ( data )  => {
         this.saveToLocalStorage( data.find( field => field.name === 'username').value );
+        this.props.history.push('/lobby');
     };
 
     saveToLocalStorage = ( username ) => {
@@ -46,7 +47,6 @@ class Landing extends Component {
                         <Button key={'login-form-btn'}
                                 type={'submit'}
                                 title={'Submit'}
-                                // link={'/lobby'}
                                 className={'btn-primary btn-main'}/>
                     </Form>
                 </Content>
