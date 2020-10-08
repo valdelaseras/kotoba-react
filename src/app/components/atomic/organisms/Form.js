@@ -21,6 +21,7 @@ export default class Form extends Component {
        const groups = Array.from( this.state.groups );
        const updatedGroup = groups.find( group => group.id === updatedState.id );
 
+       updatedGroup.fields = updatedState.fields;
        updatedGroup.isValid = updatedState.isValid;
 
        const updatedGroups = {
@@ -31,9 +32,22 @@ export default class Form extends Component {
        this.setState( updatedGroups );
     };
 
-    submitHandler = ( e ) => {
-        e.preventDefault();
-    };
+    // submitHandler = ( e ) => {
+    //     e.preventDefault();
+    //
+    //     const form = this.state.groups.map( group => {
+    //         return {
+    //             fields: group.fields.map( field => {
+    //                 return {
+    //                     name: field.name,
+    //                     value: field.value
+    //                 }
+    //             })
+    //         }
+    //     });
+    //
+    //     console.log(this.form);
+    // };
 
     /**
      * Returns true if the type param is found in the element param
@@ -57,8 +71,7 @@ export default class Form extends Component {
         });
 
         return (
-            <form id={ this.props.id }
-                  onSubmit={ this.submitHandler }>
+            <form id={ this.props.id } onSubmit={ this.props.onSubmit( this.state.groups ) }>
                 { children }
             </form>
         )

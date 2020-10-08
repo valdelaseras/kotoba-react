@@ -14,15 +14,24 @@ import Button from "../../atomic/atoms/Button";
 import './landing.css';
 
 class Landing extends Component {
-    // constructor( props ){
-    //     super( props );
-    //
-    //     this.state = {
-    //         isValid: false
-    //         // disabled: 'disabled'
-    //     }
-    // }
-    // handleSubmit = ( fields ) => {
+    submitHandler = ( form )  => {
+        console.log( form );
+        // this.saveToLocalStorage( username );
+
+        const username = this.getField( form, 'username' );
+        console.log(username);
+    };
+
+    // This method could be used anywhere so it would be good if this was global or something
+    getField = ( form, fieldName ) => {
+        // If because initially the field is empty and has no fields prop yet, only ID and
+        // isValid of the form group(s)
+        if ( form[0].fields) {
+            return form[0].fields.find( field => field.name === fieldName );
+        }
+    };
+
+    // submitHandler = ( fields ) => {
     //     const username = fields.find( field => field.name === 'username' );
     //
     //     this.saveToLocalStorage( username.value  );
@@ -30,6 +39,7 @@ class Landing extends Component {
     // };
 
     saveToLocalStorage = ( username ) => {
+        console.log('saving to local storage');
         localStorage.setItem('ktb-username', username );
     };
 
@@ -42,7 +52,7 @@ class Landing extends Component {
                         based on your results or create a custom exam yourself!
                     </p>
 
-                    <Form id={'login-form'}>
+                    <Form id={'login-form'} onSubmit={ this.submitHandler }>
                         <FormGroup key={ 'login-details' } id={'login'}>
                             <FormField value={''} key='username'>
                                 <Input id={'username-input'}
@@ -52,30 +62,12 @@ class Landing extends Component {
                                        minLength={'3'}
                                        required={'required'}/>
                             </FormField>
-                            <FormField value={''} key='extrafield'>
-                                <Input id={'extrafield-input'}
-                                       name={'extrafield'}
-                                       type={'text'}
-                                       placeholder={'Enter your extrafield'}
-                                       minLength={'3'}
-                                       required={'required'}/>
-                            </FormField>
-                            <p>bleep</p>
-                        </FormGroup>
-                        <FormGroup key={ 'test-details' } id={'test'}>
-                            <FormField value={''} key='testkey'>
-                                <Input id={'test-input'}
-                                       name={'test'}
-                                       type={'text'}
-                                       placeholder={'test'}
-                                       minLength={'3'}
-                                       required={'required'}/>
-                            </FormField>
                         </FormGroup>
 
                         <Button key={'login-form-btn'}
                                 type={'submit'}
                                 title={'Submit'}
+                                // link={'/lobby'}
                                 className={'btn-primary btn-main'}/>
                     </Form>
                 </Content>
