@@ -14,32 +14,11 @@ import Button from "../../atomic/atoms/Button";
 import './landing.css';
 
 class Landing extends Component {
-    submitHandler = ( form )  => {
-        console.log( form );
-        // this.saveToLocalStorage( username );
-
-        const username = this.getField( form, 'username' );
-        console.log(username);
+    submitHandler = ( data )  => {
+        this.saveToLocalStorage( data.find( field => field.name === 'username').value );
     };
-
-    // This method could be used anywhere so it would be good if this was global or something
-    getField = ( form, fieldName ) => {
-        // If because initially the field is empty and has no fields prop yet, only ID and
-        // isValid of the form group(s)
-        if ( form[0].fields) {
-            return form[0].fields.find( field => field.name === fieldName );
-        }
-    };
-
-    // submitHandler = ( fields ) => {
-    //     const username = fields.find( field => field.name === 'username' );
-    //
-    //     this.saveToLocalStorage( username.value  );
-    //     this.props.history.push('/lobby');
-    // };
 
     saveToLocalStorage = ( username ) => {
-        console.log('saving to local storage');
         localStorage.setItem('ktb-username', username );
     };
 
