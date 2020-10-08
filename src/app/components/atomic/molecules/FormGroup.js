@@ -7,7 +7,7 @@ export default class FormGroup extends Component {
         this.state = {
             id: props.id,
             isValid: false,
-            fields: React.Children.toArray(props.children)
+            fields: React.Children.toArray( props.children )
                 .filter( child => this.elementIsOfType( child, 'FormField'))
                 .map( field => {
                     return {
@@ -72,19 +72,12 @@ export default class FormGroup extends Component {
         const children = React.Children.toArray( this.props.children )
             .map( child => {
                 if ( this.elementIsOfType( child, 'FormField')) {
-                    const props = {
-                        handleChange: this.handleChange
-                    };
-
-                    return React.cloneElement( child, props );
-                } else {
-                    return child;
-                }
+                    return React.cloneElement( child, { handleChange: this.handleChange });
+                } else { return child; }
             });
 
         return(
-            <div className={ 'form-group' + ( this.state.isValid ? '' : ' invalid' ) }
-                 id={ this.props.id }>
+            <div className='form-group' id={ this.props.id }>
                 { this.props.title ? <h2>{ this.props.title }</h2> : null }
                 { children }
             </div>

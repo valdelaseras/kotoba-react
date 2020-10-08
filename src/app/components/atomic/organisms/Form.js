@@ -6,7 +6,6 @@ export default class Form extends Component {
 
         this.state = {
             isValid: false,
-            disabled: true,
             groups: React.Children.toArray( props.children )
                 .filter( child => this.elementIsOfType( child,'FormGroup' ))
                 .map( group => {
@@ -26,14 +25,10 @@ export default class Form extends Component {
 
        const updatedGroups = {
            groups: groups,
-           isValid: !groups.filter( group => !group.isValid).length
+           isValid: !groups.filter( group => !group.isValid ).length
        };
 
        this.setState( updatedGroups );
-    };
-
-    handleDisabled = ( e ) => {
-      // if valid, props.disabled = false, Button component then updates disdable state
     };
 
     submitHandler = ( e ) => {
@@ -54,20 +49,15 @@ export default class Form extends Component {
     render() {
         const children = React.Children.toArray( this.props.children )
             .map( child => {
-                if ( this.elementIsOfType( child, 'FormGroup')) {
-                    return React.cloneElement( child, { handleChange: this.handleChange });
-                } else if ( this.elementIsOfType( child, 'Button' )) {
-                    return React.cloneElement( child, { handleDisabled: this.handleDisabled });
-                } else {
-                    return child;
-                }
+                if ( this.elementIsOfType( child, 'FormGroup')) { return React.cloneElement( child, { handleChange: this.handleChange });}
+                if ( child.props.type === 'submit') { return React.cloneElement( child, {
+                    isValid: this.state.isValid
+                });}
+                else { return child; }
         });
 
         return (
-            // TODO: remove this invalid classname, instead just pass state info
-            //  to the button and enable/disable
-            <form className={ this.state.isValid ? '' : 'invalid'}
-                  id={ this.props.id }
+            <form id={ this.props.id }
                   onSubmit={ this.submitHandler }>
                 { children }
             </form>

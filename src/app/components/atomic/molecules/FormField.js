@@ -37,12 +37,10 @@ export default class FormField extends Component {
 
     render() {
         const children = React.Children.map( this.props.children, child => {
-            const props = {
+            return React.cloneElement( child, {
                 isValid: this.state.isValid,
                 fieldValue: this.state.fieldValue
-            };
-
-            return React.cloneElement( child, props );
+            });
         });
 
         return (
