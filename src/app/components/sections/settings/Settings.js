@@ -42,15 +42,44 @@ const fontSizeOptions = [
 ];
 
 export default class Settings extends Component {
-    submitHandler = () => {
-      console.log('submit');
+    constructor( props ){
+        super( props );
+
+        // Setting default settings
+       this.state = {
+           settings: {
+               examSettings: {
+                   retries: retryOptions[2].title,
+                   repeat: repeatOptions[0].title
+               },
+               visualSettings: {
+                   theme: themeOptions[0].title,
+                   fontFamily: fontFamilyOptions[0].title,
+                   fontSize: fontSizeOptions[0].title,
+               },
+               generalSettings: {
+                   localRecord: 'checked'
+               }
+           }
+       };
+
+       // Save default settings to local storage
+        this.saveToLocalStorage( JSON.stringify( this.state.settings ) );
+    }
+
+    saveToLocalStorage = ( settings ) => {
+        localStorage.setItem('ktb-settings', settings );
+    };
+
+    submitHandler = ( data ) => {
+        console.log( data );
     };
 
     render() {
         return (
             <Section id={'settings'} title={'Settings'}>
                 <Row colSize={'column'}>
-                    <Form id={'settings-form'}>
+                    <Form id={'settings-form'} onSubmit={ this.submitHandler }>
                         <Row colSize={'column'}>
                             <Content colSize={'column two'}>
                                 <Fieldset title={'Exams'}>
@@ -59,14 +88,14 @@ export default class Settings extends Component {
                                         Set your preference on handling incorrectly answered questions.
                                     </p>
                                     <FormGroup key={'exam-settings'} id={'exam-settings'}>
-                                        <FormField key={'retry-settings'} value={ retryOptions[2].title }>
+                                        <FormField key={'retry-settings'} value={ this.state.settings.examSettings.retries }>
                                             <Select name={'retry'}
                                                     title={'Allowed retries per question'}
                                                     text={'The amount of retries allowed before moving on to the next question'}
                                                     id={'retry-select'}
                                                     children={ retryOptions }/>
                                         </FormField>
-                                        <FormField key={'repeat-settings'} value={ repeatOptions[0].title }>
+                                        <FormField key={'repeat-settings'} value={ this.state.settings.examSettings.repeat }>
                                             <Select name={'repeat'}
                                                     title={'Repeat incorrectly answered questions'}
                                                     text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
@@ -81,7 +110,7 @@ export default class Settings extends Component {
                                 <Fieldset title={'Visual preferences'}>
                                     <FormGroup key={'visual-settings'} id={'visual-settings'}>
                                         <h3>Theme</h3>
-                                        <FormField key={'theme-select'} value={ themeOptions[0].title }>
+                                        <FormField key={'theme-select'} value={ this.state.settings.visualSettings.theme }>
                                             <Select name={'theme'}
                                                     id={'theme-select'}
                                                     children={ themeOptions }/>
@@ -90,13 +119,13 @@ export default class Settings extends Component {
                                         <p>
                                             For kids who can't read good and want to learn how to do other stuff good too
                                         </p>
-                                        <FormField key={'font-family-select'} value={ fontFamilyOptions[0].title }>
+                                        <FormField key={'font-family-select'} value={ this.state.settings.visualSettings.fontFamily }>
                                             <Select name={'font-family'}
                                                     title={'Font family'}
                                                     id={'ff-select'}
                                                     children={ fontFamilyOptions }/>
                                         </FormField>
-                                        <FormField key={'font-size-select'} value={ fontSizeOptions[0].title }>
+                                        <FormField key={'font-size-select'} value={ this.state.settings.visualSettings.fontSize }>
                                             <Select name={'font-size'}
                                                     title={'Font size'}
                                                     id={'fs-select'}
@@ -111,7 +140,7 @@ export default class Settings extends Component {
                             <Content colSize={'column two'}>
                                 <Fieldset title={'General settings'}>
                                     <FormGroup key={'general-settings'} id={'general-settings'}>
-                                        <FormField key={'local-record'} value={'checked'}>
+                                        <FormField key={'local-record'} value={ this.state.settings.generalSettings.localRecord }>
                                             <Checkbox id={'local-record'}
                                                       text={'Keep a local record of your scores'}
                                                       title={'Score history'}
@@ -119,10 +148,10 @@ export default class Settings extends Component {
                                         </FormField>
                                     </FormGroup>
                                 </Fieldset>
-                                <Button type={'submit'}
+                                <Button key={'settings-form-btn'}
+                                        type={'submit'}
                                         title={'Save'}
-                                        onSubmit={ this.submitHandler }
-                                        class={'btn-primary btn-main'}/>
+                                        className={'btn-primary btn-main'}/>
                             </Content>
                         </Row>
                     </Form>
@@ -131,6 +160,3 @@ export default class Settings extends Component {
         )
     }
 }
-
-// TODO: btn-main class is 'undefined'
-// TODO: Form cannot yet handle multiple FormGroups
