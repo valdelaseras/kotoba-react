@@ -7,6 +7,7 @@ export default class FormField extends Component {
     constructor( props ){
         super( props );
 
+        // this.handleChange = this.handleChange.bind(this);
         /**
          * For any type of form field element ( input, select, checkbox, radiobutton ), a
          * value={'somevalue'} may be set on the FormField tag. This serves as the initial value and sets

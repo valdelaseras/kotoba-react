@@ -4,6 +4,8 @@ export default class FormGroup extends Component {
     constructor( props ){
         super( props );
 
+        // this.handleChange = this.handleChange.bind(this);
+
         this.state = {
             id: props.id,
             isValid: false,
