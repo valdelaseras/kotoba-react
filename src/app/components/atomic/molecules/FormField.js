@@ -17,6 +17,8 @@ export default class FormField extends Component {
             isValid: false,
             fieldValue: props.value,
             name: props.children.props.name
+            // TODO: this only works if formfield only has 1 child
+            //  ( see if it works with radio buttons for example )
         };
     }
 

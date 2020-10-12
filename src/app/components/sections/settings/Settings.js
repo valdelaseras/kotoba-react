@@ -83,11 +83,11 @@ export default class Settings extends Component {
                         <Row colSize={'column'}>
                             <Content colSize={'column two'}>
                                 <Fieldset title={'Exams'}>
-                                    <h3>Incorrect answers</h3>
-                                    <p>
-                                        Set your preference on handling incorrectly answered questions.
-                                    </p>
                                     <FormGroup key={'exam-settings'} id={'exam-settings'}>
+                                        <h3>Incorrect answers</h3>
+                                        <p>
+                                            Set your preference on handling incorrectly answered questions.
+                                        </p>
                                         <FormField key={'retry-settings'} value={ this.state.settings.examSettings.retries }>
                                             <Select name={'retry'}
                                                     title={'Allowed retries per question'}

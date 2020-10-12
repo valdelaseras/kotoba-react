@@ -1,7 +1,8 @@
+Styling:
 TODO: Move (component related) CSS to components eventually and actually use SCSS there. Styling got a little messed up
 TODO: Hover state on disabled btn styling is a little off
-TODO: Been using () and =()= and submitHandler=handleSubmit and onSubmit=submitHandler etc. Clean up with consistency
 
-NAV:
-TODO: nav anchors are now React NavLinks so some styling needs to be fixed for this
-TODO: secnav has buttons, not NavLinks. But I guess they should be, since they are just navlinks but displayed as buttons. Need active states with navlink router and use location props etc.
+Nav:
+TODO: in secnav, 'back' is now an actual link to landing/root ( / ). This should actually function as a
+ proper back button ( iirc, last time I looked at this the problem was that secnav is outside of <Router>, so I can't use
+ history.push or something along those lines )
