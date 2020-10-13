@@ -130,11 +130,20 @@ export default class Form extends Component {
         const filteredChildren = React.Children.toArray( this.props.children ).
         filter( child => ( child.props.type !== 'submit') );
 
+        // TODO: submit btn is only found on landing because it is a direct child of Form, unlike
+        //  the buttons on lobby, settings and exam.
         const submitBtn = React.Children.toArray( this.props.children ).map( child => {
             if ( child.props.type === 'submit') { return React.cloneElement( child, {
                 isValid: this.state.isValid
             });}
         });
+
+        // this doesnt work as is, error (undefined) from field.name in formgroup
+        // const submitBtn = this.recursiveCloneChildren( React.Children.toArray( this.props.children ), 'submit', {
+        //     isValid: this.state.isValid
+        // });
+
+        // console.log(submitBtn);
 
         return (
             <form id={ this.props.id } onSubmit={ this.submitHandler.bind( this ) }>

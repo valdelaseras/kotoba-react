@@ -39,7 +39,6 @@ class Landing extends Component {
                                        name={'username'}
                                        type={'text'}
                                        placeholder={'Enter your username'}
-                                       minLength={'3'}
                                        required={'required'}/>
                             </FormField>
                         </FormGroup>

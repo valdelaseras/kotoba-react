@@ -28,11 +28,14 @@ export default class Exam extends Component {
                     <Content colSize={'column two'}>
                         <Form id={'exam-form'} onSubmit={ this.submitHandler }>
                             <Fieldset title={'Current question'}>
+                                {/*TODO: I will need 'special validation' in this form to compare input to values in the datasets.*/}
+                                {/*Create a validation container for exam questions ( see https://stackoverflow.com/questions/35855781/having-services-in-react-application )*/}
                                 <FormGroup key={'exam-question'} id={'exam-question-fg'}>
                                     <FormField value={''}>
                                         <Input id={'exam-input'}
                                                name={'answer'}
                                                type={'text'}
+                                               minLength={'5'}
                                                placeholder={'Please answer in Current method'}
                                                required={'required'}/>
                                     </FormField>
@@ -50,6 +53,7 @@ export default class Exam extends Component {
                                     </Row>
                                 </div>
 
+                                {/*TODO: disabled state not updating here*/}
                                 <Button key={'submit-answer-btn'}
                                         type={'submit'}
                                         title={'Submit'}
