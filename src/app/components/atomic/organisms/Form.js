@@ -21,8 +21,8 @@ export default class Form extends Component {
     // TODO: in the form on Settings, default settings are set in the constructor. If a
     //  user would change any setting, handleChange is called with updated fields. This
     //  means that this submit handler doesn't have any field(values), except the ones
-    //  that had their new values updated and passed through handleChange. The rest of
-    //  the fields are undefined.
+    //  that had their new values updated and passed through handleChange. The same for
+    //  the Selected exam settings form on Lobby. The rest of the fields are undefined.
     submitHandler( e ) {
         e.preventDefault();
         const data = this.state.groups.map( group => {
@@ -93,7 +93,8 @@ export default class Form extends Component {
         return React.Children.map( children, child => {
             if ( this.elementIsOfType( child, type ) ) {
                 return child;
-            } else {
+                // check if child has children props
+            } else if ( child.props && child.props.children ) {
                 return this.getAllChildrenOfType( child.props.children, type );
             }
         } );
@@ -128,7 +129,8 @@ export default class Form extends Component {
     render() {
         // The submit button needs the state of the form to be passed a s a prop. Before we recursively clone all other
         // children, the submit button is filtered from the props.children array
-        const filteredChildren = this.props.children.filter( child => ( child.props.type !== 'submit') );
+        const filteredChildren = React.Children.toArray( this.props.children ).
+        filter( child => ( child.props.type !== 'submit') );
 
         const submitBtn = React.Children.toArray( this.props.children ).map( child => {
             if ( child.props.type === 'submit') { return React.cloneElement( child, {

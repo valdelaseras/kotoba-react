@@ -47,6 +47,26 @@ const methodOptions = [
 ];
 
 export default class Lobby extends Component {
+    constructor( props ){
+        super( props );
+
+        // TODO: the settings here must reflect the settings from Settings
+        //  ( these are now still only the default settings )
+        this.state = {
+            selectedExam: 'Selected exam title',
+            selectedExamSubText: 'Test your hiragana skills',
+            retrySettings: retryOptions[2].title,
+            repeatSettings: repeatOptions[0].title,
+            methodSettings: methodOptions[1].title
+        };
+    }
+
+    submitHandler = ( data ) => {
+        // TODO: only gets the data once I have changed at least 1 value in the form
+        console.log( data );
+        // this.props.history.push('/exam');
+    };
+
     render() {
         return (
             <Section id={'lobby'} title={'Lobby'}>
@@ -67,41 +87,41 @@ export default class Lobby extends Component {
                     </Row>
                     <Row colSize={'column two'}>
                         <Content colSize={'column'}>
-                            <div className="selected-exam">
-                                <Form id={'selected-exam-form'}>
-                                    <Fieldset title={'Selected exam title'}>
-                                        <p className="highlight">Selected exam sub text</p>
-                                        <p>
-                                            The settings below only affect the current exam.
-                                            To change your default global settings, <NavLink className="highlight" to={'/settings'}>click here</NavLink>.
-                                        </p>
-                                        <h3>Exam settings</h3>
-                                        <FormGroup key={'exam-settings'} id={'exam-settings'}>
-                                            <FormField key={'retry-settings'} value={ retryOptions[2].title }>
-                                                <Select name={'retry-settings'}
-                                                        title={'Allowed retries per question'}
-                                                        id={'retry-select'}
-                                                        children={ retryOptions }/>
-                                            </FormField>
-                                            <FormField key={'repeat-settings'} value={ repeatOptions[0].title }>
-                                                <Select name={'repeat-settings'}
-                                                        title={'Repeat incorrectly answered questions'}
-                                                        text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
-                                                        id={'repeat-select'} children={ repeatOptions }/>
-                                            </FormField>
-                                            <FormField key={'method-settings'} value={ methodOptions[1].title }>
-                                                <Select name={'method-settings'}
-                                                        title={'Method'}
-                                                        id={'method-select'}
-                                                        children={ methodOptions }/>
-                                            </FormField>
-                                        </FormGroup>
-                                        <Button type={'submit'}
-                                                title={'Start exam'}
-                                                className={'btn-primary btn-main'}/>
-                                    </Fieldset>
-                                </Form>
-                            </div>
+                            <Form id={'selected-exam-form'} onSubmit={ this.submitHandler }>
+                                <Fieldset title={ this.state.selectedExam }>
+                                    <p className="highlight">{ this.state.selectedExamSubText }</p>
+                                    <p>
+                                        The settings below only affect the current exam.
+                                        To change your default global settings, <NavLink className="highlight" to={'/settings'}>click here</NavLink>.
+                                    </p>
+                                    <h3>Exam settings</h3>
+                                    <FormGroup key={'exam-settings'} id={'exam-settings'}>
+                                        <FormField key={'retry-settings'} value={ this.state.retrySettings }>
+                                            <Select name={'retry-settings'}
+                                                    title={'Allowed retries per question'}
+                                                    id={'retry-select'}
+                                                    children={ retryOptions }/>
+                                        </FormField>
+                                        <FormField key={'repeat-settings'} value={ this.state.repeatSettings }>
+                                            <Select name={'repeat-settings'}
+                                                    title={'Repeat incorrectly answered questions'}
+                                                    text={"By default, questions you answered incorrectly will be repeated again at the end of your exam until you answer them correctly. You may also choose to disable this."}
+                                                    id={'repeat-select'} children={ repeatOptions }/>
+                                        </FormField>
+                                        <FormField key={'method-settings'} value={ this.state.methodSettings }>
+                                            <Select name={'method-settings'}
+                                                    title={'Method'}
+                                                    id={'method-select'}
+                                                    children={ methodOptions }/>
+                                        </FormField>
+                                    </FormGroup>
+
+                                    <Button key={'selected-exam-form-btn'}
+                                            type={'submit'}
+                                            title={'Start exam'}
+                                            className={'btn-primary btn-main'}/>
+                                </Fieldset>
+                            </Form>
                         </Content>
                     </Row>
                 </Row>
