@@ -80,7 +80,8 @@ export default class FormGroup extends Component {
         return React.Children.map( children, child => {
             if ( this.elementIsOfType( child, type ) ) {
                 return child;
-            } else if ( typeof child !== 'string' ) {
+                // check if child has children props
+            } else if ( child.props && child.props.children ) {
                 return this.getAllChildrenOfType( child.props.children, type );
             }
         } );

@@ -8,6 +8,11 @@ input {
     width: 100%;
 }
 
+/*The current question*/
+#exam Form:first-child Fieldset h2 {
+    color: var(--secondary-color);
+}
+
 #exam .stats > li {
     margin-bottom: 2rem;
 }

@@ -52,6 +52,8 @@ export default class Lobby extends Component {
 
         // TODO: the settings here must reflect the settings from Settings
         //  ( these are now still only the default settings )
+        //  & the title and sub text reflect the selected button
+        //  from the button lists
         this.state = {
             selectedExam: 'Selected exam title',
             selectedExamSubText: 'Test your hiragana skills',
@@ -64,7 +66,7 @@ export default class Lobby extends Component {
     submitHandler = ( data ) => {
         // TODO: only gets the data once I have changed at least 1 value in the form
         console.log( data );
-        // this.props.history.push('/exam');
+        this.props.history.push('/exam');
     };
 
     render() {
@@ -130,4 +132,3 @@ export default class Lobby extends Component {
     }
 }
 
-// TODO: default values here must be according to settings local storage keys

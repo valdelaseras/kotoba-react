@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-// TODO: Form on Lobby is broken now
-
 export default class Form extends Component {
     constructor( props ){
         super( props );
