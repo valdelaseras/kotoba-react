@@ -126,7 +126,10 @@ export default class Form extends Component {
     };
 
     render() {
-        // TODO: Filter submit button from the this.recursiveCloneChildren call
+        // The submit button needs the state of the form to be passed a s a prop. Before we recursively clone all other
+        // children, the submit button is filtered from the props.children array
+        const filteredChildren = this.props.children.filter( child => ( child.props.type !== 'submit') );
+
         const submitBtn = React.Children.toArray( this.props.children ).map( child => {
             if ( child.props.type === 'submit') { return React.cloneElement( child, {
                 isValid: this.state.isValid
@@ -134,8 +137,8 @@ export default class Form extends Component {
         });
 
         return (
-            <form id={ this.props.id } onSubmit={ this.submitHandler.bind(this) }>
-                { this.recursiveCloneChildren( this.props.children, 'FormGroup', {
+            <form id={ this.props.id } onSubmit={ this.submitHandler.bind( this ) }>
+                { this.recursiveCloneChildren( filteredChildren, 'FormGroup', {
                     handleChange: this.handleChange
                 })}
                 { submitBtn }
