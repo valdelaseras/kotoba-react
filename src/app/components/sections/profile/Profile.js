@@ -10,7 +10,7 @@ export default class Profile extends Component {
         return (
             <Section id={'profile'} title={'Your profile'}>
                 <Content colSize={'column two'}>
-                    <Fieldset title={'Username'}>
+                    <Fieldset title={ localStorage.getItem('ktb-username') }>
                         <AnchorList children={ profileList }/>
                     </Fieldset>
                 </Content>

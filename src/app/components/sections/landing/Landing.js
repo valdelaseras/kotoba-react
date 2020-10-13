@@ -14,20 +14,10 @@ import Button from "../../atomic/atoms/Button";
 import './landing.css';
 
 class Landing extends Component {
-    // constructor( props ){
-    //     super( props );
-    //
-    //     this.state = {
-    //         isValid: false
-    //         // disabled: 'disabled'
-    //     }
-    // }
-    // handleSubmit = ( fields ) => {
-    //     const username = fields.find( field => field.name === 'username' );
-    //
-    //     this.saveToLocalStorage( username.value  );
-    //     this.props.history.push('/lobby');
-    // };
+    submitHandler = ( data )  => {
+        this.saveToLocalStorage( data.find( field => field.name === 'username').value );
+        this.props.history.push('/lobby');
+    };
 
     saveToLocalStorage = ( username ) => {
         localStorage.setItem('ktb-username', username );
@@ -42,7 +32,7 @@ class Landing extends Component {
                         based on your results or create a custom exam yourself!
                     </p>
 
-                    <Form id={'login-form'}>
+                    <Form id={'login-form'} onSubmit={ this.submitHandler }>
                         <FormGroup key={ 'login-details' } id={'login'}>
                             <FormField value={''} key='username'>
                                 <Input id={'username-input'}

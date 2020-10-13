@@ -4,16 +4,19 @@ export default class FormGroup extends Component {
     constructor( props ){
         super( props );
 
+        this.handleChange = this.handleChange.bind(this);
+
         this.state = {
+            id: props.id,
             isValid: false,
-            fields: React.Children.toArray(props.children).filter( child => this.elementIsOfType( child, 'FormField')).map( field => {
-                return {
-                    // The field names never change so we just get the names from the children props right away
+            fields: this.getAllChildrenOfType( props.children, 'FormField' )
+                .map( field => ({
+                    // The field names never change so we just get
+                    // the names from the children props right away
                     name: field.props.children.props.name,
                     value: field.props.value,
                     isValid: false
-                }
-            })
+                }))
         };
     }
 
@@ -28,28 +31,82 @@ export default class FormGroup extends Component {
         // Find the field that executed this handleChange callback method
         const updatedField = fields.find( field => field.name === updatedState.name );
 
-        // Then we assign the updatedState's values for isValid and fieldValue to those in the
+        // Then assign the updatedState's values for isValid and fieldValue to those in the
         // cloned fields array ( per field )
         updatedField.isValid = updatedState.isValid;
         updatedField.value = updatedState.fieldValue;
 
-        // With this updated fields array, we can set the updated state of this component. If no fields
-        // are left with isValid: false states, the group is valid
-        this.setState({
+        const updatedFields = {
             fields: fields,
-            isValid: !fields.filter( field => !field.isValid).length
-        });
+            isValid: !fields.filter( field => !field.isValid ).length
+        };
+        // With this updated fields array, set the updated state of this component. If no fields
+        // are left with isValid: false states, the group is valid
+        this.setState( updatedFields );
+        this.props.handleChange( Object.assign({ fields: this.state.fields, id: this.state.id }, updatedFields ));
     };
 
+    // TODO: duplicate functionality ( see Form )
     /**
-     * Returns true if the type param is found in the element param
+     * Returns true if the type name param is found in the element param.
+     *
+     * Some form groups may contain children that are not form fields (like p or h3 tags etc).
+     * The contents of these elements are apparently also prop children of those tags. These
+     * just need to be rendered as is, so they return false in the first condition if the type
+     * param is not actually string.
+     *
+     * If the intention is to actually do something with elements of type string, the second
+     * statement will ensure the call does indeed return true.
      *
      * @param element
      * @param type
      * @returns {*|boolean}
      */
     elementIsOfType = ( element, type ) => {
+        if ( typeof element === 'string' && type !== 'string' ) return false;
+        else if ( typeof element === 'string' && type === 'string' ) return true;
         return (( element.type.name && element.type.name.includes( type )));
+    };
+
+    // TODO: duplicate functionality ( see Form )
+    /**
+     * Get all children of a type. Recursively searches for prop children of the type param
+     *
+     * @param children
+     * @param type
+     * @returns {any[] | * | *}
+     */
+    getAllChildrenOfType( children, type ) {
+        return React.Children.map( children, child => {
+            if ( this.elementIsOfType( child, type ) ) {
+                return child;
+                // check if child has children props
+            } else if ( child.props && child.props.children ) {
+                return this.getAllChildrenOfType( child.props.children, type );
+            }
+        } );
+    };
+
+    // TODO: duplicate functionality ( see Form )
+    /**
+     * Clone all children and pass a new prop to the children with the type param.
+     *
+     * @param children
+     * @param type
+     * @param props = the prop that needs to be passed to the cloned children of the type that is passed in the type
+     *        param.
+     * @returns {any[] | * | *}
+     */
+    recursiveCloneChildren = ( children, type, props ) => {
+        return React.Children.map( children, child => {
+            if ( typeof child === 'string' || ( !this.elementIsOfType( child, type ) && !child.props.children ) ) {
+                return child;
+            } else if ( !this.elementIsOfType( child, type ) && child.props.children ) {
+                return React.cloneElement( child, { children: this.recursiveCloneChildren( child.props.children, type, props )} );
+            } else if ( this.elementIsOfType( child, type ) ) {
+                return React.cloneElement( child, props );
+            }
+        });
     };
 
     /**
@@ -61,26 +118,12 @@ export default class FormGroup extends Component {
      * we pass the handleChange function as an additional property .
      */
     render() {
-        // Must be turned into an array, so if there is only 1 child we can still perform .filter
-        // and .map methods on it ( as used in this.state.fields )
-        const children = React.Children.toArray( this.props.children )
-            .map( child => {
-                if ( this.elementIsOfType( child, 'FormField')) {
-                    const props = {
-                        handleChange: this.handleChange
-                    };
-
-                    return React.cloneElement( child, props );
-                } else {
-                    return child;
-                }
-            });
-
         return(
-            <div className={ 'form-group' + ( this.state.isValid ? '' : ' invalid' ) }
-                 id={ this.props.id }>
+            <div className='form-group' id={ this.props.id }>
                 { this.props.title ? <h2>{ this.props.title }</h2> : null }
-                { children }
+                { this.recursiveCloneChildren( this.props.children, 'FormField', {
+                    handleChange: this.handleChange
+                })}
             </div>
         )
     }

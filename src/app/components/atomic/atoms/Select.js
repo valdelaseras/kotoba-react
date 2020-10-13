@@ -41,8 +41,6 @@ export default class Select extends Component {
     }
 }
 
-// TODO: add default checked option
-
 // TODO: Check what kind of HTML validity check is done for Select elements, if any.
 //  Style element accordingly as well
 

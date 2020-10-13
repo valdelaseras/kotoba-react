@@ -5,7 +5,6 @@ export default class Checkbox extends Component {
         super( props );
 
         this.title = props.title;
-        // this.checked = props.checked;
         this.required = props.required;
 
         this.initCheckbox();

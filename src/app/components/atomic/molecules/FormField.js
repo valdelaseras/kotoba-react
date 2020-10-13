@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 /**
- * Pass one form field element in this component
+ * Important notes:
+ * - A FormField MUST be wrapped in a FormGroup component
+ * - You should only pass one form field element in one FormField
  */
 export default class FormField extends Component {
     constructor( props ){
         super( props );
 
+        // this.handleChange = this.handleChange.bind(this);
         /**
          * For any type of form field element ( input, select, checkbox, radiobutton ), a
          * value={'somevalue'} may be set on the FormField tag. This serves as the initial value and sets
@@ -16,6 +19,8 @@ export default class FormField extends Component {
             isValid: false,
             fieldValue: props.value,
             name: props.children.props.name
+            // NOTE: this only works if formfield only has 1 child
+            //  ( see if it works with radio buttons for example )
         };
     }
 
@@ -37,12 +42,10 @@ export default class FormField extends Component {
 
     render() {
         const children = React.Children.map( this.props.children, child => {
-            const props = {
+            return React.cloneElement( child, {
                 isValid: this.state.isValid,
                 fieldValue: this.state.fieldValue
-            };
-
-            return React.cloneElement( child, props );
+            });
         });
 
         return (
@@ -54,7 +57,4 @@ export default class FormField extends Component {
     }
 }
 
-// TODO: if form field is not wrapped in a FormGroup component, it now breaks on this.props.handleChange.
-//  Even though a form field "should" be wrapped in a form group ( at least in this project ), it would
-//  be nice if the form fields + children would also still work as standalone components
 
