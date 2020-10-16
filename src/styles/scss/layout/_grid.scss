@@ -1,12 +1,12 @@
 /* @start grid */
 .grid {
-    margin: 0 auto;
-    height: 100%;
+  margin: 0 auto;
+  height: 100%;
 }
 
-@media only screen and ( min-width: $large-screen ) {
-    .grid {
-        max-width: 1200px;
-    }
+@media only screen and (min-width: $large-screen) {
+  .grid {
+    max-width: 1200px;
+  }
 }
 /* @end grid */

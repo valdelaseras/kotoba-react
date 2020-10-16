@@ -42,8 +42,8 @@
       "on": ["u", "yuu"]
     },
     "kana": {
-        "kun": ["みぎ"],
-        "on": ["ウ", "ユウ"]
+      "kun": ["みぎ"],
+      "on": ["ウ", "ユウ"]
     },
     "english": ["right"]
   },
@@ -78,7 +78,7 @@
       "on": ["en"]
     },
     "kana": {
-      "kun": ["まる","まるい"],
+      "kun": ["まる", "まるい"],
       "on": ["エン"]
     },
     "english": ["yen", "circle"]
@@ -86,11 +86,11 @@
   {
     "kanji": ["火"],
     "romaji": {
-      "kun": ["hi","ho"],
+      "kun": ["hi", "ho"],
       "on": ["ka"]
     },
     "kana": {
-      "kun": ["ひ","ほ"],
+      "kun": ["ひ", "ほ"],
       "on": ["カ"]
     },
     "english": ["fire"]
@@ -146,7 +146,7 @@
   {
     "kanji": ["外", "外す"],
     "romaji": {
-      "kun": ["soto", "hoka", "hazu" ,"hazusu"],
+      "kun": ["soto", "hoka", "hazu", "hazusu"],
       "on": ["gai", "ge"]
     },
     "kana": {
@@ -158,7 +158,7 @@
   {
     "kanji": ["学", "学ぶ"],
     "romaji": {
-      "kun": ["mana","manabu"],
+      "kun": ["mana", "manabu"],
       "on": ["gaku"]
     },
     "kana": {

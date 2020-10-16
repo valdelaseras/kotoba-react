@@ -1,38 +1,38 @@
 input {
-    font-size: .8rem;
-    background-color: transparent;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: 1px solid var(--secondary-color);
-    width: 100%;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid var(--secondary-color);
+  width: 100%;
 }
 
 /*The current question*/
 #exam Form:first-child Fieldset h2 {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 #exam .stats > li {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 #exam .stats > li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 #exam li > small {
-    display: block;
+  display: block;
 }
 
 #exam .incorrect-answer {
-    text-align: right;
+  text-align: right;
 }
 
 #exam .info-bar {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
 }

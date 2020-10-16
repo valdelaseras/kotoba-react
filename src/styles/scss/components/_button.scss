@@ -1,10 +1,10 @@
 button {
-    margin: 0;
-    text-align: center;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    padding: .5rem .8rem;
-    //border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  padding: 0.5rem 0.8rem;
+  //border-radius: 5px;
 }
 
 .btn {
@@ -12,7 +12,7 @@ button {
 }
 
 .btn.btn-compact {
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 .btn.btn-primary.btn-main[disabled],
@@ -40,23 +40,23 @@ button {
 }
 
 .btn-group {
-    display: inline-block;
-    width: auto;
+  display: inline-block;
+  width: auto;
 }
 
 .btn-group > li {
-    display: inline;
-    margin-right: .5rem;
+  display: inline;
+  margin-right: 0.5rem;
 }
 
 .btn-group > li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .btn-group.vertical > li {
   display: block;
   margin-right: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .btn-group.vertical > li:last-child {

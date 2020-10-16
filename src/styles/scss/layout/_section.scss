@@ -4,16 +4,14 @@
 }
 /*@end section*/
 
-
-
 /*@start section-content*/
 .section-content {
-    padding: 90px 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    position: relative;
-    height: 100%;
-    overflow-y: scroll;
+  padding: 90px 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -22,4 +20,3 @@
   }
 }
 /*@end section-content*/
-

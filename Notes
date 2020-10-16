@@ -6,3 +6,8 @@ Nav:
 TODO: in secnav, 'back' is now an actual link to landing/root ( / ). This should actually function as a
  proper back button ( iirc, last time I looked at this the problem was that secnav is outside of <Router>, so I can't use
  history.push or something along those lines )
+
+TODO: Using yarn and npm now, which is not good practice. Must use only one
+( Jest wasn't working properly and it was recommended to use yarn instead to solve certain problems.
+Which didn't work after all either unfortunately )
+    --- I think this is done now, using Yarn only. Still no luck with Jest but I'll get back to it later

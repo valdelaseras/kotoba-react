@@ -1,18 +1,18 @@
 #landing input {
-    background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid var(--secondary-color);
-    font-size: 1rem;
-    width: 100%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--secondary-color);
+  font-size: 1rem;
+  width: 100%;
 }
 
 #landing input:hover,
 #landing input:focus,
 #landing input:focus-within,
 #landing input:active {
-    border-bottom: 1px solid var(--quaternary-color);
+  border-bottom: 1px solid var(--quaternary-color);
 }
 
 #landing input.invalid,
@@ -20,5 +20,5 @@
 #landing input.invalid:active,
 #landing input.invalid:focus,
 #landing input.invalid:focus-within {
-    border-bottom-color: red;
+  border-bottom-color: red;
 }

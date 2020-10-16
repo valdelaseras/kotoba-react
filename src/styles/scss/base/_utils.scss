@@ -1,17 +1,17 @@
 $large-screen: 1024px;
 
 .desktop-only {
-    display: none;
+  display: none;
 }
 
-@media only screen and ( min-width: $large-screen ){
-    .mobile-only {
-        display: none;
-    }
+@media only screen and (min-width: $large-screen) {
+  .mobile-only {
+    display: none;
+  }
 
-    .desktop-only {
-        display: inline-block;
-    }
+  .desktop-only {
+    display: inline-block;
+  }
 }
 
 .ta-center {
@@ -19,7 +19,7 @@ $large-screen: 1024px;
 }
 
 .submit-confirmation::after {
-  content: "d \2713";
+  content: 'd \2713';
 }
 
 .submit-confirmation:not(:active)::after {

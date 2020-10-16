@@ -1,37 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class RadioButton extends Component {
-    constructor( props ){
-        super( props );
+const RadioButton = (props) => (
+  <label htmlFor={props.id}>
+    {props.title} {props.required === 'required' ? ' *' : null}
+    {props.text ? <p>{props.text}</p> : null}
+    <input
+      className={props.isValid ? '' : 'invalid '}
+      id={props.id}
+      name={props.name}
+      type="radio"
+      defaultChecked={props.checked}
+      required={props.required}
+    />
+  </label>
+);
 
-        this.title = props.title;
-        this.required = props.required;
-
-        this.initInput();
-    }
-
-    initInput = () => {
-        if ( this.required ) {
-            if ( this.title ) {
-                this.title += ' *';
-            }
-        }
-    };
-
-    render() {
-        return(
-            <label htmlFor={ this.props.id }>{ this.title }
-                <input className={ this.props.isValid ? '' : 'invalid' }
-                       id={ this.props.id }
-                       name={ this.props.name }
-                       type='radio'
-                       defaultChecked={ this.props.checked }
-                       required={ this.required }
-                       onChange={ this.handleChange }/>
-            </label>
-        )
-    }
-}
+export default RadioButton;
 
 /**
  * NOTE: default checked in radio buttons must be passed like a 'normal html attribute'.
@@ -48,4 +32,3 @@ export default class RadioButton extends Component {
         name={'record'}/>
      </FormField>
  */
-

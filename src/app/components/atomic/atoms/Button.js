@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class Button extends Component {
-    clickHandler = () => {
-        if ( this.props.link ) {
-            this.props.history.push( this.props.link );
-        }
-    };
+const Button = (props) => (
+  <button
+    type={props.type}
+    title={props.title}
+    className={'btn ' + props.className}
+    disabled={props.isValid === false ? 'disabled' : ''}
+    onClick={() => navigate(props)}
+  >
+    {props.title}
+  </button>
+);
 
-    render(){
-        return(
-            <button type={ this.props.type }
-                    title={ this.props.title }
-                    className={ "btn " + this.props.className }
-                    disabled={ this.props.isValid === false ? 'disabled' : '' }
-                    onClick={ this.clickHandler }>{ this.props.title }
-            </button>
-        )
-    }
-}
+const navigate = (props) => {
+  if (props.link) {
+    props.history.push(props.link);
+  }
+};
 
-export default withRouter( Button );
+export default withRouter(Button);
 
-// TODO: 'back' in SecNav is just / now, so not truly back
+// TODO: 'back' in SecNav is just / now, so it's not truly 'back'. I think I'll need to change
+//  my use of the router because secnav/nav/footer are 'outside' of Router (?)

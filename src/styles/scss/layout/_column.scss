@@ -7,7 +7,7 @@
 }
 
 .column::after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
   height: 0;
@@ -34,45 +34,45 @@
   width: 75%;
 }
 
-@media only screen and ( min-width: $large-screen ) {
-    .column.phi.a {
-        width: 38%;
-    }
+@media only screen and (min-width: $large-screen) {
+  .column.phi.a {
+    width: 38%;
+  }
 
-    .column.phi.b {
-        width: 62%;
-    }
+  .column.phi.b {
+    width: 62%;
+  }
 
-    .column.two {
-        width: 50%;
-    }
+  .column.two {
+    width: 50%;
+  }
 
-    .column.three {
-        width: 33.33%;
-    }
+  .column.three {
+    width: 33.33%;
+  }
 
-    .column.three.a {
-        width: 33.33%;
-    }
+  .column.three.a {
+    width: 33.33%;
+  }
 
-    .column.three.b {
-        width: 66.66%;
-    }
+  .column.three.b {
+    width: 66.66%;
+  }
 
-    .column.four {
-        width: 25%;
-    }
+  .column.four {
+    width: 25%;
+  }
 
-    .column.four.a {
-        width: 25%;
-    }
+  .column.four.a {
+    width: 25%;
+  }
 
-    .column.four.b {
-        width: 50%;
-    }
+  .column.four.b {
+    width: 50%;
+  }
 
-    .column.four.c {
-        width: 75%;
-    }
+  .column.four.c {
+    width: 75%;
+  }
 }
 /* @end column */

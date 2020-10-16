@@ -1,22 +1,22 @@
 .secondary-nav {
-    display: none;
+  display: none;
 }
 
 @media only screen and (min-width: 1024px) {
-    .secondary-nav {
-        display: inline-block;
-        background-color: var(--primary-color);
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        box-sizing: border-box;
-        z-index: 999;
-        height: 70px;
-        margin: 0 auto;
-    }
+  .secondary-nav {
+    display: inline-block;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 999;
+    height: 70px;
+    margin: 0 auto;
+  }
 
-    .secondary-nav .btn-group {
-        margin: 0;
-    }
+  .secondary-nav .btn-group {
+    margin: 0;
+  }
 }

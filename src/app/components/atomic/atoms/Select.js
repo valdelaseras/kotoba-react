@@ -1,45 +1,27 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import './select.css';
 
-export default class Select extends Component {
-    constructor( props ){
-        super( props );
+const Select = (props) => (
+  <label htmlFor={props.id}>
+    {props.title} {props.required === 'required' ? ' *' : null}
+    {props.text ? <p>{props.text}</p> : null}
+    <select
+      className={props.isValid ? '' : 'invalid'}
+      id={props.id}
+      required={props.required}
+      name={props.name}
+      defaultValue={props.fieldValue}
+    >
+      {props.children.map((child) => (
+        <option key={child.id} value={child.title}>
+          {child.title}
+        </option>
+      ))}
+    </select>
+  </label>
+);
 
-        this.title = props.title;
-        this.required = props.required;
-
-        this.initSelect();
-    }
-
-    initSelect = () => {
-        if ( this.required ) {
-            if ( this.title ) {
-                this.title += ' *';
-            }
-        }
-    };
-
-    render() {
-        return(
-            <label htmlFor={ this.props.name }>{ this.title }
-                { this.props.text? <p>{ this.props.text }</p> : null }
-                <select className={ this.props.isValid ? '' : 'invalid' }
-                        id={ this.props.id }
-                        required={ this.required }
-                        name={ this.props.name }
-                        defaultValue={ this.props.fieldValue }>
-                        { this.props.children.map( child =>
-                            <option key={ child.id }
-                                    value={ child.title }>
-                                { child.title }
-                            </option>
-                    )}
-                </select>
-            </label>
-        )
-    }
-}
+export default Select;
 
 // TODO: Check what kind of HTML validity check is done for Select elements, if any.
 //  Style element accordingly as well

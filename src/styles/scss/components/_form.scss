@@ -1,15 +1,15 @@
 input,
 select {
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    background-color: var(--tertiary-color);
-    color: var(--secondary-color);
-    transition: all 100ms;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  transition: all 100ms;
 }
 
 input {
   font-size: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 input[type='checkbox'] {
@@ -23,13 +23,13 @@ label + p {
 }
 
 select {
-  width: 100%;;
-  margin: .5rem 0 1rem;
-  padding: .5rem;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
 }
 
 form button {
-    margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 label {
@@ -50,10 +50,9 @@ input.invalid:hover,
 input.invalid:active,
 input.invalid:focus,
 input.invalid:focus-within {
-    border-bottom-color: red;
+  border-bottom-color: red;
 }
 
 .form-group {
   margin: 1.5rem 0;
 }
-

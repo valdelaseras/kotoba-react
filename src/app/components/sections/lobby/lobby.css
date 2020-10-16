@@ -1,24 +1,24 @@
 #lobby .selected-exam header {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-#lobby button[type=submit] {
-    margin: 0;
+#lobby button[type='submit'] {
+  margin: 0;
 }
 
 #lobby .reduce-fs-padding {
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 #lobby .btn-group {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #lobby .btn-group > li,
 #lobby .btn-group.vertical > li {
-    flex: 1 1 33vw;
-    margin: .25rem;
-    max-width: calc(50% - .5rem);
+  flex: 1 1 33vw;
+  margin: 0.25rem;
+  max-width: calc(50% - 0.5rem);
 }

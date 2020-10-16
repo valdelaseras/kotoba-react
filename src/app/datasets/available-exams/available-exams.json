@@ -4,49 +4,31 @@
     "category": "kana",
     "title": "Hiragana",
     "description": "Test your hiragana knowledge",
-    "dataSets": [
-      "hiragana"
-    ],
-    "methods": [
-      "Romaji to hiragana",
-      "Hiragana to romaji",
-      "Shuffle"
-    ]
-  }, {
+    "dataSets": ["hiragana"],
+    "methods": ["Romaji to hiragana", "Hiragana to romaji", "Shuffle"]
+  },
+  {
     "id": 1,
     "category": "kana",
     "title": "Katakana",
     "description": "Test your katakana knowledge",
-    "dataSets": [
-      "katakana"
-    ],
-    "methods": [
-      "Romaji to katakana",
-      "Katakana to romaji",
-      "Shuffle"
-    ]
-  }, {
+    "dataSets": ["katakana"],
+    "methods": ["Romaji to katakana", "Katakana to romaji", "Shuffle"]
+  },
+  {
     "id": 2,
     "category": "kana",
     "title": "All kana",
     "description": "Test your kana knowledge by mixing katakana and hiragana",
-    "dataSets": [
-      "hiragana",
-      "katakana"
-    ],
-    "methods": [
-      "Romaji to kana",
-      "Kana to romaji",
-      "Shuffle"
-    ]
-  }, {
+    "dataSets": ["hiragana", "katakana"],
+    "methods": ["Romaji to kana", "Kana to romaji", "Shuffle"]
+  },
+  {
     "id": 3,
     "category": "kanji",
     "title": "Kanji N5",
     "description": "Kanji N5",
-    "dataSets": [
-      "kanjiN5"
-    ],
+    "dataSets": ["kanjiN5"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",
@@ -59,14 +41,13 @@
       "Shuffle kanji & romaji",
       "Shuffle all"
     ]
-  }, {
+  },
+  {
     "id": 4,
     "category": "kanji",
     "title": "Kanji N4",
     "description": "Kanji N4",
-    "dataSets": [
-      "kanjiN4"
-    ],
+    "dataSets": ["kanjiN4"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",
@@ -79,14 +60,13 @@
       "Shuffle kanji & romaji",
       "Shuffle all"
     ]
-  }, {
+  },
+  {
     "id": 5,
     "category": "kanji",
     "title": "Kanji N3",
     "description": "Kanji N3",
-    "dataSets": [
-      "kanjiN3"
-    ],
+    "dataSets": ["kanjiN3"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",
@@ -99,14 +79,13 @@
       "Shuffle kanji & romaji",
       "Shuffle all"
     ]
-  }, {
+  },
+  {
     "id": 6,
     "category": "kanji",
     "title": "Kanji N2",
     "description": "Kanji N2",
-    "dataSets": [
-      "kanjiN2"
-    ],
+    "dataSets": ["kanjiN2"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",
@@ -119,14 +98,13 @@
       "Shuffle kanji & romaji",
       "Shuffle all"
     ]
-  }, {
+  },
+  {
     "id": 7,
     "category": "kanji",
     "title": "Kanji N1",
     "description": "Kanji N1",
-    "dataSets": [
-      "kanjiN1"
-    ],
+    "dataSets": ["kanjiN1"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",
@@ -139,18 +117,13 @@
       "Shuffle kanji & romaji",
       "Shuffle all"
     ]
-  }, {
+  },
+  {
     "id": 8,
     "category": "kanji",
     "title": "All kanji",
     "description": "Kanji N5 to N1",
-    "dataSets": [
-      "kanjiN5",
-      "kanjiN4",
-      "kanjiN3",
-      "kanjiN2",
-      "kanjiN1"
-    ],
+    "dataSets": ["kanjiN5", "kanjiN4", "kanjiN3", "kanjiN2", "kanjiN1"],
     "methods": [
       "Kanji to romaji",
       "Romaji to kanji",

@@ -1,23 +1,41 @@
 html {
-    //font-size: 16px;
-    line-height: 2;
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
+  //font-size: 16px;
+  line-height: 2;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
-.helvetica { font-family: Helvetica, sans-serif; }
-.comfortaa { font-family: 'Comfortaa', cursive; }
-.montserrat { font-family: 'Montserrat', sans-serif; }
+.helvetica {
+  font-family: Helvetica, sans-serif;
+}
+.comfortaa {
+  font-family: 'Comfortaa', cursive;
+}
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
 
 //TODO: Pick actual sizes and adjust some styling based on rem
-.normal { font-size: 16px; }
-.large { font-size: 20px; }
-.xl { font-size: 24px; }
+.normal {
+  font-size: 16px;
+}
+.large {
+  font-size: 20px;
+}
+.xl {
+  font-size: 24px;
+}
 
-@media only screen and ( min-width: $large-screen ) {
-  .normal { font-size: 17px; }
-  .large { font-size: 21px; }
-  .xl { font-size: 25px; }
+@media only screen and (min-width: $large-screen) {
+  .normal {
+    font-size: 17px;
+  }
+  .large {
+    font-size: 21px;
+  }
+  .xl {
+    font-size: 25px;
+  }
 }
 
 p {
@@ -42,11 +60,12 @@ h1 {
 }
 
 h2 {
-  font-size: calc( 2.5rem/1.61803398875);
+  font-size: calc(2.5rem / 1.61803398875);
 }
 
-h3, h4 {
-  font-size: calc(calc( 2.5rem/1.61803398875)/1.61803398875);
+h3,
+h4 {
+  font-size: calc(calc(2.5rem / 1.61803398875) / 1.61803398875);
 }
 
 .font-xxl {
@@ -85,4 +104,3 @@ a {
   color: var(--secondary-color);
   text-decoration: none;
 }
-
