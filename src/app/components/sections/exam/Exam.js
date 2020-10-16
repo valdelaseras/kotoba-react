@@ -13,9 +13,9 @@ import Button from "../../atomic/atoms/Button";
 import './exam.css';
 
 export default class Exam extends Component {
-    constructor( props ){
-        super( props );
-    }
+    // constructor( props ){
+    //     super( props );
+    // }
 
     submitHandler = () => {
       // console.log('submit');
@@ -35,7 +35,6 @@ export default class Exam extends Component {
                                         <Input id={'exam-input'}
                                                name={'answer'}
                                                type={'text'}
-                                               minLength={'5'}
                                                placeholder={'Please answer in Current method'}
                                                required={'required'}/>
                                     </FormField>

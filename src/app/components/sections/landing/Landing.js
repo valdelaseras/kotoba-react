@@ -11,7 +11,7 @@ import FormField from "../../atomic/molecules/FormField";
 import Input from "../../atomic/atoms/Input";
 import Button from "../../atomic/atoms/Button";
 
-import './landing.css';
+// import './landing.css';
 
 class Landing extends Component {
     submitHandler = ( data )  => {
@@ -55,4 +55,3 @@ class Landing extends Component {
 }
 
 export default withRouter(Landing);
-

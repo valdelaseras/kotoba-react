@@ -8,15 +8,21 @@
     "react-scripts": "^3.4.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^26.5.2",
+    "jest": "^26.5.3",
     "react-router-dom": "^5.2.0",
     "react-router-native": "^5.2.0",
+    "react-test-renderer": "^16.14.0",
     "sass": "^1.26.10"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "test": "jest",
     "sass": "sass ./src/styles/scss:./src/styles/css --watch"
   },
   "browserslist": {

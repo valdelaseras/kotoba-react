@@ -124,11 +124,14 @@ export default class Form extends Component {
         });
     };
 
+    // TODO: render { children } ( all children ) here and clone children appropriately in functions above.
+    //  The submit button is now outside of the form element ( as below ), which it shouldn't be ( see HTML )
     render() {
         // The submit button needs the state of the form to be passed a s a prop. Before we recursively clone all other
-        // children, the submit button is filtered from the props.children array
-        const filteredChildren = React.Children.toArray( this.props.children ).
-        filter( child => ( child.props.type !== 'submit') );
+        // children, the submit button is filtered from the props.children array. This is only useful for forms where the
+        // button is a direct descendant ( i.e. on Landing )
+        const filteredChildren = React.Children.toArray( this.props.children )
+            .filter( child => ( child.props.type !== 'submit'));
 
         // TODO: submit btn is only found on landing because it is a direct child of Form, unlike
         //  the buttons on lobby, settings and exam.
@@ -137,13 +140,6 @@ export default class Form extends Component {
                 isValid: this.state.isValid
             });}
         });
-
-        // this doesnt work as is, error (undefined) from field.name in formgroup
-        // const submitBtn = this.recursiveCloneChildren( React.Children.toArray( this.props.children ), 'submit', {
-        //     isValid: this.state.isValid
-        // });
-
-        // console.log(submitBtn);
 
         return (
             <form id={ this.props.id } onSubmit={ this.submitHandler.bind( this ) }>
