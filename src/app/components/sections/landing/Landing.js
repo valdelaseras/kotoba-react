@@ -34,7 +34,7 @@ class Landing extends Component {
 
           <Form id={'login-form'} onSubmit={this.submitHandler}>
             <FormGroup key={'login-details'} id={'login'}>
-              <FormField value={''} key="username">
+              <FormField key="username">
                 <Input
                   id={'username-input'}
                   name={'username'}

@@ -5,6 +5,7 @@ const Input = (props) => (
     {props.title}
     {props.text ? <p>{props.text}</p> : null}
     <input
+      onChange={props.handleChange}
       className={props.isValid ? '' : 'invalid '}
       defaultValue={props.fieldValue}
       id={props.id}
